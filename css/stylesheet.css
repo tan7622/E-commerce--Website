@@ -6,15 +6,16 @@
   box-sizing: border-box;
 }
 
-
+   /*--------------- Zoom out nav bar background --------------- */
 .container {
   min-height: 100vh;
   width: 100%;
   background-color: #caf0f8;
-  background-image: linear-gradient(135deg, #caf0f8 0%, #90e0ef 74%);
+  background-image: linear-gradient(135deg, #e8feff 0%, #caf0f8 74%);
   overflow-x: hidden;
   transform-style: preserve-3d;
 }
+   /*--------------- Zoom out nav bar background --------------- */
 
 .navbar {
   position: fixed;
@@ -98,17 +99,19 @@ header {
   position: relative;
 }
 
+   /*--------------- Zoom In nav bar background --------------- */
 .overlay {
   position: absolute;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-  background-color: #90e0ef;
+  background-color: #e8feff;
   display: flex;
   /* justify-content: center; */
   align-items: center;
 }
+   /*--------------- Zoom In nav bar background --------------- */
 
 .intro {
   max-width: 35rem;
