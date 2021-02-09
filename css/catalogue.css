@@ -2,10 +2,65 @@ html,
 body {
     height: 100%;
     margin: 0;
+    overflow: hidden;
+}
+
+.menu{
+    display: flex;
+    padding: 2em;
+    height: 100%;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    animation: fadein 1s forwards;
 }
 
 
+.menu-item{
+    background-color: rgb(247, 247, 247);
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid;
+    margin: 1em;
+    height: 400px;
+    width: 400px;
+    transition: 1s;
+    overflow: hidden;
+}
+
+.menu-overlay{
+    display: flex;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 500px;
+    justify-content: center;
+    background: linear-gradient(rgba(247,247,247,1),rgba(247,247,247,0));
+    transition: 0.5s;
+}
+
+.menu-overlay p{
+    opacity: 0; 
+    padding: 1.5em;
+    text-align: center;
+}
+.menu-item:hover .menu-overlay{
+    top:0;
+}
+.menu-item:hover .menu-overlay p{
+    animation: fadein 0.5s forwards 0.5s;
+}
+
+#vial-container-wrap{
+    display: flex;
+    flex-direction: row;
+}
+
 .vial-container {
+    background-color: rgb(247, 247, 247);
     height: inherit;
     display: flex;
     position: absolute;
@@ -17,13 +72,22 @@ body {
     align-items: center;
 }
 
+.cross{
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    background-color: red;
+    left: 95%;
+    bottom: 90%;
+}
+
 .vial {
     position: relative;
     flex: 0 0 25%;
     animation: show 0.5s;
     animation-fill-mode: forwards;
+    opacity: 1;
 }
-
 
 .description {
     height: inherit;
@@ -63,15 +127,6 @@ body {
     box-sizing: border-box;
     display: block;
 }
-
-/* .short span:nth-child(1)
-{
-    transform:rotate(45deg);
-}
-.short span:nth-child(1)
-{
-    transform:rotate(0deg);
-} */
 
 .ingredient span:nth-child(1)
 {

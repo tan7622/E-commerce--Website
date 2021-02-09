@@ -6,36 +6,154 @@
     <title>Catalogue</title>
 
     <link rel="stylesheet" href="./css/catalogue.css">
+    <script src="./js/medicine.js"></script>
 </head>
 <body>
-    <div class="vial-container">
-        <div class="description">
-            <div class="ingredient">
-                <span class="long"></span>
-                <span class="long"></span>
-                <span class="long"></span>
-                <span class="long"></span>
-                <span class="short"></span>
-                <span class="short"></span>
-                <div class="content">
-                    <h3>Ingredient</h3>
-                    <ul style="position: relative; right: 1.5em;">
-                        <li>aaaaaaaa</li>
-                        <li>aaa</li>
-                        <li>aa</li>
-                        <li>aaaaaa</li>
-                    </ul>
+    <div id='menu' class="menu">
+
+    </div>
+
+    <div id="vial-container-wrap" style="display: none;">
+        <div id='vial-container' class="vial-container">
+            <div class="cross">a</div>
+            <div id='id' style="display: none;"></div>
+            <div class="description thing">
+                <div class="ingredient">
+                    <span class="long"></span>
+                    <span class="long"></span>
+                    <span class="long"></span>
+                    <span class="long"></span>
+                    <span class="short"></span>
+                    <span class="short"></span>
+                    <div class="content">
+                        <h3>Ingredient</h3>
+                        <ul style="position: relative; right: 1.5em;">
+                        </ul>
+                    </div>
                 </div>
             </div>
+            <img id='vial' class="vial thing" src="" style="height: 50%; display: block;"></img>
+            <div id='description' class="description thing"></div>
         </div>
-        <img id='vial' class="vial" src="css/images/vial.png" style="height: 50%; display: block;"></img>
-        <div class="description">aasa</div>
     </div>
 </body>
 </html>
 
+<script type="template">
+    <div class="menu-item">
+        <img src="/res/fish-oil.jpg" style="height:70%">
+        <div class="menu-overlay">
+            <p>THis is some word</p>
+        </div>
+    </div>
+</script>
+
 <script>
-    document.body.onclick = function() {
-        document.getElementById('vial').style.display = 'block'
+    const closeBtn = document.querySelector('.cross')
+    const menu = document.getElementById('menu')
+    const product = document.querySelector('.vial-container')
+    let scrollPosition = 0
+
+    medicine.forEach(obj => {
+        let item = document.createElement('div')
+        item.className = 'menu-item'
+        item.id = obj.id
+
+        let image = document.createElement('img')
+        image.src = obj.path
+        image.style.height = '70%'
+
+        let overlay = document.createElement('div')
+        overlay.className = 'menu-overlay'
+        let desc = document.createElement('p')
+        desc.innerHTML = obj.description
+        overlay.append(desc)
+
+        item.append(image)
+        item.append(overlay)
+
+        menu.append(item)
+    });
+
+    const items = document.querySelectorAll('.menu-item')
+
+    items.forEach(element => {
+            element.addEventListener('click',function(e){
+                generateDetails(element.id)
+                window.addEventListener('wheel',(e)=>{scrollAnim(e)})
+                document.getElementById('vial-container-wrap').style.display = 'flex'
+                document.getElementById('menu').style.display = 'none'
+        })        
+    });
+
+
+    closeBtn.addEventListener('click',()=>{
+        document.getElementById('menu').style.display = 'flex'
+        document.getElementById('vial-container-wrap').style.display = 'none'
+        let img = product.querySelectorAll('.thing')
+        scrollPosition = 0
+            img.forEach(element => {
+                element.animate({opacity:[0,1]},{duration:1000,fill:"forwards"})
+                element.style.transform = `translateY(0px)`
+            });
+    })
+
+
+    function generateDetails(id) {
+        let list = product.querySelector('.content ul')
+        list.innerHTML = ''
+        console.log(id)
+
+        let med = medicine.filter((obj)=>{
+            return obj.id === id
+        })
+
+        let ingredients = med[0].ingredient
+
+        ingredients.forEach(element => {
+            let ul = document.createElement('li')
+            ul.innerHTML = element
+            list.append(ul)
+        });
+
+        let img = product.querySelector('#vial')
+        img.src = med[0].path
+
+        let desc = product.querySelector('#description')
+        desc.innerHTML = med[0].description
+
+        let medid = product.querySelector('#id')
+        medid.innerHTML = med[0].id
     }
+
+    function scrollAnim(e){
+        let img = product.querySelectorAll('.thing')
+        let id = parseInt(product.querySelector('#id').innerHTML)
+
+        if(e.deltaY == 100){
+            scrollPosition += 120
+            let scroll = scrollPosition*-1
+            img.forEach(element => {
+                element.style.transform = `perspective(1000px) translateY(${scroll}px) rotateX(${scrollPosition/10}deg)`
+            });
+        }
+        else{
+            scrollPosition -= 120
+            let scroll = scrollPosition*-1
+            img.forEach(element => {
+                element.style.transform = `perspective(1000px) translateY(${scroll}px) rotateX(${scrollPosition/10}deg)`
+            });
+        }
+
+
+        if(scrollPosition == 600 || scrollPosition == -600 ){
+            scrollPosition == 600? generateDetails((id+1).toString()): generateDetails((id-1).toString())
+            scrollPosition = 0
+            img.forEach(element => {
+                element.animate({opacity:[0,1]},{duration:1000,fill:"forwards"})
+                element.style.transform = `translateY(0px)`
+            });
+        }
+    }
+
 </script>
