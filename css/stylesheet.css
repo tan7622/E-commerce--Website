@@ -269,18 +269,30 @@ h2{
     left: 40%;
     text-align: left;
 }
-.aboutus{
+.email{
   height: 100px;
   width: 300px;
   position: absolute;
   left: 20px ;
   }
   
-.Address{
+.aboutus{
+  height: 100px;
+  width: 300px;
+  position: absolute;
+  left: 440px ;
+  }
+  
+.customerS{
   height: 100px;
   width: 250px;
   position: absolute;
-  left: 550px ;
+  left: 840px ;
+
+}
+.customerS li{
+  position:relative; 
+  left:60px;
 
 }
 .socialMedia-icons{
@@ -288,7 +300,7 @@ h2{
   height: 100px;
   width: 250px;
   position: absolute;
-  left: 1000px ;
+  left: 1130px ;
 
 }
 .site-footer .icons
