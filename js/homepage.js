@@ -5,6 +5,7 @@ hamburger_menu.addEventListener("click", () => {
   container.classList.toggle("active");
 });
 
+
 $(function () {
 
   var wrapper = $('.wrapper');
@@ -34,4 +35,7 @@ $(function () {
   });
 
 });
+
+
+  
 
