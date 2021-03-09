@@ -33,7 +33,7 @@ html,body{
   height: 250px;
   width: 350px;
   position: relative;
-  top: 10%;
+  top: 20%;
   left: 15%;
 }
 /*--------------- Whole container section ends here --------------- */
@@ -171,7 +171,7 @@ html,body{
 .pdcontainer{
   position: absolute;
   left:50%;
-  top: 15%;
+  top: 20%;
 
 }
 
