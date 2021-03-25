@@ -1,0 +1,195 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+   /*--------------- Zoom out nav bar background --------------- */
+.container {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #caf0f8;
+  background-image: linear-gradient(135deg, #e8feff 0%, #caf0f8 74%);
+  overflow-x: hidden;
+  transform-style: preserve-3d;
+}
+   /*--------------- Zoom out nav bar background --------------- */
+
+
+/*--------------- footer section starts here --------------- */
+/* .horizontal-scroll {
+  width: 100%;
+  height: 400px;
+  background: url('./images/medFuze\ footer-02.png');
+  -webkit-animation: backgroundScroll 400s linear infinite;
+  animation: backgroundScroll 60s linear infinite;
+  background-repeat: no-repeat;
+  }
+  
+  @-webkit-keyframes backgroundScroll {
+  from {background-position: 0 0;}
+  to {background-position: -600px 0;}
+  }
+          
+  @keyframes backgroundScroll {
+  from {background-position: 0 0;}
+  to {background-position: -2000px 0;}
+  }
+   */
+  .horizontal-scroll2 {
+  width: 100%;
+  height: 350px;
+  background: url('./images/medFuze footer-01.png');
+  -webkit-animation: backgroundScroll2 400s linear infinite;
+  animation: backgroundScroll2 30s linear infinite;
+  background-repeat: no-repeat;
+  }
+  
+  @-webkit-keyframes backgroundScroll2 {
+  from {background-position: -1000px 0;}
+  to {background-position: 0 0;}
+  }
+          
+  @keyframes backgroundScroll2 {
+  from {background-position: -2000px 0;}
+  to {background-position: 0 0;}
+  }
+
+  
+h2{
+    position:initial;
+    left: 40%;
+    text-align: left;
+}
+.email{
+  height: 100px;
+  width: 300px;
+  position: absolute;
+  left: 20px ;
+  }
+  
+.aboutus{
+  height: 100px;
+  width: 300px;
+  position: absolute;
+  left: 440px ;
+  }
+  
+.customerS{
+  height: 100px;
+  width: 250px;
+  position: absolute;
+  left: 840px ;
+
+}
+.customerS li{
+  position:relative; 
+  left:60px;
+
+}
+.socialMedia-icons{
+
+  height: 100px;
+  width: 250px;
+  position: absolute;
+  left: 1130px ;
+
+}
+.site-footer .icons
+{
+  text-align:left;
+}
+.site-footer .icons a
+{
+  width:40px;
+  height:40px;
+  line-height:40px;
+  margin-left:6px;
+  margin-right:20px;
+  border-radius:100%;
+  background-color:#33353d
+}
+
+@media (max-width:991px)
+{
+  .site-footer [class^=col-]
+  {
+    margin-bottom:30px
+  }
+}
+
+.icons
+{
+  padding-left:0;
+  margin-bottom:0;
+  list-style:none
+}
+.icons li
+{
+  display:inline-block;
+  margin-bottom:4px
+}
+.icons li.title
+{
+  margin-right:15px;
+  text-transform:uppercase;
+  color:#96a2b2;
+  font-weight:700;
+  font-size:13px
+}
+.icons a{
+  background-color:#eceeef;
+  color:#818a91;
+  font-size:16px;
+  display:inline-block;
+  line-height:44px;
+  width:44px;
+  height:44px;
+  text-align:center;
+  margin-right:8px;
+  border-radius:100%;
+  -webkit-transition:all .2s linear;
+  -o-transition:all .2s linear;
+  transition:all .2s linear
+}
+.icons a:active,.icons a:focus,.icons a:hover
+{
+  color:#fff;
+  background-color:#29aafe
+}
+.icons.size-sm a
+{
+  line-height:34px;
+  height:34px;
+  width:34px;
+  font-size:14px
+}
+.icons a.facebook:hover
+{
+  background-color:#3b5998
+}
+.icons a.twitter:hover
+{
+  background-color:#00aced
+}
+.icons a.instagram:hover
+{
+  background-color:#b6004c
+}
+.icons a.youtube:hover
+{
+  background-color:#fa0404
+}
+@media (max-width:767px)
+{
+  .icons li.title
+  {
+    display:block;
+    margin-right:0;
+    font-weight:600
+  }
+}
+/*--------------- footer section ends here --------------- */
+
+
+
