@@ -7,30 +7,216 @@
     <link rel="icon" href="/css/images/medFuze_Logo.png">
     <link rel="stylesheet" href="css/checkout.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-</head>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.26.0/moment.min.js"></script>
+    <script src="js/checkout.js"></script>
+  </head>
   <body>
-      <div class="container">
-
-
+      <div class="container1">
+        
+        <div class="container">
+          <div class="py-3 text-center">
+             <h2>
+             Billing Details</h2>
+          </div>
+       </div>
+          <div class="container">
+            <form novalidate>
+               <div class="row g-4">
+                  <div class="col-sm-4">
+                     <label for="firstName" class="form-label">First Name</label>
+                     <input id="firstName"  type="text" class="form-control" placeholder="Cyka" required>
+                     <div class="invalid-feedback">
+                        First name is required.
+                     </div>
+                  </div>
+                  <div class="col-sm-4">
+                   <label for="lastname" class="form-label">Last Name</label>
+                   <input id="lastname"  type="text" class="form-control" placeholder="Blyat" required>
+                   <div class="invalid-feedback">
+                      First name is required.
+                   </div>
+                </div>
+                <div class="col-md-4">
+                 <label for="email" class="form-label">Email</label>
+                 <div class="input-group">
+                   <span class="input-group-text">@</span>
+                   <input id="email" type="text" class="form-control" placeholder="Email" required>
+                 </div>
+                 </div>
+                  <div class="col-md-12">
+                 <label for="email" class="form-label">Billing Address</label>
+                 <div class="input-group">
+                   <input id="email" type="text" class="form-control" placeholder="Address" required>
+                 </div>
+                 </div>
+                 <div class="col-md-12">
+                  <label for="email" class="form-label">Billing Address 2</label>
+                  <div class="input-group">
+                    <input id="email" type="text" class="form-control" placeholder="Address" required>
+                  </div>
+                  </div>
+                <div class="col-md-3">
+                 <label for="country" class="form-label">Country</label>
+                   <select id="country" class="form-control">
+                     <option value="Choose">Choose...</option>
+                     <option value="Malaysia">Malaysia</option>
+                     <option value="Malaysia">Australia</option>
+                     <option value="Malaysia">Ching Chong</option>
+                     </select>
+                   <div class="invalid-feedback">
+                     Valid Last name is required.
+                   </div>
+                 </div> 
+                 <div class="col-md-2">
+                   <label for="state" class="form-label">State</label>
+                   <select id="state" class="form-control">
+                     <option value="Choose">Choose...</option>
+                     <option value="Penang">Penang</option>
+                     <option value="Kuala Lumpur">Kuala Lumpur</option>
+                     <option value="Ipoh">Ipoh</option>
+                     </select>
+                   <div class="invalid-feedback">
+                     Valid State is required.
+                   </div>     
+                 </div> 
+                 <div class="col-md-1">
+                   <label for="postcode" class="form-label">Post Code</label>
+                   <input id="postcode"  type="text" class="form-control" placeholder="00000" required>
+                   <div class="invalid-feedback">
+                      Post Code is required.
+                   </div>
+               </div>
+             <hr class="my-4">
+             <div class="col-12">
+             <div class="form-check">
+               <input id="sameAddress" type="checkbox" class="form-check-input">
+               <label for="sameAddress" for="sameAddress"> Shipping Address</label>
+               </div>
+               <div class="form-check">
+                 <input id="sameAddress" type="checkbox" class="form-check-input">
+                 <label for="sameAddress" for="sameAddress"> Save this info</label>
+                 </div>
+               </div>
+               <hr class="my-2">
+               <h4 class="mb-1">Payments</h4>
+               
+               <div class="col-12">
+               <div class="form-check">
+               <input id="creditCard" name="paymentMethod" type="radio"  class="form-check-input" >
+               <label for="creditCard">Credit Card</label>
+               </div>
+               <div class="form-check">
+                 <input id="debitCard" name="paymentMethod" type="radio" class="form-check-input" >
+                 <label for="creditCard">Debit Card</label>
+                 </div>
+      
+                 <div class="row my-3 gy-3">
+                   <div class="col-md-6">
+                       Card holder Name 
+                       <input id="cardhN" type="text" class="form-control" required>
+                       </small>
+                       <div class="invalid-feedback">
+                         Card Holder name required.
+                       </div>
+                     </div>
+                   <div class="col-md-6">
+                       Card No. 
+                     <input id="cardNo" type="text" class="form-control" required>
+                     <div class="invalid-feedback">
+                       Card No required.
+                     </div>
+                   </div>
+                 
+                     <div class="col-md-2">
+                       Expiration date
+                     <div class="form-group">
+                         <div class="input-group date" id="datetimepicker4">
+                             <input type="text" class="form-control" readonly>
+                             <div class="input-group-addon input-group-prepend">
+                                 <span class="input-group-text"><i class="fas fa-calendar"></i></span>
+                             </div>
+                         </div>
+                     </div>
+                     </div>
+                 
+                   <div class="col-md-1">
+                     CVC
+                     <input id="expiration" type="password" class="form-control" required>
+                     <div class="invalid-feedback">
+                       CVV required.
+                     </div>
+                   </div>
+                   </div>
+                   <hr class="my-4">
+                   <button class='btn btn-primary btn-lg btn-block> Continue to checkout'> Continue to checkout</button>
+                 </div>
+               </div>
+               
+            </form>
+         </div>
+          
+          <script>
+              $(function () {
+                  $.extend(true, $.fn.datetimepicker.defaults, {
+                      icons: {
+                          time: 'far fa-clock',
+                          date: 'far fa-calendar',
+                          up: 'fas fa-arrow-up',
+                          down: 'fas fa-arrow-down',
+                          previous: 'fas fa-chevron-left',
+                          next: 'fas fa-chevron-right',
+                          today: 'far fa-calendar-check-o',
+                          clear: 'far fa-trash',
+                          close: 'far fa-times'
+                      }
+                  });
+              });
+              </script>
+              <script type="text/javascript">
+                  $(function () {
+                      $('#datetimepicker').datetimepicker({
+                        ignoreReadonly: true
+                      });
+                  });
+      
+                  $(function () {
+                      $('#datetimepicker1').datetimepicker({
+                        format: 'YYYY-MM-DD',
+                        ignoreReadonly: true
+                      });
+                  });
+      
+                  $(function () {
+                    var minDate = new Date();
+      
+                    minDate.setDate(minDate.getDate()-5); // set days - mean previous date from current date + mean future date from current date
+      
+                      $('#datetimepicker4').datetimepicker({
+                        format: 'YYYY-MM-DD',
+                        minDate: minDate,
+                        ignoreReadonly: true
+                      });
+                  });
+      
+                  $(function () {
+                    var minDate = new Date();
+                    var maxDate = new Date();
+      
+                    minDate.setDate(minDate.getDate()-5); // set days - mean previous date from current date + mean future date from current date
+                    maxDate.setDate(maxDate.getDate()+10);
+                      $('#datetimepicker5').datetimepicker({
+                        format: 'YYYY-MM-DD',
+                        minDate: minDate,
+                        maxDate: maxDate,
+                        ignoreReadonly: true
+                      });
+                  });
+      
+              </script>
         </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <!--------------- footer start here --------------->
     <footer>
 
