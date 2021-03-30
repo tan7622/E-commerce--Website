@@ -249,7 +249,7 @@ ul {
   height: 350px;
   background: url('./images/medFuze footer-01.png');
   -webkit-animation: backgroundScroll2 400s linear infinite;
-  animation: backgroundScroll2 30s linear infinite;
+  animation: backgroundScroll2 10s linear infinite;
   background-repeat: no-repeat;
   }
   
@@ -269,6 +269,7 @@ h2{
     left: 40%;
     text-align: left;
 }
+
 .email{
   height: 100px;
   width: 300px;

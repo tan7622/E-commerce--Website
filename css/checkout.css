@@ -6392,7 +6392,7 @@
   height: 350px;
   background: url('./images/medFuze footer-01.png');
   -webkit-animation: backgroundScroll2 400s linear infinite;
-  animation: backgroundScroll2 30s linear infinite;
+  animation: backgroundScroll2 10s linear infinite;
   background-repeat: no-repeat;
   }
   
