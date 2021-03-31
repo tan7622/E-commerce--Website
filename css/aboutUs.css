@@ -13,41 +13,113 @@
     text-align: center;
     overflow-x: hidden;
     transform-style: preserve-3d;
+    text-align: center;
   }
      /*--------------- Zoom out nav bar background --------------- */
 
    /*--------------- about us section starts here --------------- */
 
-   .absContainer{
-
-
-
-
-
-   }
+   .header{
+  
+    padding: top 60px;
+    color: #444;
+    font-size: 20px;
+    margin:auto;
+    line-height: 50px;
+  }
+  .header2{
+    
+    padding: top 60px;
+    color: #444;
+    font-size: 20px;
+    margin:auto;
+    line-height: 50px;
+  }
+  .sub-container{
+  
+    max-width: 1200px;
+    margin: auto;
+    padding:40px 0;
+    display: flex;
+    flex-wrap: wrap ;
+    justify-content: center;
+  }
+  .teams{
+  
+  margin: 10px;
+  padding:22px;
+  cursor: pointer;
+  transition: 0.4s;
+  box-sizing: border-box;
+  }
+  .teams:hover{
+  
+    background: #ddd;
+    border: 12px;
+  
+  }
+  desc{
+      width: 800px;
+      text-align: center;
+      position: relative;
+      left: 550px;
+  
+  
+  }
+  .teams img{
+  
+  width:200px;
+  height: 200px;
    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  }
+  .name{
+  
+  padding: 12px;
+  font-weight:bold;
+  font: size 16px;
+  text-transform: uppercase;
+  
+  }
+  .position{
+    font-style: italic;
+    color:#888;
+  }
+  .about{
+  
+    margin: 20px;
+    font-weight: lighter;
+    color: #4e4e4e;
+  }
+  .social-links{
+    margin: 14px;
+  }
+  .social-links a{
+  
+  display: inline-block;
+  height: 30px;
+  width: 40px;
+  transition: .10sec;
+  }
+  
+  .social-links a:hover{
+    transform: scale(2.0);
+  }
+  .social-links a i1{
+    color: #3b5998;
+  
+  }
+  .social-links a i2{
+    color: #b6004c;
+  
+  }
+  .social-links a i3{
+    color: #00aced;
+    
+  }
+  .social-links a i4{
+    color: #000;
+  
+  }
   /*--------------- about us section end here --------------- */
   
   
@@ -209,6 +281,5 @@
   }
   /*--------------- footer section ends here --------------- */
   
-     }
   
   
