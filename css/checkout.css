@@ -27,7 +27,6 @@
    }
    body {
      margin: 0;
-     font-family: sans-serif;
      font-size: 1rem;
      font-weight: 400;
      line-height: 1.5;
@@ -36,85 +35,8 @@
      -webkit-text-size-adjust: 100%;
      -webkit-tap-highlight-color: transparent;
    }
-   hr {
-     margin: 1rem 0;
-     color: inherit;
-     background-color: currentColor;
-     border: 0;
-     opacity: 0.25;
-   }
-   hr:not([size]) {
-     height: 1px;
-   }
-   .h1,
-   .h2,
-   .h3,
-   .h4,
-   .h5,
-   .h6,
-   h1,
-   h2,
-   h3,
-   h4,
-   h5,
-   h6 {
-     margin-top: 0;
-     margin-bottom: 0.5rem;
-     font-weight: 500;
-     line-height: 1.2;
-   }
-   .h1,
-   h1 {
-     font-size: calc(1.375rem + 1.5vw);
-   }
-   @media (min-width: 1200px) {
-     .h1,
-     h1 {
-       font-size: 2.5rem;
-     }
-   }
-   .h2,
-   h2 {
-     font-size: calc(1.325rem + 0.9vw);
-   }
-   @media (min-width: 1200px) {
-     .h2,
-     h2 {
-       font-size: 2rem;
-     }
-   }
-   .h3,
-   h3 {
-     font-size: calc(1.3rem + 0.6vw);
-   }
-   @media (min-width: 1200px) {
-     .h3,
-     h3 {
-       font-size: 1.75rem;
-     }
-   }
-   .h4,
-   h4 {
-     font-size: calc(1.275rem + 0.3vw);
-   }
-   @media (min-width: 1200px) {
-     .h4,
-     h4 {
-       font-size: 1.5rem;
-     }
-   }
-   .h5,
-   h5 {
-     font-size: 1.25rem;
-   }
-   .h6,
-   h6 {
-     font-size: 1rem;
-   }
-   p {
-     margin-top: 0;
-     margin-bottom: 1rem;
-   }
+  
+
    abbr[data-bs-original-title],
    abbr[title] {
      -webkit-text-decoration: underline dotted;
@@ -993,7 +915,7 @@
        flex: 0 0 auto;
        width: 100%;
      }
-   
+    }
    .form-control {
      display: block;
      width: 100%;
@@ -1506,7 +1428,7 @@
    .input-group-text {
      display: flex;
      align-items: center;
-     padding: 0.375rem 0.75rem;
+     padding: 0.675rem 0.75rem;
      font-size: 1rem;
      font-weight: 400;
      line-height: 1.5;
@@ -6345,38 +6267,79 @@
   
   
 /*--------------- footer section starts here --------------- */
- .horizontal-scroll1 {
+.horizontal-scroll {
   width: 100%;
   height: 350px;
   background: url('./images/medFuze footer-01.png');
-  -webkit-animation: backgroundScroll2 400s linear infinite;
-  animation: backgroundScroll2 10s linear infinite;
+  -webkit-animation: backgroundScroll 400s linear infinite;
+  animation: backgroundScroll 15s linear infinite;
   background-repeat: no-repeat;
   }
   
-  @-webkit-keyframes backgroundScroll2 {
+  @-webkit-keyframes backgroundScroll {
   from {background-position: -1000px 0;}
   to {background-position: 0 0;}
   }
           
-  @keyframes backgroundScroll2 {
+  @keyframes backgroundScroll {
   from {background-position: -2000px 0;}
   to {background-position: 0 0;}
   }
 
   
-h2{
+.text{
     position:initial;
     left: 40%;
     text-align: left;
+    font-weight: 400px;
+    text-transform: capitalize;
+    line-height: 3rem;
 }
+
 .email{
   height: 100px;
   width: 300px;
   position: absolute;
-  left: 20px ;
+  left: 60px ;
   }
-  
+
+  .ns-container{
+    background-size: cover;
+    padding:  20px 20px 20px 20px;
+    text-align: center;
+    color: white;
+  }
+
+.email-box{
+  height: 40px;
+  justify-content: center;
+  display: flex; 
+}
+.email-box i{
+  background: #2f3542;
+  width: 40px;
+  line-height: 40px;
+}
+.tbox,.btn{
+  border: none;
+  outline: none;
+}
+.tbox{
+  width: 0px;
+  transition: 0.6s;
+}
+.email-box:hover > .tbox,.tbox:focus{
+  width: 260px;
+  padding: 0 10px;
+}
+.btn{
+  background: #2f3542;
+  color: white;
+  padding: 0 10px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+ 
 .aboutus{
   height: 100px;
   width: 300px;
@@ -6499,6 +6462,3 @@ h2{
   }
 }
 /*--------------- footer section ends here --------------- */
-
-   }
-
