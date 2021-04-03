@@ -13,6 +13,16 @@
     overflow-x: hidden;
     transform-style: preserve-3d;
   }
+  ::-webkit-scrollbar{
+
+    width: 10px;
+  
+  }
+  ::-webkit-scrollbar-thumb{
+    background: #e2e2e2;
+    border-radius: 10px;
+  
+  }
      /*--------------- Zoom out nav bar background --------------- */
 
    /*--------------- contact section starts here --------------- */
