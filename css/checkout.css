@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-   /*--------------- Zoom out nav bar background --------------- */
+   /*--------------- Zoom out nav bar background start --------------- */
 .container1 {
   height: 1000px;
   width: 100%;
@@ -13,7 +13,7 @@
   overflow-x: hidden;
   transform-style: preserve-3d;
 }
-   /*--------------- Zoom out nav bar background --------------- */
+   /*--------------- Zoom out nav bar background end--------------- */
 
    *,
    ::after,

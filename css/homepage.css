@@ -15,6 +15,65 @@
   border-radius: 10px;
 
 }
+/*--------------- Splash start --------------- */
+.sH3{
+
+font-family: Arial, Helvetica, sans-serif;
+font-style: italic;
+font-weight: 700;
+
+}
+.splash{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 937px;
+  width: 1920px;
+  background-color: #f8f7ff;
+  font-size: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation-name: open;
+  animation-duration: 2s;
+  animation-delay: 3.5s;
+  animation-fill-mode: forwards;
+}
+.splash .img{
+  background-image: url("images/spashLogo.png");
+  background-repeat: no-repeat;
+  height: 130px;
+  width: 145px;
+ 
+}
+.splash::after, .splash::before{
+  content: "";
+  position: absolute;
+  background-color: #f8f7ff;
+  height: 937px;
+  width: 576px;
+  z-index: 99;
+  animation-name: open;
+  animation-fill-mode: forwards;
+  animation-duration: 2s;
+}
+.splash::after{
+  left: 576px;
+  animation-delay: 200ms;
+}
+.splash::before{
+  left: 0;
+  animation-delay: 2s;
+}
+@keyframes open{
+  0%{
+      transform: translate(0, 0);
+  }
+  100%{
+      transform: translate(100%, 0);
+  }
+}
+/*--------------- Splash end --------------- */
 
    /*--------------- Zoom out nav bar background --------------- */
 .container {
@@ -109,8 +168,31 @@ header {
 }
 
    /*--------------- Zoom In nav bar background --------------- */
+/* red pill */
+.pill1{
+  position: relative;
+  right: auto;  
+  left: 1400px;
+  top: auto;
+  bottom: 160px;
+  transform: rotate(100deg);
+  
+}
+
+
+/* blue pill */
+.pill2{ 
+  position: relative;
+  right: auto;
+  left: 980px;
+  top:auto;
+  bottom: 300px;
+  transform: rotate(60deg);
+
+}
 .overlay {
-  background-image: url("../res/medFuze_backgroud.png");
+  background-image: url("../res/medFuze\ background2.png");
+  background-repeat: no-repeat;
   background-size: 1680px ;
   position: absolute;
   width: 100%;
