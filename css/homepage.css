@@ -174,11 +174,13 @@ header {
   right: auto;  
   left: 1400px;
   top: auto;
-  bottom: 160px;
+  bottom: 180px;
+  box-sizing: border-box;
   transform: rotate(160deg);
+  animation: float1 6s ease-in-out infinite;
+
   
 }
-
 
 /* blue pill */
 .pill2{ 
@@ -187,9 +189,112 @@ header {
   left: 980px;
   top:auto;
   bottom: 300px;
+  box-sizing: border-box;
   transform: rotate(60deg);
+  animation: float2 6s ease-in-out infinite;
+  
 
 }
+@keyframes float1{
+
+  0%{
+  transform: translatey(0px);
+
+  }
+  50%{
+    transform: translatey(-30px);
+    transform: scalex(1.4);
+  
+    }
+  100%{
+
+    transform: translatey(0px);
+  
+    }
+
+}
+@keyframes float2{
+
+  0%{
+ 
+  transform: translatey(0px);
+
+
+  }
+  50%{
+    
+    transform: translatey(-20px);
+    transform: scalex(1.4);
+  
+    }
+  100%{
+    
+    transform: translatey(0px);
+  
+    }
+
+}
+
+
+/* 360 rotate */
+
+/* @keyframes float1{
+
+  0%{
+  box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.6) ;
+
+  transform: rotate(360deg);
+
+  }
+  50%{
+    box-shadow: 0px 25px 15px 0px rgba(0, 0, 0, 0.2) ;
+
+    transform: rotate(0deg);
+    
+  
+    }
+  100%{
+    box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.6) ;
+   
+    transform: rotate(360deg);
+  
+  
+    }
+
+
+}
+
+@keyframes float2{
+
+  0%{
+  box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.6) ;
+ 
+  transform: rotate(360deg);
+
+  }
+  50%{
+    box-shadow: 0px 25px 15px 0px rgba(0, 0, 0, 0.2) ;
+    
+    transform: rotate(0deg);
+    
+  
+    }
+  100%{
+    box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.6) ;
+   
+    transform: rotate(360deg);
+  
+  
+    }
+
+
+}
+ */
+
+
+
+
+
 .overlay {
   background-image: url("../res/medFuze\ background2.png");
   background-repeat: no-repeat;
