@@ -381,6 +381,7 @@ ul {
   list-style: none;
 }
 
+
 .links a {
   text-decoration: none;
   color:#0a1128;
@@ -515,9 +516,15 @@ ul {
   left: 840px ;
 
 }
+
+.customerS li :hover{
+  color: black;
+  text-decoration: none;
+}
+
 .customerS li{
   position:relative; 
-  left:60px;
+  left: 5px;
 
 }
 .socialMedia-icons{
