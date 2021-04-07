@@ -178,9 +178,7 @@ header {
   top: auto;
   bottom: 180px;
   box-sizing: border-box;
-  transform: rotate(160deg);
   animation: float1 6s ease-in-out infinite;
-
   
 }
 
@@ -192,7 +190,6 @@ header {
   top:auto;
   bottom: 300px;
   box-sizing: border-box;
-  transform: rotate(60deg);
   animation: float2 6s ease-in-out infinite;
   
 
@@ -200,18 +197,14 @@ header {
 @keyframes float1{
 
   0%{
-  transform: translatey(0px);
-
+    transform: translatey(0px);
   }
-  50%{
-    transform: translatey(-30px);
-    transform: scalex(1.4);
-  
+  25%{
+    transform: translatey(-90px) rotate(30deg);
     }
   100%{
 
     transform: translatey(0px);
-  
     }
 
 }
@@ -221,14 +214,12 @@ header {
  
   transform: translatey(0px);
 
-
   }
   50%{
     
-    transform: translatey(-20px);
-    transform: scalex(1.4);
+    transform: translatey(-40px) rotate(-15deg);
   
-    }
+  }
   100%{
     
     transform: translatey(0px);
