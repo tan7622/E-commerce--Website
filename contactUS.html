@@ -14,33 +14,71 @@
     <script src="js/checkout.js"></script>
   </head>
   <body>
+
+
+
     <div class="container">
-            <div class="contact-section">
-              <div class="inner-width">
-                <h1>Get in touch with us</h1>
-                <input type="text" class="details" placeholder="Name">
-                <input type="text"class="details" placeholder="Email">
-                <input type="number" class="details" placeholder="Phone No.">
-                <textarea rows="1" placeholder="Message" class="message"></textarea>
-                <button class="button" onclick="alertFunction()" >Submit</button>
-                <script>
-                    function alertFunction(){
-                    alert("Thanks for contacting us!");
-                    window.location.href ="homepage.html";
-                }
-                </script>
-                <form action="homepage.html">
-                    <button class="button2" onclick="homepage.html" >Cancel</button>
-                </form>
-              </div>
-            </div>
-          </body>
-        </html>
-        
+      <div class="navbar">
+        <div class="menu">
+          <a href="homepage.html"><img class="logo" src="./css/images/medFuze_Logo.png"></img></a>
 
-
-
+          <div class="hamburger-menu">
+            <div class="bar"></div>
+          </div>
+        </div>
       </div>
+
+      <div class="main-container">
+        <div class="main">
+        <header>
+        <div class="contact-section">
+          <div class="inner-width">
+            <h1>Get in touch with us</h1>
+            <input type="text" class="details" placeholder="Name">
+            <input type="text"class="details" placeholder="Email">
+            <input type="number" class="details" placeholder="Phone No.">
+            <textarea rows="1" placeholder="Message" class="message"></textarea>
+            <button class="button" onclick="alertFunction()" >Submit</button>
+            <script>
+                function alertFunction(){
+                alert("Thanks for contacting us!");
+                window.location.href ="homepage.html";
+            }
+            </script>
+            <form action="homepage.html">
+                <button class="button2" onclick="homepage.html" >Cancel</button>
+            </form>
+          </div>
+        </div>
+        
+          
+          </header>
+          <div class="shadow one"></div>
+        </div>
+        </div>
+      
+      
+      <div class="links">
+        <ul>
+          <li>
+            <a href="homepage.html" style="--i: 0.05s;">Home</a>
+          </li>
+          <li>
+            <a href="catalogue.html" style="--i: 0.1s;">Catalogue</a>
+          </li>
+          <li>
+            <a href="shoppingCart.html" style="--i: 0.15s;">Shopping Cart </a>
+          <li>
+            <a href="trackOrder.html" style="--i: 0.25s;">Track Order </a>
+          </li>
+          <li>
+            <a href="contactUS.html" style="--i: 0.25s;">Contact us </a>
+          </li>
+         
+        </ul>
+      </div>
+    </div>
+    <script src="js/homepage.js"></script>
     <!--------------- footer start here --------------->
     <footer>
 
@@ -73,12 +111,11 @@
             <h2>Customer service</h2>
           <br>
           <ul >
-            <li><a href="contactUS.html" >Contact Us</a></li>
+            <li><a href="aboutUs.html">About Us</a></li>
             <br>
-            <li><a href="aboutUs.html" >About Us</a></li>
+            <li><a href="contactUS.html">Contact Us</a></li>
             <br>
-            <li><a href="#" >Site Map</a></li>
-
+            <li><a href="#">Site Map</a></li>
            </ul>
         </div>
           <div class="socialMedia-icons">
@@ -93,7 +130,6 @@
               </ul>
           </div>
         </div>
-   
      </footer>
                  <!--------------- footer ends here ------------->
   </body>

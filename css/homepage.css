@@ -5,25 +5,29 @@
   margin: 0;
   box-sizing: border-box;
 }
-::-webkit-scrollbar{
+
+::-webkit-scrollbar {
 
   width: 10px;
 
 }
-::-webkit-scrollbar-thumb{
+
+::-webkit-scrollbar-thumb {
   background: #e2e2e2;
   border-radius: 10px;
 
 }
-/*--------------- Splash start --------------- */
-.sH3{
 
-font-family: Arial, Helvetica, sans-serif;
-font-style: italic;
-font-weight: 700;
+/*--------------- Splash start --------------- */
+.sH3 {
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: italic;
+  font-weight: 700;
 
 }
-.splash{
+
+.splash {
   position: fixed;
   top: 0;
   left: 0;
@@ -39,15 +43,18 @@ font-weight: 700;
   animation-delay: 3.5s;
   animation-fill-mode: forwards;
 }
-.splash .img{
+
+.splash .img {
   background-image: url("images/spashLogo.png");
   background-repeat: no-repeat;
   height: 130px;
   width: 145px;
 
- 
+
 }
-.splash::after, .splash::before{
+
+.splash::after,
+.splash::before {
   content: "";
   position: absolute;
   background-color: #f8f7ff;
@@ -58,25 +65,30 @@ font-weight: 700;
   animation-fill-mode: forwards;
   animation-duration: 2s;
 }
-.splash::after{
+
+.splash::after {
   left: 576px;
   animation-delay: 200ms;
 }
-.splash::before{
+
+.splash::before {
   left: 0;
   animation-delay: 2s;
 }
-@keyframes open{
-  0%{
-      transform: translate(0, 0);
+
+@keyframes open {
+  0% {
+    transform: translate(0, 0);
   }
-  100%{
-      transform: translate(100%, 0);
+
+  100% {
+    transform: translate(100%, 0);
   }
 }
+
 /*--------------- Splash end --------------- */
 
-   /*--------------- Zoom out nav bar background --------------- */
+/*--------------- Zoom out nav bar background --------------- */
 .container {
   min-height: 100vh;
   width: 100%;
@@ -85,7 +97,8 @@ font-weight: 700;
   overflow-x: hidden;
   transform-style: preserve-3d;
 }
-   /*--------------- Zoom out nav bar background --------------- */
+
+/*--------------- Zoom out nav bar background --------------- */
 
 .navbar {
   position: fixed;
@@ -109,8 +122,8 @@ font-weight: 700;
 
 .logo {
   height: 50px;
-  width:  50px;
-  position:relative;
+  width: 50px;
+  position: relative;
   right: 180px;
 
 }
@@ -169,62 +182,68 @@ header {
   position: relative;
 }
 
-   /*--------------- Zoom In nav bar background --------------- */
+/*--------------- Zoom In nav bar background --------------- */
 /* red pill */
-.pill1{
+.pill1 {
   position: relative;
-  right: auto;  
+  right: auto;
   left: 1400px;
   top: auto;
   bottom: 180px;
   box-sizing: border-box;
   animation: float1 6s ease-in-out infinite;
-  
+
 }
 
 /* blue pill */
-.pill2{ 
+.pill2 {
   position: relative;
   right: auto;
   left: 980px;
-  top:auto;
+  top: auto;
   bottom: 300px;
   box-sizing: border-box;
   animation: float2 6s ease-in-out infinite;
-  
+
 
 }
-@keyframes float1{
 
-  0%{
+@keyframes float1 {
+
+  0% {
     transform: translatey(0px);
   }
-  25%{
+
+  25% {
     transform: translatey(-90px) rotate(30deg);
-    }
-  100%{
+  }
+
+  100% {
 
     transform: translatey(0px);
-    }
+  }
 
 }
-@keyframes float2{
 
-  0%{
- 
-  transform: translatey(0px);
+@keyframes float2 {
 
-  }
-  50%{
-    
-    transform: translatey(-40px) rotate(-15deg);
-  
-  }
-  100%{
-    
+  0% {
+
     transform: translatey(0px);
-  
-    }
+
+  }
+
+  50% {
+
+    transform: translatey(-40px) rotate(-15deg);
+
+  }
+
+  100% {
+
+    transform: translatey(0px);
+
+  }
 
 }
 
@@ -291,7 +310,7 @@ header {
 .overlay {
   background-image: url("../res/medFuze_background.png");
   background-repeat: no-repeat;
-  background-size: 1680px ;
+  background-size: 1680px;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -300,6 +319,7 @@ header {
   display: flex;
   align-items: center;
 }
+
 .shadow {
   position: absolute;
   width: 100%;
@@ -322,9 +342,9 @@ header {
   transform: perspective(1300px) rotateY(5deg) translateZ(360px) scale(0.5);
 }
 
- /*--------------- Card start here --------------- */
+/*--------------- Card start here --------------- */
 
-.mainContent{
+.mainContent {
 
   font-family: Arial, Helvetica, sans-serif;
   font-style: italic;
@@ -333,27 +353,30 @@ header {
 
 
 }
- .textContent1{
+
+.textContent1 {
   font-size: 21px;
-  width: 350px ;
+  width: 350px;
   position: relative;
   left: 40px;
   top: 50px;
 
 }
-.main-container button{
+
+.main-container button {
 
   position: absolute;
   top: 65%;
   left: 13%;
-  transform:translate(-50%,-40% );
+  transform: translate(-50%, -40%);
 }
-.main-container button{
+
+.main-container button {
 
   background: none;
   text-transform: uppercase;
   color: #1f271b;
-  width: 220px; 
+  width: 220px;
   height: 60px;
   border: 3px solid #fff;
   font-size: 18px;
@@ -361,11 +384,13 @@ header {
   transition: .6s;
   overflow: hidden;
 }
-.main-container button:focus{
 
-  outline:none;
+.main-container button:focus {
+
+  outline: none;
 }
-.main-container button:before{
+
+.main-container button:before {
 
   content: '';
   display: block;
@@ -374,12 +399,13 @@ header {
   width: 60px;
   height: 100%;
   left: 0;
-  top:0;
+  top: 0;
   opacity: .5s;
   filter: blur(30px);
-  transform:translateX(-130px) skeX(-15deg);
+  transform: translateX(-130px) skeX(-15deg);
 }
-.main-container button:after{
+
+.main-container button:after {
 
   content: '';
   display: block;
@@ -388,36 +414,38 @@ header {
   width: 30px;
   height: 100%;
   left: 30px;
-  top:0px;
+  top: 0px;
   opacity: 0;
   filter: blur(30px);
   transform: translate(-100px) scaleX(-15deg);
 
 }
 
-.main-container button:hover{
+.main-container button:hover {
 
   background: #edf2fb;
   cursor: pointer;
 
 }
-.main-container button:hover::before{
 
-transform: translateX(300px) skewX(-15px);
-opacity:1;
-transition: .7s;
+.main-container button:hover::before {
+
+  transform: translateX(300px) skewX(-15px);
+  opacity: 1;
+  transition: .7s;
 
 }
 
 
-  /*--------------- Card end here --------------- */
+/*--------------- Card end here --------------- */
 
 
 
-  /*--------------- Zoom In nav bar background --------------- */
+/*--------------- Zoom In nav bar background --------------- */
 
 .title {
-  font-size: 2.7rem; /*Font size root element */
+  font-size: 2.7rem;
+  /*Font size root element */
 }
 
 .container.active .bar {
@@ -468,7 +496,7 @@ ul {
 
 .links a {
   text-decoration: none;
-  color:#0a1128;
+  color: #0a1128;
   padding: 0.7rem 0;
   display: inline-block;
   font-size: 1rem;
@@ -494,6 +522,7 @@ ul {
     opacity: 0;
     transform: translateY(10px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0px);
@@ -505,6 +534,7 @@ ul {
     opacity: 1;
     transform: translateY(0px);
   }
+
   to {
     opacity: 0;
     transform: translateY(10px);
@@ -513,208 +543,223 @@ ul {
 
 
 /*--------------- footer section starts here --------------- */
-  .horizontal-scroll {
+.horizontal-scroll {
   width: 100%;
   height: 350px;
   background: url('./images/medFuze footer-01.png');
   -webkit-animation: backgroundScroll 400s linear infinite;
   animation: backgroundScroll 15s linear infinite;
   background-repeat: no-repeat;
-  }
-  
-  @-webkit-keyframes backgroundScroll {
-  from {background-position: -1000px 0;}
-  to {background-position: 0 0;}
-  }
-          
-  @keyframes backgroundScroll {
-  from {background-position: -2000px 0;}
-  to {background-position: 0 0;}
-  }
-
-  
-.text{
-    position:initial;
-    left: 40%;
-    text-align: left;
-    font-weight: 400px;
-    text-transform: capitalize;
-    line-height: 3rem;
 }
 
-.email{
+@-webkit-keyframes backgroundScroll {
+  from {
+    background-position: -1000px 0;
+  }
+
+  to {
+    background-position: 0 0;
+  }
+}
+
+@keyframes backgroundScroll {
+  from {
+    background-position: -2000px 0;
+  }
+
+  to {
+    background-position: 0 0;
+  }
+}
+
+
+.text {
+  position: initial;
+  left: 40%;
+  text-align: left;
+  font-weight: 400px;
+  text-transform: capitalize;
+  line-height: 3rem;
+}
+
+.email {
   height: 100px;
   width: 300px;
   position: absolute;
-  left: 60px ;
-  }
+  left: 60px;
+}
 
-  .ns-container{
-    background-size: cover;
-    padding:  20px 20px 20px 20px;
-    text-align: center;
-    color: white;
-  }
+.ns-container {
+  background-size: cover;
+  padding: 20px 20px 20px 20px;
+  text-align: center;
+  color: white;
+}
 
-.email-box{
+.email-box {
   height: 40px;
   justify-content: center;
-  display: flex; 
+  display: flex;
 }
-.email-box i{
+
+.email-box i {
   background: #2f3542;
   width: 40px;
   line-height: 40px;
 }
-.tbox,.btn{
+
+.tbox,
+.btn {
   border: none;
   outline: none;
 }
-.tbox{
+
+.tbox {
   width: 0px;
   transition: 0.6s;
 }
-.email-box:hover > .tbox,.tbox:focus{
+
+.email-box:hover>.tbox,
+.tbox:focus {
   width: 260px;
   padding: 0 10px;
 }
-.btn{
+
+.btn {
   background: #2f3542;
   color: white;
   padding: 0 10px;
   text-transform: uppercase;
   cursor: pointer;
 }
- 
-.aboutus{
+
+.aboutus {
   height: 100px;
   width: 300px;
   position: absolute;
-  left: 440px ;
-  }
-  
-.customerS{
+  left: 440px;
+}
+
+.customerS {
   height: 100px;
   width: 250px;
   position: absolute;
-  left: 840px ;
+  left: 840px;
 
 }
 
-.customerS li :hover{
+.customerS li :hover {
   color: black;
   text-decoration: none;
 }
 
-.customerS li{
-  position:relative; 
+.customerS li {
+  position: relative;
   left: 5px;
 
 }
-.socialMedia-icons{
+
+.socialMedia-icons {
 
   height: 100px;
   width: 250px;
   position: absolute;
-  left: 1130px ;
+  left: 1130px;
 
 }
-.site-footer .icons
-{
-  text-align:left;
-}
-.site-footer .icons a
-{
-  width:40px;
-  height:40px;
-  line-height:40px;
-  margin-left:6px;
-  margin-right:20px;
-  border-radius:100%;
-  background-color:#33353d
+
+.site-footer .icons {
+  text-align: left;
 }
 
-@media (max-width:991px)
-{
-  .site-footer [class^=col-]
-  {
-    margin-bottom:30px
+.site-footer .icons a {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  margin-left: 6px;
+  margin-right: 20px;
+  border-radius: 100%;
+  background-color: #33353d
+}
+
+@media (max-width:991px) {
+  .site-footer [class^=col-] {
+    margin-bottom: 30px
   }
 }
 
-.icons
-{
-  padding-left:0;
-  margin-bottom:0;
-  list-style:none
-}
-.icons li
-{
-  display:inline-block;
-  margin-bottom:4px
-}
-.icons li.title
-{
-  margin-right:15px;
-  text-transform:uppercase;
-  color:#96a2b2;
-  font-weight:700;
-  font-size:13px
-}
-.icons a{
-  background-color:#eceeef;
-  color:#818a91;
-  font-size:16px;
-  display:inline-block;
-  line-height:44px;
-  width:44px;
-  height:44px;
-  text-align:center;
-  margin-right:8px;
-  border-radius:100%;
-  -webkit-transition:all .2s linear;
-  -o-transition:all .2s linear;
-  transition:all .2s linear
-}
-.icons a:active,.icons a:focus,.icons a:hover{
-
-  color:#fff;
-  background-color:#29aafe;
+.icons {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none
 }
 
-.icons.size-sm a
-{
-  line-height:34px;
-  height:34px;
-  width:34px;
-  font-size:14px
+.icons li {
+  display: inline-block;
+  margin-bottom: 4px
 }
-.icons a.facebook:hover
-{
-  background-color:#3b5998
+
+.icons li.title {
+  margin-right: 15px;
+  text-transform: uppercase;
+  color: #96a2b2;
+  font-weight: 700;
+  font-size: 13px
 }
-.icons a.twitter:hover
-{
-  background-color:#00aced
+
+.icons a {
+  background-color: #eceeef;
+  color: #818a91;
+  font-size: 16px;
+  display: inline-block;
+  line-height: 44px;
+  width: 44px;
+  height: 44px;
+  text-align: center;
+  margin-right: 8px;
+  border-radius: 100%;
+  -webkit-transition: all .2s linear;
+  -o-transition: all .2s linear;
+  transition: all .2s linear
 }
-.icons a.instagram:hover
-{
-  background-color:#b6004c
+
+.icons a:active,
+.icons a:focus,
+.icons a:hover {
+
+  color: #fff;
+  background-color: #29aafe;
 }
-.icons a.youtube:hover
-{
-  background-color:#fa0404
+
+.icons.size-sm a {
+  line-height: 34px;
+  height: 34px;
+  width: 34px;
+  font-size: 14px
 }
-@media (max-width:767px)
-{
-  .icons li.title
-  {
-    display:block;
-    margin-right:0;
-    font-weight:600
+
+.icons a.facebook:hover {
+  background-color: #3b5998
+}
+
+.icons a.twitter:hover {
+  background-color: #00aced
+}
+
+.icons a.instagram:hover {
+  background-color: #b6004c
+}
+
+.icons a.youtube:hover {
+  background-color: #fa0404
+}
+
+@media (max-width:767px) {
+  .icons li.title {
+    display: block;
+    margin-right: 0;
+    font-weight: 600
   }
 }
+
 /*--------------- footer section ends here --------------- */
-
-
-

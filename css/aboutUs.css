@@ -1,141 +1,160 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
-  
-     /*--------------- Zoom out nav bar background --------------- */
-  .container {
-    height: 1000px;
-    width: 100%;
-    background-color: #caf0f8;               
-    background-image: linear-gradient(135deg, #e8feff 0%, #caf0f8 74%);
-    text-align: center;
-    overflow-x: hidden;
-    transform-style: preserve-3d;
-    text-align: center;
-  }
-  ::-webkit-scrollbar{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 
-    width: 10px;
-  
-  }
-  ::-webkit-scrollbar-thumb{
-    background: #e2e2e2;
-    border-radius: 10px;
-  
-  }
-     /*--------------- Zoom out nav bar background --------------- */
+/*--------------- Zoom out nav bar background --------------- */
+.container {
+  height: 1000px;
+  width: 100%;
+  background-color: #caf0f8;
+  background-image: linear-gradient(135deg, #e8feff 0%, #caf0f8 74%);
+  text-align: center;
+  overflow-x: hidden;
+  transform-style: preserve-3d;
+  text-align: center;
+}
 
-   /*--------------- about us section starts here --------------- */
+::-webkit-scrollbar {
 
-   .header{
-  
-    padding: top 60px;
-    color: #444;
-    font-size: 20px;
-    margin:auto;
-    line-height: 50px;
-  }
-  .header2{
-    
-    padding: top 60px;
-    color: #444;
-    font-size: 20px;
-    margin:auto;
-    line-height: 50px;
-  }
-  .sub-container{
-  
-    max-width: 1200px;
-    margin: auto;
-    padding:40px 0;
-    display: flex;
-    flex-wrap: wrap ;
-    justify-content: center;
-  }
-  .teams{
-  
+  width: 10px;
+
+}
+
+::-webkit-scrollbar-thumb {
+  background: #e2e2e2;
+  border-radius: 10px;
+
+}
+
+/*--------------- Zoom out nav bar background --------------- */
+
+/*--------------- about us section starts here --------------- */
+
+.header {
+
+  padding: top 60px;
+  color: #444;
+  font-size: 20px;
+  margin: auto;
+  line-height: 50px;
+}
+
+.header2 {
+
+  padding: top 60px;
+  color: #444;
+  font-size: 20px;
+  margin: auto;
+  line-height: 50px;
+}
+
+.sub-container {
+
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.teams {
+
   margin: 10px;
-  padding:22px;
+  padding: 22px;
   cursor: pointer;
   transition: 0.4s;
   box-sizing: border-box;
-  }
-  .teams:hover{
-  
-    background: #ddd;
-    border: 12px;
-  
-  }
-  desc{
-      width: 800px;
-      text-align: center;
-      position: relative;
-      left: 550px;
-  
-  
-  }
-  .teams img{
-  
-  width:200px;
+}
+
+.teams:hover {
+
+  background: #ddd;
+  border: 12px;
+
+}
+
+desc {
+  width: 800px;
+  text-align: center;
+  position: relative;
+  left: 550px;
+
+
+}
+
+.teams img {
+
+  width: 200px;
   height: 200px;
-   
-  }
-  .name{
-  
+
+}
+
+.name {
+
   padding: 12px;
-  font-weight:bold;
+  font-weight: bold;
   font: size 16px;
   text-transform: uppercase;
-  
-  }
-  .position{
-    font-style: italic;
-    color:#888;
-  }
-  .about{
-  
-    margin: 20px;
-    font-weight: lighter;
-    color: #4e4e4e;
-  }
-  .social-links{
-    margin: 14px;
-  }
-  .social-links a{
-  
+
+}
+
+.position {
+  font-style: italic;
+  color: #888;
+}
+
+.about {
+
+  margin: 20px;
+  font-weight: lighter;
+  color: #4e4e4e;
+}
+
+.social-links {
+  margin: 14px;
+}
+
+.social-links a {
+
   display: inline-block;
   height: 30px;
   width: 40px;
   transition: .10sec;
-  }
-  
-  .social-links a:hover{
-    transform: scale(2.0);
-  }
-  .social-links a i1{
-    color: #3b5998;
-  
-  }
-  .social-links a i2{
-    color: #b6004c;
-  
-  }
-  .social-links a i3{
-    color: #00aced;
-    
-  }
-  .social-links a i4{
-    color: #000;
-  
-  }
-  /*--------------- about us section end here --------------- */
-  
-  
-  
-  /*--------------- footer section starts here --------------- */
- 
+}
+
+.social-links a:hover {
+  transform: scale(2.0);
+}
+
+.social-links a i1 {
+  color: #3b5998;
+
+}
+
+.social-links a i2 {
+  color: #b6004c;
+
+}
+
+.social-links a i3 {
+  color: #00aced;
+
+}
+
+.social-links a i4 {
+  color: #000;
+
+}
+
+/*--------------- about us section end here --------------- */
+
+
+
+/*--------------- footer section starts here --------------- */
+
 .horizontal-scroll {
   width: 100%;
   height: 350px;
@@ -143,200 +162,215 @@
   -webkit-animation: backgroundScroll 400s linear infinite;
   animation: backgroundScroll 10s linear infinite;
   background-repeat: no-repeat;
-  }
-  
-  @-webkit-keyframes backgroundScroll {
-  from {background-position: -1000px 0;}
-  to {background-position: 0 0;}
-  }
-          
-  @keyframes backgroundScroll {
-  from {background-position: -2000px 0;}
-  to {background-position: 0 0;}
+}
+
+@-webkit-keyframes backgroundScroll {
+  from {
+    background-position: -1000px 0;
   }
 
-    
-  h2{
-      position:initial;
-      left: 40%;
-      text-align: left;
+  to {
+    background-position: 0 0;
+  }
+}
+
+@keyframes backgroundScroll {
+  from {
+    background-position: -2000px 0;
   }
 
-  ul{
-    list-style:none;
+  to {
+    background-position: 0 0;
   }
+}
 
-.email{
+
+h2 {
+  position: initial;
+  left: 40%;
+  text-align: left;
+}
+
+ul {
+  list-style: none;
+}
+
+.email {
   height: 100px;
   width: 300px;
   position: absolute;
-  left: 60px ;
-  }
+  left: 60px;
+}
 
-  .ns-container{
-    background-size: cover;
-    padding:  20px 20px 20px 20px;
-    text-align: center;
-    color: white;
-  }
-  
-  .email-box{
-    height: 40px;
-    justify-content: center;
-    display: flex; 
-  }
-  .email-box i{
-    background: #2f3542;
-    width: 40px;
-    line-height: 40px;
-  }
-  .tbox,.btn{
-    border: none;
-    outline: none;
-  }
-  .tbox{
-    width: 0px;
-    transition: 0.6s;
-  }
-  .email-box:hover > .tbox,.tbox:focus{
-    width: 260px;
-    padding: 0 10px;
-  }
-  .btn{
-    background: #2f3542;
-    color: white;
-    padding: 0 10px;
-    text-transform: uppercase;
-    cursor: pointer;
-  }
-   
-  .aboutus{
-    height: 100px;
-    width: 300px;
-    position: absolute;
-    left: 440px ;
-    }
-    
-  .customerS{
-    height: 100px;
-    width: 250px;
-    position: absolute;
-    left: 840px ;
-  
-  }
-  .customerS li  :hover{
-    color: black;
-    text-decoration: none;
-  }
+.ns-container {
+  background-size: cover;
+  padding: 20px 20px 20px 20px;
+  text-align: center;
+  color: white;
+}
 
-  .customerS li{
-    position:relative; 
-    left:5px;
+.email-box {
+  height: 40px;
+  justify-content: center;
+  display: flex;
+}
+
+.email-box i {
+  background: #2f3542;
+  width: 40px;
+  line-height: 40px;
+}
+
+.tbox,
+.btn {
+  border: none;
+  outline: none;
+}
+
+.tbox {
+  width: 0px;
+  transition: 0.6s;
+}
+
+.email-box:hover>.tbox,
+.tbox:focus {
+  width: 260px;
+  padding: 0 10px;
+}
+
+.btn {
+  background: #2f3542;
+  color: white;
+  padding: 0 10px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.aboutus {
+  height: 100px;
+  width: 300px;
+  position: absolute;
+  left: 440px;
+}
+
+.customerS {
+  height: 100px;
+  width: 250px;
+  position: absolute;
+  left: 840px;
+
+}
+
+.customerS li :hover {
+  color: black;
+  text-decoration: none;
+}
+
+.customerS li {
+  position: relative;
+  left: 5px;
+}
+
+.socialMedia-icons {
+
+  height: 100px;
+  width: 250px;
+  position: absolute;
+  left: 1130px;
+
+}
+
+.site-footer .icons {
+  text-align: left;
+}
+
+.site-footer .icons a {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  margin-left: 6px;
+  margin-right: 20px;
+  border-radius: 100%;
+  background-color: #33353d
+}
+
+@media (max-width:991px) {
+  .site-footer [class^=col-] {
+    margin-bottom: 30px
   }
-  
-  .socialMedia-icons{
-  
-    height: 100px;
-    width: 250px;
-    position: absolute;
-    left: 1130px ;
-  
+}
+
+.icons {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none
+}
+
+.icons li {
+  display: inline-block;
+  margin-bottom: 4px
+}
+
+.icons li.title {
+  margin-right: 15px;
+  text-transform: uppercase;
+  color: #96a2b2;
+  font-weight: 700;
+  font-size: 13px
+}
+
+.icons a {
+  background-color: #eceeef;
+  color: #818a91;
+  font-size: 16px;
+  display: inline-block;
+  line-height: 44px;
+  width: 44px;
+  height: 44px;
+  text-align: center;
+  margin-right: 8px;
+  border-radius: 100%;
+  -webkit-transition: all .2s linear;
+  -o-transition: all .2s linear;
+  transition: all .2s linear
+}
+
+.icons a:active,
+.icons a:focus,
+.icons a:hover {
+  color: #fff;
+  background-color: #29aafe
+}
+
+.icons.size-sm a {
+  line-height: 34px;
+  height: 34px;
+  width: 34px;
+  font-size: 14px
+}
+
+.icons a.facebook:hover {
+  background-color: #3b5998
+}
+
+.icons a.twitter:hover {
+  background-color: #00aced
+}
+
+.icons a.instagram:hover {
+  background-color: #b6004c
+}
+
+.icons a.youtube:hover {
+  background-color: #fa0404
+}
+
+@media (max-width:767px) {
+  .icons li.title {
+    display: block;
+    margin-right: 0;
+    font-weight: 600
   }
-  .site-footer .icons
-  {
-    text-align:left;
-  }
-  .site-footer .icons a
-  {
-    width:40px;
-    height:40px;
-    line-height:40px;
-    margin-left:6px;
-    margin-right:20px;
-    border-radius:100%;
-    background-color:#33353d
-  }
-  
-  @media (max-width:991px)
-  {
-    .site-footer [class^=col-]
-    {
-      margin-bottom:30px
-    }
-  }
-  
-  .icons
-  {
-    padding-left:0;
-    margin-bottom:0;
-    list-style:none
-  }
-  .icons li
-  {
-    display:inline-block;
-    margin-bottom:4px
-  }
-  .icons li.title
-  {
-    margin-right:15px;
-    text-transform:uppercase;
-    color:#96a2b2;
-    font-weight:700;
-    font-size:13px
-  }
-  .icons a{
-    background-color:#eceeef;
-    color:#818a91;
-    font-size:16px;
-    display:inline-block;
-    line-height:44px;
-    width:44px;
-    height:44px;
-    text-align:center;
-    margin-right:8px;
-    border-radius:100%;
-    -webkit-transition:all .2s linear;
-    -o-transition:all .2s linear;
-    transition:all .2s linear
-  }
-  .icons a:active,.icons a:focus,.icons a:hover
-  {
-    color:#fff;
-    background-color:#29aafe
-  }
-  .icons.size-sm a
-  {
-    line-height:34px;
-    height:34px;
-    width:34px;
-    font-size:14px
-  }
-  .icons a.facebook:hover
-  {
-    background-color:#3b5998
-  }
-  .icons a.twitter:hover
-  {
-    background-color:#00aced
-  }
-  .icons a.instagram:hover
-  {
-    background-color:#b6004c
-  }
-  .icons a.youtube:hover
-  {
-    background-color:#fa0404
-  }
-  @media (max-width:767px)
-  {
-    .icons li.title
-    {
-      display:block;
-      margin-right:0;
-      font-weight:600
-    }
-  }
-  /*--------------- footer section ends here --------------- */
-  
-  
-  
+}
+
+/*--------------- footer section ends here --------------- */
