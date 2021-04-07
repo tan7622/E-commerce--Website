@@ -42,8 +42,9 @@ font-weight: 700;
 .splash .img{
   background-image: url("images/spashLogo.png");
   background-repeat: no-repeat;
-  height: 130px;
-  width: 145px;
+  /* height: 130px;
+  width: 145px; */
+
  
 }
 .splash::after, .splash::before{
@@ -107,9 +108,10 @@ font-weight: 700;
 }
 
 .logo {
-
-position:relative;
-right: 180px;
+  height: 50px;
+  width:  50px;
+  position:relative;
+  right: 180px;
 
 }
 
@@ -296,7 +298,7 @@ header {
 
 
 .overlay {
-  background-image: url("../res/medFuze\ background2.png");
+  background-image: url("../res/medFuze_background.png");
   background-repeat: no-repeat;
   background-size: 1680px ;
   position: absolute;
@@ -328,6 +330,124 @@ header {
   animation: shadow-two 0.6s ease-out;
   transform: perspective(1300px) rotateY(5deg) translateZ(360px) scale(0.5);
 }
+
+ /*--------------- Card start here --------------- */
+
+ .textContent{
+  width: 350px ;
+  position: relative;
+  left: 500px;
+  bottom: 500px;
+
+}
+.card1{
+  width:300px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
+  padding: 20px;
+  grid-gap: 40px;
+  position: relative;
+  top: 50px;
+  right: 0px;
+}
+.card2{
+  width:300px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
+  padding: 20px;
+  grid-gap: 40px;
+  position: relative;
+  top: 25px;
+  left: 450px;
+}
+.card{
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.18);
+}
+.cardContainer{
+  width: 1000px;
+  position: relative;
+ 
+}
+.cardContainer img{
+  width: 300px;
+  display: block;
+  border-radius: 20px 20px 20px 20px;
+}
+
+.button{
+
+  position: absolute;
+  top: 70%;
+  left: 12%;
+  transform:translate(-50%,-40% );
+}
+.button{
+
+  background: none;
+  text-transform: uppercase;
+  color: #1f271b;
+  width: 220px; 
+  height: 60px;
+  border: 3px solid #fff;
+  font-size: 18px;
+  border-radius: 4px;
+  transition: .6s;
+  overflow: hidden;
+}
+
+.button:focus{
+
+  outline:none;
+}
+.button:before{
+
+  content: '';
+  display: block;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.5);
+  width: 60px;
+  height: 100%;
+  left: 0;
+  top:0;
+  opacity: .5s;
+  filter: blur(30px);
+  transform:translateX(-130px) skeX(-15deg);
+}
+.button:after{
+
+  content: '';
+  display: block;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.2);
+  width: 30px;
+  height: 100%;
+  left: 30px;
+  top:0px;
+  opacity: 0;
+  filter: blur(30px);
+  transform: translate(-100px) scaleX(-15deg);
+
+}
+
+.button:hover{
+
+  background: #edf2fb;
+  cursor: pointer;
+
+}
+.button:hover::before{
+
+transform: translateX(300px) skewX(-15px);
+opacity:1;
+transition: .7s;
+
+}
+
+
+  /*--------------- Card end here --------------- */
+
 
 
   /*--------------- Zoom In nav bar background --------------- */
