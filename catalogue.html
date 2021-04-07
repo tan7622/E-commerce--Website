@@ -15,9 +15,10 @@
 
     <div id="vial-container-wrap" style="display: none;">
         <div id='vial-container' class="vial-container">
+            <div id='prev' class="next">a</div>
             <div class="cross">a</div>
             <div id='id' style="display: none;"></div>
-            <div class="description thing">
+            <div class="description">
                 <div class="ingredient">
                     <span class="long"></span>
                     <span class="long"></span>
@@ -32,8 +33,13 @@
                     </div>
                 </div>
             </div>
-            <img id='vial' class="vial thing" src="" style="height: 50%; display: block;"></img>
-            <div id='description' class="description thing"></div>
+            <img id='vial' class="vial" src="" style="height: 50%; display: block;"></img>
+            <div class="description" style="display: block; text-align: center;">
+                <div id='description' style="text-align: justify;"></div>
+                    <button>Add to Cart</button>
+                    <button>Buy Now</button>
+            </div>
+            <div id='next' class="next">a</div>
         </div>
     </div>
 </body>
@@ -50,9 +56,11 @@
 
 <script>
     const closeBtn = document.querySelector('.cross')
+    const prev = document.querySelector('#prev')
+    const next = document.querySelector('#next')
     const menu = document.getElementById('menu')
     const product = document.querySelector('.vial-container')
-    let scrollPosition = 0
+    const max = medicine.length
 
     medicine.forEach(obj => {
         let item = document.createElement('div')
@@ -80,24 +88,36 @@
     items.forEach(element => {
             element.addEventListener('click',function(e){
                 generateDetails(element.id)
-                window.addEventListener('wheel',(e)=>{scrollAnim(e)})
                 document.getElementById('vial-container-wrap').style.display = 'flex'
                 document.getElementById('menu').style.display = 'none'
         })        
     });
 
-
     closeBtn.addEventListener('click',()=>{
         document.getElementById('menu').style.display = 'flex'
         document.getElementById('vial-container-wrap').style.display = 'none'
-        let img = product.querySelectorAll('.thing')
-        scrollPosition = 0
-            img.forEach(element => {
-                element.animate({opacity:[0,1]},{duration:1000,fill:"forwards"})
-                element.style.transform = `translateY(0px)`
-            });
     })
 
+    prev.addEventListener('click',()=>{
+        document.getElementById('vial-container-wrap').style.display = 'none'
+        setTimeout(() => {
+            let id = parseInt(document.getElementById('id').innerHTML)
+            id == 1? id = max : id--
+            generateDetails(id.toString())
+            document.getElementById('vial-container-wrap').style.display = 'flex'
+            document.getElementById('menu').style.display = 'none'
+        }, 100);
+    })
+    next.addEventListener('click',()=>{
+        document.getElementById('vial-container-wrap').style.display = 'none'
+        setTimeout(() => {
+            let id = parseInt(document.getElementById('id').innerHTML)
+            id == max? id = 1 : id++
+            generateDetails(id.toString())
+            document.getElementById('vial-container-wrap').style.display = 'flex'
+            document.getElementById('menu').style.display = 'none'
+        }, 100);
+    })
 
     function generateDetails(id) {
         let list = product.querySelector('.content ul')
@@ -109,7 +129,7 @@
         })
 
         let ingredients = med[0].ingredient
-
+        
         ingredients.forEach(element => {
             let ul = document.createElement('li')
             ul.innerHTML = element
@@ -124,36 +144,6 @@
 
         let medid = product.querySelector('#id')
         medid.innerHTML = med[0].id
-    }
-
-    function scrollAnim(e){
-        let img = product.querySelectorAll('.thing')
-        let id = parseInt(product.querySelector('#id').innerHTML)
-
-        if(e.deltaY == 100){
-            scrollPosition += 120
-            let scroll = scrollPosition*-1
-            img.forEach(element => {
-                element.style.transform = `perspective(1000px) translateY(${scroll}px) rotateX(${scrollPosition/10}deg)`
-            });
-        }
-        else{
-            scrollPosition -= 120
-            let scroll = scrollPosition*-1
-            img.forEach(element => {
-                element.style.transform = `perspective(1000px) translateY(${scroll}px) rotateX(${scrollPosition/10}deg)`
-            });
-        }
-
-
-        if(scrollPosition == 600 || scrollPosition == -600 ){
-            scrollPosition == 600? generateDetails((id+1).toString()): generateDetails((id-1).toString())
-            scrollPosition = 0
-            img.forEach(element => {
-                element.animate({opacity:[0,1]},{duration:1000,fill:"forwards"})
-                element.style.transform = `translateY(0px)`
-            });
-        }
     }
 
 </script>

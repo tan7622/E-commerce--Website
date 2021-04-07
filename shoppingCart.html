@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="css/shoppingCart.css">
+    <script src="js/shoppingList.js"></script>
+    <script src="js/medicine.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>Shopping Cart</h2>
+            <div id='cart'></div>
+            <div class="row end">
+                <div style="display: inline;">
+                    <div>Total:</div>
+                    <div id='totalPrice'></div>
+                </div>
+                <button style="margin-top: 1em;">Proceed</button>
+            </div>
+    </div>
+    
+</body>
+</html>
+
+<script type="template">
+    <div class="row">
+        <div style="width: 20%; padding: 1em;">
+            <div class="menu-item"><img src="res/aspirin.jpg" style="max-width: 100%;"></div>
+        </div>
+        <div style="width: 80%; padding: 1em; margin: 1em 0 1em 0; position: relative;">
+            <div style="display: flex;">
+                <div style="width: 80%;">Aspirin</div>
+                <div style="width: 20%; text-align: right;">$12.99</div>
+            </div>
+            <div class="counter">
+                <button>-</button>
+                <input style="width: 4em;"></input>
+                <button>+</button>
+                <button>Delete</button>
+            </div>
+        </div>
+    </div>
+</script>
+
+<script>
+    const cart = document.getElementById('cart')
+    const total = document.getElementById('totalPrice')
+    let totalPrice = 0;
+
+    shoppingList.forEach( obj =>{
+        let thumbnail = document.createElement('div')
+        thumbnail.className = 'menu-item'
+        thumbnail.id = obj.id
+
+        let med = medicine.filter((obj)=>{
+            return obj.id === thumbnail.id
+        })
+
+        let item = document.createElement('div')
+        item.className = 'row'
+
+        let div1 = document.createElement('div')
+        div1.className = 'thumbnail'
+
+        let image = document.createElement('img')
+        image.src = med[0].path
+        image.style.maxWidth = '100%'
+
+        let div2 = document.createElement('div')
+        div2.className = 'detail'
+        
+        let div3 = document.createElement('div')
+        div3.style.display = 'flex'
+
+        let name = document.createElement('div')
+        name.innerHTML = med[0].medicine
+        name.style.width = '80%'
+
+        let price = document.createElement('div')
+        price.innerHTML = '$' + med[0].price
+        price.style.width = '20%'
+        price.style.textAlign = 'right'
+
+        div3.append(name)
+        div3.append(price)
+        div2.append(div3)
+
+        let counter = document.createElement('div')
+        counter.className = 'counter'
+
+        let btn = document.createElement('button')
+        let btn2 = document.createElement('button')
+        let btn3 = document.createElement('button')
+        let input = document.createElement('input')
+
+        btn.innerHTML = '-'
+        btn2.innerHTML = '+'
+        btn3.innerHTML = 'Delete'
+
+        counter.append(btn)
+        counter.append(input)
+        counter.append(btn2)
+        counter.append(btn3)
+
+        div2.append(counter)
+
+        div1.append(thumbnail)
+        thumbnail.append(image)
+        item.append(div1)
+        item.append(div2)
+
+        cart.append(item)
+
+        totalPrice = totalPrice + parseInt(med[0].price);
+
+        total.innerHTML = totalPrice
+    });
+
+</script>

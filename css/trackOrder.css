@@ -1,0 +1,177 @@
+.container{
+    margin: 10% 15% 10% 15%;
+    border: black 0.5px solid;
+    padding: 0 2em 0 2em;
+}
+
+.order{
+    padding: 2em 0 2em 0;
+    border-bottom: black 0.5px solid;
+    overflow: hidden;
+    height: 10px;
+    transition: height 0.5s;
+}
+
+.clickable{
+    cursor: pointer;
+}
+
+.on{
+    height: 100%;
+}
+
+.order:last-child{
+    border: 0px;
+}
+
+.row{
+    display: flex;
+    cursor: auto;
+}
+
+.thumbnail{
+    width: 20%;
+    padding: 1em;
+}
+
+.detail{
+    width: 80%;
+    padding: 1em;
+    margin: 1em 0 1em 0;
+    position: relative;
+}
+
+.items{
+    margin-top: 2em;
+}
+
+.end{
+    cursor: auto;
+    padding: 1em;
+    display: block;
+    margin-top: 4em;
+    text-align: right;
+}
+
+.overlay {
+    position: fixed;
+    display: none; 
+    width: 100%; 
+    height: 100%; 
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.5); 
+    justify-content: center;
+    z-index: 2;
+    overflow: auto;
+}
+
+.overlay .container2{
+    position: relative;
+    padding: 1em 10% 1em 10% ;
+    background-color: white;
+    min-height: 70%;
+    max-height: 70%;
+    top: 10%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.container3{
+    border: 0.5px black solid;
+}
+
+.container3 .row{
+    padding: 1em;
+    margin: 1em 0 1em 0;
+}
+
+h2, h3{
+    margin: 0;
+}
+
+.message{
+    width: 80%;
+}
+.datetime{
+    width: 20%;
+    text-align: center;
+}
+
+.progressbar {
+    counter-reset: step;
+    padding: 0%;
+    text-align: center;
+    margin: 3em 0 3em 0;
+  }
+  .progressbar li {
+    list-style: none;
+    display: inline-flex;
+    width: 20%;
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+  }
+  .progressbar li:before {
+    content: '';
+    width: 30px;
+    height: 30px;
+    line-height : 30px;
+    border: 10px solid purple;
+    border-radius: 100%;
+    display: block;
+    text-align: center;
+    background-color: purple;
+    z-index: 2;
+    margin: auto;
+  }
+  .progressbar li:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 10px;
+    background-color: #ddd;
+    border: 5px solid purple;
+    top: 15px;
+    left: -50%;
+    z-index : 1;
+  }
+  .progressbar li:first-child:after {
+    content: none;
+  }
+  .progressbar li.active {
+    color: green;
+  }
+  .progressbar li.active:before {
+    border-color: purple;
+    background-color: lightpink;
+  } 
+  .progressbar li.active + li:after {
+    background-color: lightpink;
+  }
+
+  .progressbar li.current:before {
+    border-color: purple;
+    background-color: palevioletred;
+  } 
+
+#cross{
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    background-color: red;
+    left: 95%;
+    bottom: 90%;
+}
+
+@keyframes expand{
+    0% {height: 10px;}
+    50% {height: 50%;}
+    100% {height: 100%;}
+}
+@keyframes close{
+    0% {height: 100%;}
+    50% {height: 50%;}
+    100% {height: 10px;}
+}
