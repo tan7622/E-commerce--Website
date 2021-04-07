@@ -42,8 +42,8 @@ font-weight: 700;
 .splash .img{
   background-image: url("images/spashLogo.png");
   background-repeat: no-repeat;
-  /* height: 130px;
-  width: 145px; */
+  height: 130px;
+  width: 145px;
 
  
 }
@@ -333,57 +333,31 @@ header {
 
  /*--------------- Card start here --------------- */
 
- .textContent{
+.mainContent{
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 48px;
+
+
+}
+ .textContent1{
+  font-size: 21px;
   width: 350px ;
   position: relative;
-  left: 500px;
-  bottom: 500px;
-
-}
-.card1{
-  width:300px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
-  padding: 20px;
-  grid-gap: 40px;
-  position: relative;
+  left: 40px;
   top: 50px;
-  right: 0px;
-}
-.card2{
-  width:300px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
-  padding: 20px;
-  grid-gap: 40px;
-  position: relative;
-  top: 25px;
-  left: 450px;
-}
-.card{
-  background-color: #fff;
-  border-radius: 20px;
-  box-shadow: 0 0 30px rgba(0,0,0,0.18);
-}
-.cardContainer{
-  width: 1000px;
-  position: relative;
- 
-}
-.cardContainer img{
-  width: 300px;
-  display: block;
-  border-radius: 20px 20px 20px 20px;
-}
 
-.button{
+}
+.main-container button{
 
   position: absolute;
-  top: 70%;
-  left: 12%;
+  top: 65%;
+  left: 13%;
   transform:translate(-50%,-40% );
 }
-.button{
+.main-container button{
 
   background: none;
   text-transform: uppercase;
@@ -396,12 +370,11 @@ header {
   transition: .6s;
   overflow: hidden;
 }
-
-.button:focus{
+.main-container button:focus{
 
   outline:none;
 }
-.button:before{
+.main-container button:before{
 
   content: '';
   display: block;
@@ -415,7 +388,7 @@ header {
   filter: blur(30px);
   transform:translateX(-130px) skeX(-15deg);
 }
-.button:after{
+.main-container button:after{
 
   content: '';
   display: block;
@@ -431,13 +404,13 @@ header {
 
 }
 
-.button:hover{
+.main-container button:hover{
 
   background: #edf2fb;
   cursor: pointer;
 
 }
-.button:hover::before{
+.main-container button:hover::before{
 
 transform: translateX(300px) skewX(-15px);
 opacity:1;
