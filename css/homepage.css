@@ -639,6 +639,14 @@ ul {
   position: absolute;
   left: 440px;
 }
+.customerUl{
+  padding: 0%;
+
+}
+
+.customerUl li{
+  margin: 10%;
+}
 
 .customerS {
   height: 100px;
@@ -689,6 +697,7 @@ ul {
 }
 
 .icons {
+  padding: 10%;
   padding-left: 0;
   margin-bottom: 0;
   list-style: none
