@@ -395,11 +395,6 @@ header {
   line-height: 3rem;
 }
 
-ul {
-  list-style: none;
-}
-
-
 .email {
   height: 100px;
   width: 300px;
@@ -457,7 +452,15 @@ ul {
   position: absolute;
   left: 440px;
 }
+.customerUl{
+  padding: 0%;
 
+}
+
+.customerUl li{
+  margin: 10%;
+  list-style-type:circle;
+}
 .customerS {
   height: 100px;
   width: 250px;
@@ -474,6 +477,7 @@ ul {
 .customerS li {
   position: relative;
   left: 5px;
+
 }
 
 .socialMedia-icons {
@@ -506,6 +510,7 @@ ul {
 }
 
 .icons {
+  padding: 10%;
   padding-left: 0;
   margin-bottom: 0;
   list-style: none
@@ -543,8 +548,9 @@ ul {
 .icons a:active,
 .icons a:focus,
 .icons a:hover {
+
   color: #fff;
-  background-color: #29aafe
+  background-color: #29aafe;
 }
 
 .icons.size-sm a {
@@ -577,5 +583,6 @@ ul {
     font-weight: 600
   }
 }
+
 
 /*--------------- footer section ends here --------------- */

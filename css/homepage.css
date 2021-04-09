@@ -646,6 +646,7 @@ ul {
 
 .customerUl li{
   margin: 10%;
+  list-style-type:circle;
 }
 
 .customerS {

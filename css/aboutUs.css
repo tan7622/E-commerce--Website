@@ -52,7 +52,7 @@
 
 .sub-container {
 
-  max-width: 1200px;
+  max-width: 100%;
   margin: auto;
   padding: 40px 0;
   display: flex;
@@ -86,9 +86,9 @@ desc {
 }
 
 .teams img {
-
   width: 200px;
   height: 200px;
+  border-radius: 50%;
 
 }
 
@@ -160,7 +160,7 @@ desc {
   height: 350px;
   background: url('./images/medFuze footer-01.png');
   -webkit-animation: backgroundScroll 400s linear infinite;
-  animation: backgroundScroll 10s linear infinite;
+  animation: backgroundScroll 15s linear infinite;
   background-repeat: no-repeat;
 }
 
@@ -185,14 +185,13 @@ desc {
 }
 
 
-h2 {
+.text {
   position: initial;
   left: 40%;
   text-align: left;
-}
-
-ul {
-  list-style: none;
+  font-weight: 400px;
+  text-transform: capitalize;
+  line-height: 3rem;
 }
 
 .email {
@@ -252,7 +251,15 @@ ul {
   position: absolute;
   left: 440px;
 }
+.customerUl{
+  padding: 0%;
 
+}
+
+.customerUl li{
+  margin: 10%;
+  list-style-type:circle;
+}
 .customerS {
   height: 100px;
   width: 250px;
@@ -269,6 +276,7 @@ ul {
 .customerS li {
   position: relative;
   left: 5px;
+
 }
 
 .socialMedia-icons {
@@ -301,6 +309,7 @@ ul {
 }
 
 .icons {
+  padding: 10%;
   padding-left: 0;
   margin-bottom: 0;
   list-style: none
@@ -338,8 +347,9 @@ ul {
 .icons a:active,
 .icons a:focus,
 .icons a:hover {
+
   color: #fff;
-  background-color: #29aafe
+  background-color: #29aafe;
 }
 
 .icons.size-sm a {
