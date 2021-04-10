@@ -7,8 +7,12 @@
 
     <link rel="stylesheet" href="./css/catalogue.css">
     <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="./css/particle.css">
+
     <script src="./js/medicine.js"></script>
     <script src="./js/homepage.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
 </head>
 <body>
     <div class="navbar">
@@ -21,12 +25,14 @@
     </div>
 
     <div id='menu' class="menu-list">
+    <div id="particles-js"></div>
+
     </div>
 
     <div id="vial-container-wrap" style="display: none;">
         <div id='vial-container' class="vial-container">
-            <div id='prev' class="next">a</div>
-            <div class="cross">a</div>
+            <div id='prev' class="next"><img class="arrow" src="res/icon/left.svg"></div>
+            <div class="cross"><img style="height: 50%; width: 50%;" src="res/icon/close-button.svg"></div>
             <div id='id' style="display: none;"></div>
             <div class="description">
                 <div class="ingredient">
@@ -52,7 +58,7 @@
                     <button>Add to Cart</button>
                     <button>Buy Now</button>
             </div>
-            <div id='next' class="next">a</div>
+            <div id='next' class="next"><img class="arrow right" src="res/icon/left.svg"></div>
         </div>
     </div>
 </body>
@@ -172,3 +178,5 @@
     }
 
 </script>
+
+<script src="js/particle.js"></script>
