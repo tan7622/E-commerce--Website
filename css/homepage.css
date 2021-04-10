@@ -549,7 +549,7 @@ ul {
   -webkit-animation: backgroundScroll 400s linear infinite;
   animation: backgroundScroll 15s linear infinite;
   background-repeat: no-repeat;
-
+  /* transform: translateY(-10em); */
 }
 
 @-webkit-keyframes backgroundScroll {

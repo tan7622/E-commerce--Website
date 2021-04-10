@@ -38,7 +38,7 @@
                     <span class="short"></span>
                     <div class="content">
                         <h3>Ingredient</h3>
-                        <ul style="position: relative; right: 1.5em;">
+                        <ul style="position: relative; right: 1.5em;  ">
                         </ul>
                     </div>
                 </div>
@@ -88,7 +88,7 @@
         let overlay = document.createElement('div')
         overlay.className = 'menu-overlay'
         let desc = document.createElement('p')
-        desc.innerHTML = obj.description
+        desc.innerHTML = obj.medicine
         overlay.append(desc)
 
         item.append(image)
@@ -155,7 +155,6 @@
             tool.style.left = e.pageX + 15 + 'px';
             tool.style.top = e.pageY - 15 + 'px';
         })
-
         let ul = document.createElement('ul')
         med[0].symptom.forEach(element =>{
             let li = document.createElement('li')
