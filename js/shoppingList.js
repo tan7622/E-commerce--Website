@@ -23,9 +23,5 @@ let shoppingList =
     {
         "id":"6",
         "quantity":"2"
-    },
-    {
-        "id":"7",
-        "quantity":"2"
     }
 ]

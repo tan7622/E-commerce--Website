@@ -1,28 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shopping Cart</title>
     <link rel="stylesheet" href="css/shoppingCart.css">
+    <link rel="stylesheet" href="css/navbar.css">
     <script src="js/shoppingList.js"></script>
     <script src="js/medicine.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 </head>
+
 <body>
-    <div class="container">
-        <h2>Shopping Cart</h2>
-            <div id='cart'></div>
-            <div class="row end">
-                <div style="display: inline;">
-                    <div>Total:</div>
-                    <div id='totalPrice'></div>
-                </div>
-                <button style="margin-top: 1em;">Proceed</button>
+    <div class="navbar">
+        <div class="menu">
+            <a href="homepage.html"><img class="logo" src="./css/images/medFuze_Logo.png"></img></a>
+            <div class="hamburger-menu">
+                <div class="bar"></div>
             </div>
+        </div>
     </div>
-    
+
+    <div id="particles-js"></div>
+    <div class="container">
+
+        <h2 style="margin-bottom: 0.5em;">Shopping Cart</h2>
+        <div id='cart'>
+            <div id='empty' style="display: none; place-items: center; margin: 2em; filter: invert(0.5);">
+                <img src="res/icon/shopping.svg" style="height: 50%; width: 50%;">
+                <h3 style="display: block;">The shopping cart is empty</h3>
+            </div>
+        </div>
+
+        <div class="end">
+            <div style="display: inline-flex;">
+                <div style="font-size: 1.1em; margin-right: 1em; transform: translateY(0.4em);">Total:</div>
+                <div class="dollar-sign">$</div>
+                <div class="price-1" id='totalPrice'></div>
+                <div class="price-2" id='totalPriceDec'></div>
+            </div>
+            <br>
+            <button class="button" style="margin-top: 2em;">Proceed</button>
+
+        </div>
+
+    </div>
+
+
 </body>
+
 </html>
 
 <script type="template">
@@ -48,19 +76,24 @@
 <script>
     const cart = document.getElementById('cart')
     const total = document.getElementById('totalPrice')
+    const totalDec = document.getElementById('totalPriceDec')
+    const deletes = document.querySelectorAll('.delete')
+
     let totalPrice = 0;
 
-    shoppingList.forEach( obj =>{
+    shoppingList.forEach(obj => {
+
         let thumbnail = document.createElement('div')
         thumbnail.className = 'menu-item'
         thumbnail.id = obj.id
 
-        let med = medicine.filter((obj)=>{
+        let med = medicine.filter((obj) => {
             return obj.id === thumbnail.id
         })
 
         let item = document.createElement('div')
         item.className = 'row'
+        item.id = obj.id
 
         let div1 = document.createElement('div')
         div1.className = 'thumbnail'
@@ -71,18 +104,30 @@
 
         let div2 = document.createElement('div')
         div2.className = 'detail'
-        
+
         let div3 = document.createElement('div')
         div3.style.display = 'flex'
 
         let name = document.createElement('div')
+        name.className = 'name'
         name.innerHTML = med[0].medicine
         name.style.width = '80%'
 
         let price = document.createElement('div')
-        price.innerHTML = '$' + med[0].price
-        price.style.width = '20%'
-        price.style.textAlign = 'right'
+        price.className = 'price-wrap'
+        let dollar = document.createElement('div')
+        dollar.className = 'dollar-sign'
+        dollar.innerHTML = '$'
+        let price1 = document.createElement('div')
+        price1.className = 'price-1'
+        price1.innerHTML = med[0].price.split('.')[0]
+        let price2 = document.createElement('div')
+        price2.className = 'price-2'
+        price2.innerHTML = '.' + med[0].price.split('.')[1]
+
+        price.append(dollar)
+        price.append(price1)
+        price.append(price2)
 
         div3.append(name)
         div3.append(price)
@@ -91,32 +136,78 @@
         let counter = document.createElement('div')
         counter.className = 'counter'
 
-        let btn = document.createElement('button')
-        let btn2 = document.createElement('button')
-        let btn3 = document.createElement('button')
-        let input = document.createElement('input')
+        let counter_wrap = document.createElement('div')
+        counter_wrap.className = 'counter-wrap'
 
-        btn.innerHTML = '-'
-        btn2.innerHTML = '+'
-        btn3.innerHTML = 'Delete'
+        let count = document.createElement('select')
+        for (let i = 1; i < 16; i++) {
+            let opt = document.createElement('option')
+            opt.innerHTML = i;
+            count.append(opt)
+        }
 
-        counter.append(btn)
-        counter.append(input)
-        counter.append(btn2)
-        counter.append(btn3)
-
+        counter_wrap.append(count)
+        counter.append(counter_wrap)
         div2.append(counter)
+
+
+        let a = document.createElement('div')
+        a.className = 'delete-hover'
+        let del = document.createElement('div')
+        del.className = 'delete'
+        let delicon = document.createElement('img')
+        delicon.src = "res/icon/delete.svg"
+        delicon.className = "delete-icon"
+        a.append(del)
+        a.append(delicon)
+        a.addEventListener('click', () => {
+            deleteFunc(obj.id, del)
+        })
 
         div1.append(thumbnail)
         thumbnail.append(image)
         item.append(div1)
         item.append(div2)
+        item.append(a)
 
         cart.append(item)
 
-        totalPrice = totalPrice + parseInt(med[0].price);
+        totalPrice = totalPrice + parseFloat(med[0].price);
 
-        total.innerHTML = totalPrice
     });
 
+    calculate()
+
+    function deleteFunc(id, button) {
+        button.className = 'deleted';
+        let item = document.getElementById(id)
+        item.style.opacity = 0
+
+        setTimeout(() => {
+            button.className = 'delete';
+            cart.removeChild(item)
+            calculate()
+        }, 1000);
+    }
+
+    function calculate(){
+        let price1 = cart.querySelectorAll('.price-1')
+        let price2 = cart.querySelectorAll('.price-2')
+        let totalP = 0
+        let i = 0
+
+        price1.forEach(e=>{
+            let price = e.innerHTML + '.' + price2[i].innerHTML.substr(1)
+            totalP = totalP + parseFloat(price)
+            i++
+        })
+
+        if(totalP == 0)
+            document.querySelector('#empty').style.display = 'grid'
+
+        total.innerHTML = totalP.toString().split('.')[0]
+        totalDec.innerHTML = '.' + totalP.toFixed(2).toString().split('.')[1]
+    }
 </script>
+
+<script src="js/particle.js"></script>

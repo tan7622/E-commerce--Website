@@ -1,26 +1,93 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+    background: linear-gradient(#f2f2f2 60%, #c3e6f7);
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
 .container{
+    border-radius: 1px;
     margin-top: 10%;
     margin-bottom: 10%;
-    margin-left: 25%;
-    margin-right: 25%;
+    margin-left: 20%;
+    margin-right: 20%;
     height: 100%;
+    padding-left: 5em;
+    padding-right: 5em;
+    padding-bottom: 1em;
+    padding-top: 2em;
     position: relative;
+    box-shadow: 0 0 6em #b3b3b3;
+    background-color: #f7f7f7;
+    overflow: hidden;
+}
+
+.delete{
+    opacity: 0;
+    position: absolute;
+    right: -30em;
+    bottom: 5px;
+    background-color: #d0057a;
+    height: 200%;
+    width: 50%;
+    border-radius: 40%;
+    transition: 0.5s;
+    cursor: pointer;
+    z-index: 10;
 }
 
 .row{
     display: flex;
+    background-image: linear-gradient(to right, #f7f7f7 70%, #e5d9ff);
+    transition: 0.5s;
+    position: relative;
+    overflow: hidden;
+}
+
+.row:hover{
+    transform: translateY(-10px) translateX(-10px);
+    box-shadow: 0.5em 0.5em 10px #8975b5;
+}
+
+.delete-hover{
+    width: 5%;
+}
+.delete-hover:hover .delete{
+    opacity: 1;
+    height: 200%;
+    width: 50%;
+    right: -10em;
+    bottom: -5px;
+}
+.delete-hover:hover .delete-icon{
+    opacity: 1;
+}
+
+.deleted{
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    background-color: #562366;
+    height: 100%;
+    width: 200%;
+    transition: 1s;
+    border-radius: 0;
+    cursor: pointer;
 }
 
 .end{
-    padding: 1em;
-    display: block;
-    margin-top: 4em;
+    padding: 2em;
+    margin-top: 1em;
     text-align: right;
-}
-
-.line{
-    width: 1%;
-    border-left: rgb(200, 200, 200) solid 3px;
+    display: block;
 }
 
 .menu-item{
@@ -30,22 +97,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border: solid;
     max-height: 100%;
     max-width: 100%;
-}
-
-.counter{
-    text-align: end;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-}
-
-.counter input{
-    width: 4em;
-    text-align: center;
-    outline: none;
 }
 
 .thumbnail{
@@ -67,4 +120,90 @@ ul{
 li{
     list-style-type: none;
     transform: translateX(-1em);
+}
+
+.name{
+    font-size: 1.25em;
+}
+
+.price-wrap{
+    display: inline-flex;
+}
+
+.dollar-sign{
+    transform: translateY(0.15em);
+    font-size: 1.5em;
+    margin-right: 0.25em;
+}
+.price-1{
+    font-size: 2.5em;
+    z-index: 1;
+}
+.price-2{
+    font-size: 1.5em;
+    margin-left: 0.25em;
+    transform: translateY(0.15em);
+}
+
+.counter{
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 1em;
+}
+
+.counter-wrap{
+    display: flex;
+    justify-content: center;
+    width: 25%;
+}
+
+select{
+    width: 50%;
+    height: 2em;
+    outline: none;
+    border: #bbb solid 1px;
+    text-indent: 50%;
+    transition: 0.5s;
+}
+
+select:hover{
+    box-shadow: 0 0 5px black;
+}
+
+.particles-js-canvas-el{
+    position: absolute;
+    width: 100%;
+    height: 10%;
+}
+
+
+.button{
+    width: 30%;
+    padding: 1em;
+    background-image: linear-gradient(135deg,#3a8ffe 0%,#9658fe 100%);;
+    background-size: 200%;
+    transition: 0.5s;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 1em;
+    outline: none;
+    cursor: pointer;
+    box-shadow: 0 0 2em #201160;
+}
+
+.button:hover{
+    background-position: right center;
+    transform: translateX(2px) translateY(2px);
+}
+
+.delete-icon{
+    opacity: 0;
+    position: absolute;
+    z-index: 100;
+    top: 35%;
+    right: 7%;
+    height: 25%;
+    cursor: pointer;
+    filter: invert();
+    transition: 1s;
 }

@@ -6,11 +6,21 @@
     <title>Catalogue</title>
 
     <link rel="stylesheet" href="./css/catalogue.css">
+    <link rel="stylesheet" href="./css/navbar.css">
     <script src="./js/medicine.js"></script>
+    <script src="./js/homepage.js"></script>
 </head>
 <body>
-    <div id='menu' class="menu">
+    <div class="navbar">
+    <div class="menu">
+        <a href="homepage.html"><img class="logo" src="./css/images/medFuze_Logo.png"></img></a>
+        <div class="hamburger-menu">
+        <div class="bar"></div>
+        </div>
+    </div>
+    </div>
 
+    <div id='menu' class="menu-list">
     </div>
 
     <div id="vial-container-wrap" style="display: none;">
@@ -33,7 +43,10 @@
                     </div>
                 </div>
             </div>
-            <img id='vial' class="vial" src="" style="height: 50%; display: block;"></img>
+            <div class="img-container">
+                <div class="toolbox"></div>
+                <img id='vial' class="vial" src="" style="height: 50%; display: block;"></img>
+            </div>
             <div class="description" style="display: block; text-align: center;">
                 <div id='description' style="text-align: justify;"></div>
                     <button>Add to Cart</button>
@@ -61,6 +74,7 @@
     const menu = document.getElementById('menu')
     const product = document.querySelector('.vial-container')
     const max = medicine.length
+    const tool = document.querySelector('.toolbox')
 
     medicine.forEach(obj => {
         let item = document.createElement('div')
@@ -88,7 +102,7 @@
     items.forEach(element => {
             element.addEventListener('click',function(e){
                 generateDetails(element.id)
-                document.getElementById('vial-container-wrap').style.display = 'flex'
+                document.getElementById('vial-container-wrap').style.display = 'block'
                 document.getElementById('menu').style.display = 'none'
         })        
     });
@@ -122,7 +136,6 @@
     function generateDetails(id) {
         let list = product.querySelector('.content ul')
         list.innerHTML = ''
-        console.log(id)
 
         let med = medicine.filter((obj)=>{
             return obj.id === id
@@ -138,6 +151,19 @@
 
         let img = product.querySelector('#vial')
         img.src = med[0].path
+        img.addEventListener('mousemove',(e)=>{
+            tool.style.left = e.pageX + 15 + 'px';
+            tool.style.top = e.pageY - 15 + 'px';
+        })
+
+        let ul = document.createElement('ul')
+        med[0].symptom.forEach(element =>{
+            let li = document.createElement('li')
+            li.innerHTML = element
+            ul.append(li)
+        })
+        tool.innerHTML = ''
+        tool.append(ul)
 
         let desc = product.querySelector('#description')
         desc.innerHTML = med[0].description
