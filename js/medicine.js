@@ -92,7 +92,7 @@ let medicine =
     },
     {
         "id":"11",
-        "medicine":"Tb",
+        "medicine":"Terbinafine",
         "ingredient":["Microcrystalline ","hydroxypropyl ","Colloidal"],
         "description":"Terbinafine used to treat fungal infections of the scalp. Terbinafine tablets are used to treat fungal infections of the toenails and fingernails. Terbinafine is in a class of medications called antifungals. It works by stopping the growth of fungi.",
         "path":"/res/anything-2-2.jpg",
