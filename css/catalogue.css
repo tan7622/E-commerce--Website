@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
 html,
 body {
     background: linear-gradient(#f2f2f2 70%, #c3e6f7);
@@ -37,8 +44,9 @@ body {
     width: 100%;
     top: 500px;
     justify-content: center;
-    background: linear-gradient(rgba(247,247,247,1),#48b0e47D);
+    background: linear-gradient(#b62c7aFF 30%,#4e24647D);
     transition: 0.5s;
+    color: white
 }
 
 .menu-overlay p{
@@ -69,11 +77,14 @@ body {
 
 .cross{
     position: absolute;
+    display: flex;
+    justify-content: center;
+    align-content: center;
     height: 50px;
     width: 50px;
-    background-color: red;
     left: 95%;
     bottom: 90%;
+    cursor: pointer;
 }
 
 .vial {
@@ -96,10 +107,12 @@ body {
     position: absolute;
     width: 200px;
     height: 200px;
-    background-color: #48b0e4F0;
+    background: linear-gradient(#b62c7a 30%,#4e2464);
     box-shadow: 2px 2px 1em #5176cb;
     color: white;
     z-index: 10;
+    padding: 2em;
+    transition: 0.1s;
 }
 
 .img-container:hover .toolbox{
@@ -196,14 +209,13 @@ body {
 
 li{
     list-style-type: none;
-    transform: translateX(-1em);
 }
 
 button{
     width: 30%;
     margin: 2em;
     padding: 1em;
-    background-image: linear-gradient(135deg,#3a8ffe 0%,#9658fe 100%);;
+    background-image: linear-gradient(135deg,#3a8ffe 0%,#9658fe 100%);
     /* background-image: linear-gradient(to right, #5f59a7, #d0057a); */
     background-size: 200%;
     transition: 0.5s;
@@ -227,10 +239,24 @@ button:hover{
     justify-content: center;
     align-items: center;
     transition: 0.5s;
+    cursor: pointer;
 }
 .next:hover{
     background-color: rgba(0,0,0, 0.25);
     transition: 0.5s;
+}
+
+.arrow{
+    height: 50%;
+    width: 50%;
+    filter: invert(0.8);
+    transition: 1s;
+}
+.right{
+    transform: scaleX(-1);
+}
+.next:hover .arrow{
+    filter: invert(0.3);
 }
 
 @keyframes show {
