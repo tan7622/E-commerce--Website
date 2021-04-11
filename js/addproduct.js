@@ -10,10 +10,6 @@ const img = document.querySelector("img");
 function addBtnActive(){
   defaultBtn.click();
 }
-function clearBtnActive(){
-    defaultBtn2.click();
-  }
-
 defaultBtn.addEventListener("change", function(){
   const file = this.files[0];
   if(file){
