@@ -255,13 +255,17 @@ h2, h3{
     animation: glowing 2s infinite;
   } 
 
-#cross{
+  .cross{
     position: absolute;
+    display: flex;
+    justify-content: center;
+    align-content: center;
     height: 50px;
     width: 50px;
-    background-color: red;
     left: 95%;
     bottom: 90%;
+    cursor: pointer;
+    z-index: 3;
 }
 
 @keyframes expand{

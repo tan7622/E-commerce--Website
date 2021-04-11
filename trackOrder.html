@@ -19,7 +19,7 @@
     <div id="particles-js"></div>
 
     <div class="overlay">
-        <div id='cross'>a</div>
+        <div class="cross"><img style="height: 50%; width: 50%;" src="res/icon/close-button.svg"></div>
         <div id='container2' class="container2">
 
         </div>
@@ -109,7 +109,7 @@
     const container = document.querySelector('#container');
     const container2 = document.querySelector('#container2');
     const overlay = document.querySelector('.overlay');
-    const closeBtn = document.querySelector('#cross');
+    const closeBtn = document.querySelector('.cross');
 
     closeBtn.addEventListener('click', () => {
         overlay.style.opacity = 0
@@ -120,11 +120,14 @@
         container2.innerHTML = ''
     })
 
-    orderList.forEach(obj => {
+    let orderFromCustomer = orderList.filter((c)=>{
+        return c.customer === 'Francesca'
+    })
+
+    orderFromCustomer.forEach(obj => {
         let orderDiv = document.createElement('div')
         orderDiv.className = 'order'
         orderDiv.id = obj.id
-
 
         let orderNo = document.createElement('div')
         orderNo.classList = 'clickable'

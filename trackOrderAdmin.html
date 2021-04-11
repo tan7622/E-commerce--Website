@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Track Order</title>
-    <link rel="stylesheet" href="css/trackOrder.css">
+    <link rel="stylesheet" href="css/trackOrderAdmin.css">
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/particle.css">
 
@@ -19,12 +19,11 @@
     <div id="particles-js"></div>
 
     <div class="overlay">
-        <div id='cross'>a</div>
+        <div class="cross"><img style="height: 50%; width: 50%;" src="res/icon/close-button.svg"></div>
         <div id='container2' class="container2">
 
         </div>
     </div>
-
 
     <div class="navbar">
         <div class="menu">
@@ -47,69 +46,58 @@
 </html>
 
 <script type="template">
-    <div class="overlay">
-        <div class="container2">
-            <h2>Order 1</h2>
-            <ul class="progressbar">
-                <li class="active"></li>
-                <li class="active"></li>
-                <li class="current"></li>
-                <li></li>
-            </ul>
-            <div class="container3">
-                <div class="row">
-                    <div style="width: 80%;">The package has been packed</div>
-                    <div style="width: 20%; text-align: center;">
-                        <h2>9 Feb</h2>
-                        <h3>10AM</h3>
-                    </div>
+    <div id='container2' class="container2">
+        <h2>Order 2</h2>
+        <div class="row">
+            <div style="width: 60%;">
+                <div>Customer: Someone</div>
+                <div>Address</div>
+                <div>Line1</div>
+                <div>Line2</div>
+                <div>Line3</div>
+            </div>
+            <div style="width: 40%;">
+                <div>Status</div>
+                <select style="width: 60%;">
+                    <option>Received</option>
+                    <option>Packed</option>
+                    <option>Delivering</option>
+                    <option>Completed</option>
+                </select>
+            </div>
+        </div>
+        <h2>Orders</h2>
+        <div class="row">
+            <div class="menu-list">
+                <div class="item">
+                    <div class="menu-item">a</div>
+                    Name x3
                 </div>
-                <div class="row">
-                    <div style="width: 80%;">The package has been packed</div>
-                    <div style="width: 20%; text-align: center;">
-                        <h2>9 Feb</h2>
-                        <h3>10AM</h3>
-                    </div>
+                <div class="item">
+                    <div class="menu-item">a</div>
+                    Name x3
+                </div>
+                <div class="item">
+                    <div class="menu-item">a</div>
+                    Name x3
+                </div>
+                <div class="item">
+                    <div class="menu-item">a</div>
+                    Name x3
                 </div>
             </div>
         </div>
-    </div>
-</script>
-<script type="template">
-    <div id='1' class="order">
-        <div>Order 20</div>
-        <div class="items">
-            <div class="row">
-                <div class="thumbnail">
-                    <div class="menu-item"><img src="res/aspirin.jpg" style="max-width: 100%;"></div>
-                </div>
-                <div class="detail">
-                    <div style="display: flex;">
-                        <div style="width: 80%;">Aspirin</div>
-                        <div style="width: 20%; text-align: right;">$12.99</div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="thumbnail">
-                    <div class="menu-item"><img src="res/aspirin.jpg" style="max-width: 100%;"></div>
-                </div>
-                <div class="detail">
-                    <div style="display: flex;">
-                        <div style="width: 80%;">Aspirin</div>
-                        <div style="width: 20%; text-align: right;">$12.99</div>
-                    </div>
-                </div>
-            </div>
+        <div class="row end">
+            <button>Save</button>
         </div>
     </div>
 </script>
 
 <script>
-    const container = document.querySelector('#container');
-    const container2 = document.querySelector('#container2');
+    let cont = document.getElementById('container')
+    const closeBtn = document.querySelector('.cross');
     const overlay = document.querySelector('.overlay');
-    const closeBtn = document.querySelector('#cross');
+    const container2 = document.querySelector('#container2');
 
     closeBtn.addEventListener('click', () => {
         overlay.style.opacity = 0
@@ -120,154 +108,51 @@
         container2.innerHTML = ''
     })
 
-    orderList.forEach(obj => {
+    orderList.forEach(e => {
         let orderDiv = document.createElement('div')
         orderDiv.className = 'order'
-        orderDiv.id = obj.id
-
 
         let orderNo = document.createElement('div')
-        orderNo.classList = 'clickable'
-        orderNo.innerHTML = 'Order ' + obj.id
+        orderNo.className = 'orderNo'
+        orderNo.innerHTML = 'Order ' + e.id
 
-        let orderItems = document.createElement('div')
-        orderItems.className = "items"
+        let status = document.createElement('div')
+        status.className = 'status'
+        status.innerHTML = getStatus(e, status)
 
-        let receivedDiv = document.createElement('div')
-        receivedDiv.className = 'row'
-        let received = document.createElement('div')
-        received.innerHTML = 'Received on: ' + obj.status.received.date
+        let btnContainer = document.createElement('div')
+        btnContainer.className = 'btnContainer'
+        let btn = document.createElement('button')
+        btn.innerHTML = "View"
+        btnContainer.append(btn)
 
-        receivedDiv.append(received)
-        orderItems.append(receivedDiv)
+        btn.addEventListener('click',()=>{
+            showOrder(e)
+        })
 
         orderDiv.append(orderNo)
-        orderDiv.append(orderItems)
+        orderDiv.append(status)
+        orderDiv.append(btnContainer)
 
-        container.append(orderDiv)
-
-        let totalP = 0;
-        obj.items.forEach(i => {
-            let med = medicine.filter((m) => {
-                return m.id === i.id
-            })
-
-            let item = document.createElement('div')
-            item.className = 'row'
-
-            let div1 = document.createElement('div')
-            div1.className = 'thumbnail'
-
-            let thumbnail = document.createElement('div')
-            thumbnail.className = 'menu-item'
-
-            let image = document.createElement('img')
-            image.src = med[0].path
-            image.style.maxWidth = '100%'
-
-            let div2 = document.createElement('div')
-            div2.className = 'detail'
-
-            let quantity = document.createElement('div')
-            quantity.className = 'quantity'
-            quantity.innerHTML = 'Quantity: ' + i.quantity
-
-            let div3 = document.createElement('div')
-            div3.style.display = 'flex'
-
-            let name = document.createElement('div')
-            name.className = 'name'
-            name.innerHTML = med[0].medicine
-            name.style.width = '80%'
-
-            let price = document.createElement('div')
-            price.className = 'price-wrap'
-            let dollar = document.createElement('div')
-            dollar.className = 'dollar-sign'
-            dollar.innerHTML = '$'
-            let price1 = document.createElement('div')
-            price1.className = 'price-1'
-            price1.innerHTML = med[0].price.split('.')[0]
-            let price2 = document.createElement('div')
-            price2.className = 'price-2'
-            price2.innerHTML = '.' + med[0].price.split('.')[1]
-
-            price.append(dollar)
-            price.append(price1)
-            price.append(price2)
-
-            div3.append(name)
-            div3.append(price)
-            div2.append(div3)
-            div2.append(quantity)
-
-            div1.append(thumbnail)
-            thumbnail.append(image)
-            item.append(div1)
-            item.append(div2)
-
-            orderItems.append(item)
-
-        })
-
-        totalP = caclculate(orderDiv)
-
-        let summaryDiv = document.createElement('div')
-        summaryDiv.className = "end"
-
-        let totalText = document.createElement('div')
-        totalText.className = 'total-text'
-        totalText.innerHTML = 'Total:'
-
-        let price = document.createElement('div')
-        price.className = 'price-wrap'
-        let dollar = document.createElement('div')
-        dollar.className = 'dollar-sign'
-        dollar.innerHTML = '$'
-        let price1 = document.createElement('div')
-        price1.className = 'price-1'
-        price1.innerHTML = totalP.toString().split('.')[0]
-        let price2 = document.createElement('div')
-        price2.className = 'price-2'
-        price2.innerHTML = '.' + totalP.toFixed(2).toString().split('.')[1]
-
-        price.append(totalText)
-        price.append(dollar)
-        price.append(price1)
-        price.append(price2)
-
-        let a = document.createElement('div')
-        a.append(price)
-        let btn = document.createElement('button')
-        btn.innerHTML = 'Track'
-        btn.onclick = () => {
-            showTracker(obj)
-        }
-
-        summaryDiv.append(a)
-        summaryDiv.append(btn)
-
-        orderItems.append(summaryDiv)
-    })
-
-    const orders = document.querySelectorAll('.order')
-
-    orders.forEach(element => {
-        element.querySelector('.clickable').addEventListener('click', () => {
-            element.classList.toggle('on')
-            let a = element.querySelector('.items')
-            element.classList.contains('on') ? a.style.opacity = '1' : a.style.opacity = '0';
-        })
+        cont.append(orderDiv)
     });
 
-    let messages = [
-        'Your order has been received',
-        'Your order has been packed',
-        'Your order is being delivered',
-        'Your order is delivered',
-    ]
+    function getStatus(order, element){
+        let status = '';
+        order.status.received.date != '' ? status = 'Received' : null;
+        order.status.packed.date != '' ? status = 'Packed' : null;
+        order.status.delivering.date != '' ? status = 'Delivering' : null;
+        order.status.complete.date != '' ? status = 'Completed' : null;
 
-    function showTracker(order) {
+        status == 'Received'? element.classList.toggle('received') :null;
+        status == 'Packed'? element.classList.toggle('packed') :null;
+        status == 'Delivering'? element.classList.toggle('delivering') :null;
+        status == 'Completed'? element.classList.toggle('completed') :null;
+
+        return status
+    }
+    
+    function showOrder(e) {
         overlay.style.display = 'flex';
         setTimeout(() => {
             overlay.style.opacity = 1;
@@ -275,86 +160,87 @@
         document.body.style.overflow = 'hidden'
 
         let orderNo = document.createElement('h2')
-        orderNo.innerHTML = "Order " + order.id
+        orderNo.innerHTML = 'Order ' + e.id
 
-        let progressBar = document.createElement('ul')
-        progressBar.className = 'progressbar'
+        let detail = document.createElement('div')
+        detail.className = 'row'
+        let detail1 = document.createElement('div')
+        detail1.style.width = '60%'
+        let detail2 = document.createElement('div')
+        detail2.style.width = '40%'
+        detail.append(detail1)
+        detail.append(detail2)
 
-        let status = 0;
-        order.status.received.date != '' ? status = 0 : null;
-        order.status.packed.date != '' ? status = 1 : null;
-        order.status.delivering.date != '' ? status = 2 : null;
-        order.status.complete.date != '' ? status = 3 : null;
+        let n = document.createElement('strong')
+        n.innerHTML = 'Customer: '
+        let name = document.createElement('div')
+        name.innerHTML = e.customer;
+        let address = document.createElement('strong')
+        address.innerHTML = 'Address: '
+        let line1 = document.createElement('div')
+        line1.innerHTML = e.address1
+        let line2 = document.createElement('div')
+        line2.innerHTML = e.address2
+        let line3 = document.createElement('div')
+        line3.innerHTML = e.address3
 
-        for (let i = 0; i < 4; i++) {
-            let step = document.createElement('li')
-            progressBar.append(step)
-        }
-        for (let i = 0; i <= status; i++) {
-            let list = progressBar.querySelectorAll('li')
-            list[i].className = 'active'
-            list[status].className = 'current'
-        }
+        console.log(line2)
+        detail1.append(n)
+        detail1.append(name)
+        detail1.append(address)
+        detail1.append(line1)
+        detail1.append(line2)
+        detail1.append(line3)
 
-        let statusContainer = document.createElement('div')
-        statusContainer.className = 'container3'
+        let status = document.createElement('div')
+        status.innerHTML = 'Status'
+        let select = document.createElement('select')
+        select.style.width = '60%'
+        let s = ['Received','Packed','Delivering','Completed']
+        s.forEach((e)=>{
+            let opt = document.createElement('option')
+            opt.innerHTML = e
+            select.append(opt)
+        })
 
-        for (let i = 0; i <= status; i++) {
-            let row = document.createElement('div')
-            row.className = 'row'
-            let message = document.createElement('div')
-            message.className = 'message'
-            let datetime = document.createElement('div')
-            datetime.className = 'datetime'
+        detail2.append(status)
+        detail2.append(select)
 
-            message.innerHTML = messages[i]
-            let date = document.createElement('h2')
-            let time = document.createElement('h3')
+        let o = document.createElement('h2')
+        o.innerHTML = 'Orders'
 
-            if (i == 0) {
-                date.innerHTML = order.status.received.date
-                time.innerHTML = order.status.received.time
-            }
-            if (i == 1) {
-                date.innerHTML = order.status.packed.date
-                time.innerHTML = order.status.packed.time
-            }
-            if (i == 2) {
-                date.innerHTML = order.status.delivering.date
-                time.innerHTML = order.status.delivering.time
-            }
-            if (i == 3) {
-                date.innerHTML = order.status.complete.date
-                time.innerHTML = order.status.complete.time
-            }
+        let menulist = document.createElement('div')
+        menulist.className = 'menu-list'
+        e.items.forEach((i)=>{
+            let med = medicine.filter((m) => {
+                return m.id === i.id
+            })
+            let item = document.createElement('div')
+            item.className = 'item'
+            let menuitem = document.createElement('div')
+            menuitem.className = 'menu-item'
+            let img = document.createElement('img')
+            img.src = med[0].path
 
-            datetime.append(date)
-            datetime.append(time)
+            menuitem.append(img)
+            item.append(menuitem)
+            item.append(med[0].medicine + ' x' + i.quantity)
+            menulist.append(item)
+        })
 
-            row.append(message)
-            row.append(datetime)
-            statusContainer.append(row)
-        }
+        let end = document.createElement('div')
+        end.className = "row end"
+        let btn = document.createElement('button')
+        btn.innerHTML = 'Save'
+        end.append(btn)
 
         container2.append(orderNo)
-        container2.append(progressBar)
-        container2.append(statusContainer)
+        container2.append(detail)
+        container2.append(o)
+        container2.append(menulist)
+        container2.append(end)
     }
 
-    function caclculate(order) {
-        let price1 = order.querySelectorAll('.price-1')
-        let price2 = order.querySelectorAll('.price-2')
-        let quantity = order.querySelectorAll('.quantity')
-        let totalP = 0
-        let i = 0
-        price1.forEach(e => {
-            let price = e.innerHTML + '.' + price2[i].innerHTML.substr(1)
-            totalP = totalP + (parseFloat(price) * parseFloat(quantity[i].innerHTML.split(': ')[1]))
-            i++
-        })
-        return totalP
-    }
-    
 </script>
 
-<script src="js/particle.js"></script>
+<script src="js/particleAdmin.js"></script>
