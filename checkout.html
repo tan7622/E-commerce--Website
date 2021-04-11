@@ -1,268 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>medFuze</title>
-    <link rel="icon" href="/css/images/medFuze_Logo.png">
-    <link rel="stylesheet" href="css/checkout.css" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.26.0/moment.min.js"></script>
-    <script src="js/checkout.js"></script>
-  </head>
-  <body>
-      <div class="container1">
-        
-        <div class="container">
-          <div class="py-3 text-center">
-             <h2>
-             Billing Details</h2>
-          </div>
-       </div>
-          <div class="container">
-            <form novalidate>
-               <div class="row g-4">
-                  <div class="col-sm-4">
-                     <label for="firstName" class="form-label">First Name</label>
-                     <input id="firstName"  type="text" class="form-control" placeholder="Cyka" required>
-                     <div class="invalid-feedback">
-                        First name is required.
-                     </div>
-                  </div>
-                  <div class="col-sm-4">
-                   <label for="lastname" class="form-label">Last Name</label>
-                   <input id="lastname"  type="text" class="form-control" placeholder="Blyat" required>
-                   <div class="invalid-feedback">
-                      First name is required.
-                   </div>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="css/checkout.css">
+    <link rel="stylesheet" href="css/particle.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/input.css">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+</head>
+
+<body>
+    <div id="particles-js"></div>
+
+    <div class="navbar">
+        <div class="menu">
+            <a href="homepage.html"><img class="logo" src="./css/images/medFuze_Logo.png"></img></a>
+            <div class="hamburger-menu">
+                <div class="bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="col">
+            <h2>Billing Details</h2>
+            <div class="row" style="margin-bottom: 0; margin-top: 2em;">
+                <div class="col2">
+                    <div class="group">
+                        <input type="text" required>
+                        <label>First Name</label>
+                    </div>
                 </div>
-                <div class="col-md-4">
-                 <label for="email" class="form-label">Email</label>
-                 <div class="input-group">
-                   <span class="input-group-text">@</span>
-                   <input id="email" type="text" class="form-control" placeholder="Email" required>
-                 </div>
-                 </div>
-                  <div class="col-md-12">
-                 <label for="email" class="form-label">Billing Address</label>
-                 <div class="input-group">
-                   <input id="email" type="text" class="form-control" placeholder="Address" required>
-                 </div>
-                 </div>
-                 <div class="col-md-12">
-                  <label for="email" class="form-label">Billing Address 2</label>
-                  <div class="input-group">
-                    <input id="email" type="text" class="form-control" placeholder="Address" required>
-                  </div>
-                  </div>
-                <div class="col-md-3">
-                 <label for="country" class="form-label">Country</label>
-                   <select id="country" class="form-control">
-                     <option value="Choose">Choose...</option>
-                     <option value="Malaysia">Malaysia</option>
-                     <option value="Malaysia">Australia</option>
-                     <option value="Malaysia">Ching Chong</option>
-                     </select>
-                   <div class="invalid-feedback">
-                     Valid Last name is required.
-                   </div>
-                 </div> 
-                 <div class="col-md-2">
-                   <label for="state" class="form-label">State</label>
-                   <select id="state" class="form-control">
-                     <option value="Choose">Choose...</option>
-                     <option value="Penang">Penang</option>
-                     <option value="Kuala Lumpur">Kuala Lumpur</option>
-                     <option value="Ipoh">Ipoh</option>
-                     </select>
-                   <div class="invalid-feedback">
-                     Valid State is required.
-                   </div>     
-                 </div> 
-                 <div class="col-md-1">
-                   <label for="postcode" class="form-label">Post Code</label>
-                   <input id="postcode"  type="text" class="form-control" placeholder="00000" required>
-                   <div class="invalid-feedback">
-                      Post Code is required.
-                   </div>
-               </div>
-             <hr class="my-4">
-             <div class="col-12">
-             <div class="form-check">
-               <input id="sameAddress" type="checkbox" class="form-check-input">
-               <label for="sameAddress" for="sameAddress"> Shipping Address</label>
-               </div>
-               <div class="form-check">
-                 <input id="sameAddress" type="checkbox" class="form-check-input">
-                 <label for="sameAddress" for="sameAddress"> Save this info</label>
-                 </div>
-               </div>
-               <hr class="my-2">
-               <h4 class="mb-1">Payments</h4>
-               
-               <div class="col-12">
-               <div class="form-check">
-               <input id="creditCard" name="paymentMethod" type="radio"  class="form-check-input" >
-               <label for="creditCard">Credit Card</label>
-               </div>
-               <div class="form-check">
-                 <input id="debitCard" name="paymentMethod" type="radio" class="form-check-input" >
-                 <label for="creditCard">Debit Card</label>
-                 </div>
-      
-                 <div class="row my-3 gy-3">
-                   <div class="col-md-6">
-                       Card holder Name 
-                       <input id="cardhN" type="text" class="form-control" required>
-                       </small>
-                       <div class="invalid-feedback">
-                         Card Holder name required.
-                       </div>
-                     </div>
-                   <div class="col-md-6">
-                       Card No. 
-                     <input id="cardNo" type="text" class="form-control" required>
-                     <div class="invalid-feedback">
-                       Card No required.
-                     </div>
-                   </div>
-                 
-                     <div class="col-md-2">
-                       Expiration date
-                     <div class="form-group">
-                         <div class="input-group date" id="datetimepicker4">
-                             <input type="text" class="form-control" readonly>
-                             <div class="input-group-addon input-group-prepend">
-                                 <span class="input-group-text3"><i class="fa fa-calendar"></i></span>
-                             </div>
-                         </div>
-                     </div>
-                     </div>
-                 
-                   <div class="col-md-1">
-                     CVC
-                     <input id="expiration" type="password" class="form-control" required>
-                     <div class="invalid-feedback">
-                       CVV required.
-                     </div>
-                   </div>
-                   </div>
-                   <hr class="my-4">
-                   <button class='btn btn-primary btn-lg btn-block> Continue to checkout'> Continue to checkout</button>
-                 </div>
-               </div>
-               
-            </form>
-         </div>
-          
-          <script>
-              $(function () {
-                  $.extend(true, $.fn.datetimepicker.defaults, {
-                      icons: {
-                          time: 'fa fa-clock',
-                          date: 'fa fa-calendar',
-                          up: 'fa fa-arrow-up',
-                          down: 'fa fa-arrow-down',
-                          previous: 'fa fa-chevron-left',
-                          next: 'fa fa-chevron-right',
-                          today: 'faa fa-calendar-check-o',
-                          clear: 'faa fa-trash',
-                          close: 'faa fa-times'
-                      }
-                  });
-              });
-              </script>
-              <script type="text/javascript">
-                  $(function () {
-                      $('#datetimepicker').datetimepicker({
-                        ignoreReadonly: true
-                      });
-                  });
-      
-                  $(function () {
-                      $('#datetimepicker1').datetimepicker({
-                        format: 'YYYY-MM-DD',
-                        ignoreReadonly: true
-                      });
-                  });
-      
-                  $(function () {
-                    var minDate = new Date();
-      
-                    minDate.setDate(minDate.getDate()-5); // set days - mean previous date from current date + mean future date from current date
-      
-                      $('#datetimepicker4').datetimepicker({
-                        format: 'YYYY-MM-DD',
-                        minDate: minDate,
-                        ignoreReadonly: true
-                      });
-                  });
-      
-                  $(function () {
-                    var minDate = new Date();
-                    var maxDate = new Date();
-      
-                    minDate.setDate(minDate.getDate()-5); // set days - mean previous date from current date + mean future date from current date
-                    maxDate.setDate(maxDate.getDate()+10);
-                      $('#datetimepicker5').datetimepicker({
-                        format: 'YYYY-MM-DD',
-                        minDate: minDate,
-                        maxDate: maxDate,
-                        ignoreReadonly: true
-                      });
-                  });
-      
-              </script>
-        </div>
-    <!--------------- footer start here --------------->
-    <footer>
+                <div class="col2">
+                    <div class="group">
+                        <input type="text" required>
+                        <label>Last Name</label>
+                    </div>
+                </div>
+            </div>
 
-          <div class="horizontal-scroll">
-            <div class ="email">
-              <br>
-              <h2>Connect with us</h2>
-            <br>
-            <p>Subscribe to our newsletter for updates and special offers and discount.</p>
-          </div>
-            <div class ="aboutus">
-            <br>
-              <h2>About us</h2>
-            <br>
-            <p>We medFuze is an art, science, and practice of caring for a patient and managing the prevention of patient injury or disease and illness.
-                 MedFuze encompasses a variety of health care practices evolved to maintain and restore health by the prevention and treatment of illness.</p>
-          </div>
+            <div class="group">
+                <input type="text" required>
+                <label>Billing Address 1</label>
+            </div>
+            <div class="group">
+                <input type="text" required>
+                <label>Billing Address 2</label>
+            </div>
 
-          <div class ="customerS">
-            <br>
-            <h2>Customer service</h2>
-          <br>
-          <ul >
-            <li><a href="#" >Contact Us</a></li>
-            <br>
-            <li><a href="#" >About Us</a></li>
-            <br>
-            <li><a href="#" >Site Map</a></li>
+            <div class="row" style="margin-bottom: 0; padding-top: 1em;">
+                <div class="col2">
+                    <div class="group">
+                        <select id="country">
+                            <option>Malaysia</option>
+                            <option>Australia</option>
+                            <option>Ching Chong</option>
+                        </select>
+                        <label>Country</label>
+                    </div>
+                </div>
+                <div class="col2">
+                    <div class="group">
+                        <select id="state">
+                            <option value="Penang">Penang</option>
+                            <option value="Kuala Lumpur">Kuala Lumpur</option>
+                            <option value="Ipoh">Ipoh</option>
+                        </select>
+                        <label>State</label>
+                    </div>
+                </div>
+            </div>
 
-           </ul>
+            <div class="group">
+                <input type="text" required>
+                <label>Post Code</label>
+            </div>
+            <div class="group">
+                <input type="text" required>
+                <label>E-Mail</label>
+            </div>
+
         </div>
-          <div class="socialMedia-icons">
-            <br>
-            <h2>Social Media</h2>
-            <ul class="icons">
-              <br>
-                <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-                <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-                <li><a class="instagram" href="#"><i class="fa fa-instagram"></i></a></li>
-                <li><a class="youtube" href="#"><i class="fa fa-youtube"></i></a></li>   
-              </ul>
-          </div>
+        <div class="line"></div>
+        <div class="col">
+            <h2>Payment Option</h2>
+            <div class="payment-options">
+                <div id='1' class="payment-opt"><img src="res/icon/tng.svg"></div>
+                <div id='2' class="payment-opt"><img src="res/icon/mastercard.png"></div>
+                <div id='3' class="payment-opt"><img src="res/icon/visa.png"></div>
+            </div>
+            <h2 style="margin: 1em 0;">Payment Details</h2>
+            <div class="row">
+                <div id='tng' style="width: 60%; display: none;">
+                    <div class="group">
+                        <input type="text" required>
+                        <label>Phone Number</label>
+                    </div>
+                </div>
+                <div id='card' style="width: 80%; display: none;">
+                    <div class="group">
+                        <input type="text" maxlength="16" required>
+                        <label>Card Number</label>
+                    </div>
+                    <div class="row">
+                        <div class="col2">
+                            <div class="group">
+                                <input type="text" maxlength="3" required>
+                                <label>CVV</label>
+                            </div>
+                        </div>
+                        <div class="col2">
+                            <div class="group">
+                                <input type="text" maxlength="5" required>
+                                <label>Expired Date</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="position: absolute; right: 0; bottom: 0; width: 100%; text-align: right;">
+                <button>Check Out</button>
+            </div>
         </div>
-          </div>
-   
-     </footer>
-                 <!--------------- footer ends here ------------->
-  </body>
+    </div>
+
+</body>
+
 </html>
+
+<script>
+    let options = document.querySelectorAll('.payment-opt')
+    options.forEach((e)=>{
+        e.addEventListener('click',()=>{
+            e.classList.toggle('selected')
+            deactivate(e.id)
+        })
+    })
+
+    function deactivate(id) {
+        let tng = document.getElementById('tng')
+        let card = document.getElementById('card')
+
+        options.forEach((e)=>{
+            e.id == id? null: e.classList.remove('selected')
+        })
+        if(id == 1){
+            tng.style.display = 'block'
+            card.style.display = 'none'
+        }
+        else{
+            tng.style.display = 'none'
+            card.style.display = 'block'
+        }
+}
+</script>
+
+<script src="js/particle.js"></script>
