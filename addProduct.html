@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
 	<meta charset="utf-8">
 	<title>medFuze</title>
 	<link rel="stylesheet" href="css/addProduct.css">
+	<link rel="stylesheet" href="css/input.css">
 	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
-	</head>
-	<body>
+</head>
+
+<body>
 	<div class=mainContainer>
-	<h2>Product Details</h2>
-	<div class="container">
-		<div class="wrapper">
-			<div class="image">
-				<img src="" alt="">
+		<h2>Product Details</h2>
+		<div class="container">
+			<div class="wrapper">
+				<div class="image">
+					<img src="" alt="">
 				</div>
 				<div class="content">
 					<div class="text">
@@ -23,6 +26,34 @@
 			<button onclick="addBtnActive()" id="import-btn">import</button>
 			<input id="default-btn" type="file" hidden>
 
+		</div>
+		<script src="js/addproduct.js"></script>
+		<div class=" pdcontainer">
+			<form>
+				<div class="group">
+					<input type="text" required>
+					<span class="highlight"></span>
+					<span class="underline"></span>
+					<label>Product Name</label>
+				</div>
+				<div class="group">
+					<input type="text" required>
+					<span class="highlight"></span>
+					<span class="underline"></span>
+					<label>Description</label>
+				</div>
+				<div class="group">
+					<input type="text" required>
+					<span class="highlight"></span>
+					<span class="underline"></span>
+					<label>Manufacturer</label>
+				</div>
+
+				<div class="group">
+					<input type="text" required>
+					<span class="highlight"></span>
+					<span class="underline"></span>
+					<label>Quantity</label>
 				</div>
 				<script src="js/addproduct.js"></script>
 				<div class=" pdcontainer">
@@ -63,4 +94,5 @@
 					</div>
 				</div>					
 </body>
+
 </html>

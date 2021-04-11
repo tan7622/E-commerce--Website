@@ -68,4 +68,39 @@ let orderList = [
             }
         }
     },
+    {
+        'id':'3',
+        'items':[
+            {
+                'id':'1',
+                'quantity':'2'
+            },
+            {
+                'id':'4',
+                'quantity':'3'
+            },
+            {
+                'id':'2',
+                'quantity':'1'
+            }
+        ],
+        'status':{
+            'received':{
+                'date':'8 Feb 2021',
+                'time':'8:00AM'
+            },
+            'packed':{
+                'date':'9 Feb 2021',
+                'time':'8:00AM'
+            },
+            'delivering':{
+                'date':'',
+                'time':''
+            },
+            'complete':{
+                'date':'',
+                'time':''
+            }
+        }
+    },
 ]

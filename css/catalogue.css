@@ -85,6 +85,7 @@ body {
     left: 95%;
     bottom: 90%;
     cursor: pointer;
+    z-index: 3;
 }
 
 .vial {
@@ -117,6 +118,7 @@ body {
 
 .img-container:hover .toolbox{
     display: block;
+    animation: breathing 3s infinite ease-in-out;
 }
 
 .ingredient:hover{
@@ -292,5 +294,17 @@ button:hover{
         opacity: 1;
         transform: scaleX(1);
         transform-origin: left;
+    }
+}
+
+@keyframes breathing {
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(3px);
+    }
+    100%{
+        transform: translateY(0px);
     }
 }
