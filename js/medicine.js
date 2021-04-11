@@ -56,7 +56,7 @@ let medicine =
     },
     {
         "id":"7",
-        "medicine":"Lingkus Lozenges",
+        "medicine":"Strapsiles Lozenges",
         "ingredient":["Hyssopusofficinalis","Glycyrrhiza ","Alpinia"],
         "description":" Is a type of medicine that temporarily relieves cough due to minor throat and bronchial irritation associated with the common cold and also temporary relief of occasional minor irritation, pain, sore mouth and sore throat",
         "path":"/res/anything-2-2.jpg",
@@ -74,7 +74,7 @@ let medicine =
     },
     {
         "id":"9",
-        "medicine":"Benztropine",
+        "medicine":"Benztropine 2mg",
         "ingredient":["Starch","Talc ","Microcrystalline "],
         "description":"Used along with other medications to treat the symptoms of Parkinson's disease (PD; a disorder of the nervous system that causes difficulties with movement, muscle control, and balance) and tremors caused by other medical problems or medications.",
         "path":"/res/anything-2-2.jpg",
@@ -92,7 +92,7 @@ let medicine =
     },
     {
         "id":"11",
-        "medicine":"Terbinafine",
+        "medicine":"Terbinafine 250mg",
         "ingredient":["Microcrystalline ","hydroxypropyl ","Colloidal"],
         "description":"Terbinafine used to treat fungal infections of the scalp. Terbinafine tablets are used to treat fungal infections of the toenails and fingernails. Terbinafine is in a class of medications called antifungals. It works by stopping the growth of fungi.",
         "path":"/res/anything-2-2.jpg",
@@ -101,7 +101,7 @@ let medicine =
     },
     {
         "id":"12",
-        "medicine":"Doxycycline",
+        "medicine":"Doxycycline 100mg",
         "ingredient":["Gelatin","Erythrosine ","Quinoline"],
         "description":" Doxycycline is a tetracycline antibiotic that fights bacteria in the body. Doxycycline is used to treat many different bacterial infections, such as acne, urinary tract infections, intestinal infections, respiratory infections, eye infections, gonorrhea, chlamydia, syphilis, periodontitis (gum disease) and others",
         "path":"/res/anything-2-2.jpg",
