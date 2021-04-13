@@ -16,6 +16,7 @@ border-radius: 10px;
 }
 
 body{
+    position: relative;
     background: linear-gradient(#f2f2f26F 60%, #c3e6f7), url(./images/medFuze_Logo.png);
     background-position: center;
     height: 100%;

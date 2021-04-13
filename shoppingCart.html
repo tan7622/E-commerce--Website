@@ -2,213 +2,138 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shopping Cart</title>
-    <link rel="stylesheet" href="css/shoppingCart.css">
-    <link rel="stylesheet" href="css/navbar.css">
-    <link rel="stylesheet" href="css/particle.css">
-    <script src="js/shoppingList.js"></script>
-    <script src="js/medicine.js"></script>
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart</title>
+  <link rel="icon" href="/css/images/medFuze_Logo.png">
+  <link rel="stylesheet" href="css/master.css">
+  <link rel="stylesheet" href="css/shoppingCart.css">
+  <script src="js/shoppingList.js"></script>
+  <script src="js/medicine.js"></script>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
 </head>
 
 <body>
-    <div class="navbar">
-        <div class="menu">
-            <a href="homepage.html"><img class="logo" src="./css/images/medFuze_Logo.png"></img></a>
-            <div class="hamburger-menu">
-                <div class="bar"></div>
-            </div>
-        </div>
+  <div class="navbar">
+    <div class="menu">
+      <a href="homepage.html"><img class="logo" src="./css/images/medFuze_Logo.png"></img></a>
+      <div class="hamburger-menu">
+        <div class="bar"></div>
+      </div>
     </div>
+  </div>
 
-    <div id="particles-js"></div>
-    <div class="container">
+  <div class="page-container">
+    <div class="main-container">
+      <div id="particles-js"></div>
+      <div class="main">
+        <div class="container">
 
-        <h2 style="margin-bottom: 0.5em;">Shopping Cart</h2>
-        <div id='cart'>
+          <h2 style="margin-bottom: 0.5em;">Shopping Cart</h2>
+          <div id='cart'>
             <div id='empty' style="display: none; place-items: center; margin: 2em; filter: invert(0.5);">
-                <img src="res/icon/shopping.svg" style="height: 50%; width: 50%;">
-                <h3 style="display: block;">The shopping cart is empty</h3>
+              <img src="res/icon/shopping.svg" style="height: 50%; width: 50%;">
+              <h3 style="display: block;">The shopping cart is empty</h3>
             </div>
-        </div>
+          </div>
 
-        <div class="end">
+          <div class="end">
             <div style="display: inline-flex;">
-                <div class="total-text">Total:</div>
-                <div class="dollar-sign">$</div>
-                <div class="price-1" id='totalPrice'></div>
-                <div class="price-2" id='totalPriceDec'></div>
+              <div class="total-text">Total:</div>
+              <div class="dollar-sign">$</div>
+              <div class="price-1" id='totalPrice'></div>
+              <div class="price-2" id='totalPriceDec'></div>
             </div>
             <br>
-            <button class="button" style="margin-top: 2em;">Proceed</button>
+            <button class="button" onclick="window.location.href='checkout.html'"
+              style="margin-top: 2em;">Proceed</button>
+
+          </div>
 
         </div>
-
+      </div>
     </div>
+
+    <div class="links">
+      <ul>
+        <li>
+          <a href="homepage.html" style="--i: 0.05s;">Home</a>
+        </li>
+        <li>
+          <a href="catalogue.html" style="--i: 0.1s;">Catalogue</a>
+        </li>
+        <li>
+          <a href="shoppingCart.html" style="--i: 0.15s;">Shopping Cart </a>
+        <li>
+          <a href="trackOrder.html" style="--i: 0.25s;">Track Order </a>
+        </li>
+        <li>
+          <a href="aboutUs.html" style="--i: 0.25s;">About us </a>
+        </li>
+        <li>
+          <a href="admin.html" style="--i: 0.25s;">Super Secret Admin Access</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <footer>
+    <div class="horizontal-scroll">
+      <div class="email">
+        <br>
+        <h2>Connect with us</h2>
+        <br>
+        <p>Subscribe to our newsletter for updates and special offers and discount.</p>
+        <div class="ns-container">
+
+          <!-- newsletter code -->
+          <div class="email-box">
+            <i class="fa fa-envelope"></i>
+            <input class="tbox" type="email" placeholder="Enter your email">
+            <div class="btn" type="button" name="button">Subscribe</div>
+          </div>
+        </div>
+      </div>
+      <div class="aboutus">
+        <br>
+        <h2>About us</h2>
+        <br>
+        <p>We medFuze is an art, science, and practice of caring for a patient and managing the prevention of patient
+          injury or disease and illness.
+          MedFuze encompasses a variety of health care practices evolved to maintain and restore health by the
+          prevention and treatment of illness.</p>
+      </div>
+
+      <div class="customerS">
+        <br>
+        <h2>Customer service</h2>
+
+        <ul class="customerUl">
+          <li><a href="aboutUs.html">About Us</a></li>
+        </ul>
+      </div>
+      <div class="socialMedia-icons">
+        <br>
+        <h2>Social Media</h2>
+        <ul class="icons">
+          <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+          <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+          <li><a class="instagram" href="#"><i class="fa fa-instagram"></i></a></li>
+          <li><a class="youtube" href="#"><i class="fa fa-youtube"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
 
 
 </body>
 
 </html>
 
-<script type="template">
-    <div class="row">
-        <div style="width: 20%; padding: 1em;">
-            <div class="menu-item"><img src="res/aspirin.jpg" style="max-width: 100%;"></div>
-        </div>
-        <div style="width: 80%; padding: 1em; margin: 1em 0 1em 0; position: relative;">
-            <div style="display: flex;">
-                <div style="width: 80%;">Aspirin</div>
-                <div style="width: 20%; text-align: right;">$12.99</div>
-            </div>
-            <div class="counter">
-                <button>-</button>
-                <input style="width: 4em;"></input>
-                <button>+</button>
-                <button>Delete</button>
-            </div>
-        </div>
-    </div>
-</script>
 
-<script>
-    const cart = document.getElementById('cart')
-    const total = document.getElementById('totalPrice')
-    const totalDec = document.getElementById('totalPriceDec')
-    const deletes = document.querySelectorAll('.delete')
-
-    let totalPrice = 0;
-
-    shoppingList.forEach(obj => {
-
-        let thumbnail = document.createElement('div')
-        thumbnail.className = 'menu-item'
-        thumbnail.id = obj.id
-
-        let med = medicine.filter((obj) => {
-            return obj.id === thumbnail.id
-        })
-
-        let item = document.createElement('div')
-        item.className = 'row'
-        item.id = obj.id
-
-        let div1 = document.createElement('div')
-        div1.className = 'thumbnail'
-
-        let image = document.createElement('img')
-        image.src = med[0].path
-        image.style.maxWidth = '100%'
-
-        let div2 = document.createElement('div')
-        div2.className = 'detail'
-
-        let div3 = document.createElement('div')
-        div3.style.display = 'flex'
-
-        let name = document.createElement('div')
-        name.className = 'name'
-        name.innerHTML = med[0].medicine
-        name.style.width = '80%'
-
-        let price = document.createElement('div')
-        price.className = 'price-wrap'
-        let dollar = document.createElement('div')
-        dollar.className = 'dollar-sign'
-        dollar.innerHTML = '$'
-        let price1 = document.createElement('div')
-        price1.className = 'price-1'
-        price1.innerHTML = med[0].price.split('.')[0]
-        let price2 = document.createElement('div')
-        price2.className = 'price-2'
-        price2.innerHTML = '.' + med[0].price.split('.')[1]
-
-        price.append(dollar)
-        price.append(price1)
-        price.append(price2)
-
-        div3.append(name)
-        div3.append(price)
-        div2.append(div3)
-
-        let counter = document.createElement('div')
-        counter.className = 'counter'
-
-        let counter_wrap = document.createElement('div')
-        counter_wrap.className = 'counter-wrap'
-
-        let count = document.createElement('select')
-        for (let i = 1; i < 16; i++) {
-            let opt = document.createElement('option')
-            opt.innerHTML = i;
-            count.append(opt)
-        }
-
-        counter_wrap.append(count)
-        counter.append(counter_wrap)
-        div2.append(counter)
-
-
-        let a = document.createElement('div')
-        a.className = 'delete-hover'
-        let del = document.createElement('div')
-        del.className = 'delete'
-        let delicon = document.createElement('img')
-        delicon.src = "res/icon/delete.svg"
-        delicon.className = "delete-icon"
-        a.append(del)
-        a.append(delicon)
-        a.addEventListener('click', () => {
-            deleteFunc(obj.id, del)
-        })
-
-        div1.append(thumbnail)
-        thumbnail.append(image)
-        item.append(div1)
-        item.append(div2)
-        item.append(a)
-
-        cart.append(item)
-
-        totalPrice = totalPrice + parseFloat(med[0].price);
-
-    });
-
-    calculate()
-
-    function deleteFunc(id, button) {
-        button.className = 'deleted';
-        let item = document.getElementById(id)
-        item.style.opacity = 0
-
-        setTimeout(() => {
-            button.className = 'delete';
-            cart.removeChild(item)
-            calculate()
-        }, 1000);
-    }
-
-    function calculate(){
-        let price1 = cart.querySelectorAll('.price-1')
-        let price2 = cart.querySelectorAll('.price-2')
-        let totalP = 0
-        let i = 0
-
-        price1.forEach(e=>{
-            let price = e.innerHTML + '.' + price2[i].innerHTML.substr(1)
-            totalP = totalP + parseFloat(price)
-            i++
-        })
-
-        if(totalP == 0)
-            document.querySelector('#empty').style.display = 'grid'
-
-        total.innerHTML = totalP.toString().split('.')[0]
-        totalDec.innerHTML = '.' + totalP.toFixed(2).toString().split('.')[1]
-    }
-</script>
-
+<script src="js/shoppingCart.js"></script>
+<script src="js/homepage.js"></script>
 <script src="js/particle.js"></script>

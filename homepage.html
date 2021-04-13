@@ -6,42 +6,53 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>medFuze</title>
   <link rel="icon" href="/css/images/medFuze_Logo.png">
+  <link rel="stylesheet" href="css/master.css" />
   <link rel="stylesheet" href="css/homepage.css" />
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 </head>
-<body>
-  <div class="container">
-    <div class="navbar">
-      <div class="menu">
-        <a href="homepage.html">
-          <img class="logo" src="./css/images/medFuze_Logo.png" alt="logo">
-        </a>
 
-        <div class="hamburger-menu">
-          <div class="bar"></div>
-        </div>
+<body>
+  <div id="particles-js"></div>
+
+  <div class="navbar">
+    <div class="menu">
+      <a href="homepage.html">
+        <img class="logo" src="./css/images/medFuze_Logo.png" alt="logo">
+      </a>
+      <div class="hamburger-menu">
+        <div class="bar"></div>
       </div>
     </div>
+  </div>
+
+  <div class="page-container">
     <div class="main-container">
       <div class="main">
         <header>
           <div class="overlay">
-            <!-- Red pill -->
+            <img class="bg-image" src="res/medFuze_background.png">
             <img class="pill1" src="res/Tablet1.png" alt="tablet1">
-            <!-- Blue pill -->
             <img class="pill2" src="res/Tablet2.png" alt="tablet2">
-            <h3 class="mainContent">medFuze</h3>
+            <img class="pill3" src="res/Tablet3.png" alt="tablet3">
+            <img class="pill4" src="res/Tablet4.png" alt="tablet4">
+            <img class="pill5" src="res/Tablet5.png" alt="tablet5">
 
-            <button>Shop now</button>
-
-            <div class="textContent1">
-              <h3> Always there to care. </h3>
+            <div class="slogan">
+              <h3 class="mainContent">medFuze</h3>
+              <button onclick="document.location.href = 'catalogue.html'">Shop now</button>
+              <div class="textContent1">
+                <h3> Always there to care. </h3>
+              </div>
             </div>
+
           </div>
+
         </header>
-        <div class="shadow one"></div>
       </div>
     </div>
+
     <div class="links">
       <ul>
         <li>
@@ -56,7 +67,10 @@
           <a href="trackOrder.html" style="--i: 0.25s;">Track Order </a>
         </li>
         <li>
-          <a href="contactUS.html" style="--i: 0.25s;">Contact us </a>
+          <a href="aboutUs.html" style="--i: 0.25s;">About us </a>
+        </li>
+        <li>
+          <a href="admin.html" style="--i: 0.25s;">Super Secret Admin Access</a>
         </li>
       </ul>
     </div>
@@ -76,7 +90,7 @@
           <div class="email-box">
             <i class="fa fa-envelope"></i>
             <input class="tbox" type="email" placeholder="Enter your email">
-            <button class="btn" type="button" name="button">Subscribe</button>
+            <div class="btn" type="button" name="button">Subscribe</div>
           </div>
         </div>
       </div>
@@ -96,10 +110,6 @@
 
         <ul class="customerUl">
           <li><a href="aboutUs.html">About Us</a></li>
-
-          <li><a href="contactUS.html">Contact Us</a></li>
-
-          <li><a href="#">Site Map</a></li>
         </ul>
       </div>
       <div class="socialMedia-icons">
@@ -114,10 +124,13 @@
       </div>
     </div>
   </footer>
-  <!-- <div class="splash">
-      <h3 class="sH3">medFuze</h3> <div class="img"></div>
-    </div> -->
+  <div class="splash">
+    <h3 class="sH3">medFuze</h3>
+    <div class="img"></div>
+  </div>
 
 </body>
 
 </html>
+
+<script src="js/particle.js"></script>

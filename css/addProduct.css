@@ -1,49 +1,42 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
-html,body{
-  display: grid;
+body{
+  background: linear-gradient(#f2f2f26F 60%, #e7bbc0), url(./images/medFuze_Logo.png);
+  background-position: center;
   height: 100%;
-  text-align: center;
-  background-color: #caf0f8;
-  background-image: linear-gradient(135deg, #e8feff 0%, #caf0f8 74%);
-  overflow-x: hidden;
-  transform-style: preserve-3d;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
-.mainContainer{
 
-  border: 2px groove #c2cdda;
-  background-color: #ade8f4;
-  width:75%;
-  height: 80%;
-  position: relative;
-  left: 8%;
-  align-content: center;
-  border: groove #fff;
-  padding: 20px;
-  margin: 80px;
-
-}
 /*--------------- Whole container section ends here --------------- */
+.bigcontainer{
+  background-color: #f7f7f7;
+  display: flex;
+  margin: 0 15% 10% 15%;
+  height: 100%;
+  border: 1px solid black;
+  padding: 2em;
+  border-radius: 1em;
+}
+
 .container{
-  height: 250px;
-  width: 350px;
-  position: relative;
-  top: 20%;
-  left: 15%;
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2em;
 }
-/*--------------- Whole container section ends here --------------- */
 
+.pdcontainer{
+  width: 60%;
+  padding: 2em;
+}
+
+/*--------------- Whole container section ends here --------------- */
 
 /*--------------- Outline section ends here --------------- */
 .container .wrapper{ 
   position: relative;
-  height: 300px;
-  width: 100%;
   border-radius: 10px;
   background: #fff;
   border: 2px groove #c2cdda;
@@ -51,6 +44,8 @@ html,body{
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  height: 300px;
+  width: 300px;
 }
 /*--------------- Outline section ends here --------------- */
 .wrapper.active{
@@ -65,6 +60,7 @@ html,body{
   justify-content: center;
 }
 .wrapper img{
+  display: none;
   height: 100%;
   width: 100%;
   object-fit: cover;
@@ -91,68 +87,41 @@ html,body{
 .wrapper.active:hover .file-name{
   display: block;
 }
-.container #import-btn{
-  margin-top: 30px;
-  display: block;
-  position: relative;
-  left: 30%;
-  width: 150px;
-  height: 50px;
+
+button {
+  width: 30%;
+  margin: 2em;
+  padding: 1em;
+  background-image: linear-gradient(135deg, #de8253 0%, #c9503d 100%);
+  background-size: 200%;
+  transition: 0.5s;
+  color: #FFFFFF;
   border: none;
+  border-radius: 1em;
   outline: none;
-  border-radius: 25px;
-  color: #fff;
-  font-size: 18px;
-  font-weight: 500;
-  letter-spacing: 1px;
-  text-transform: uppercase;
   cursor: pointer;
-  background: linear-gradient(135deg,#3a8ffe 0%,#9658fe 100%);
-}
-.cancel-btn{
-  margin-top: 30px;
-  display: block;
-  position: absolute;
-  left: 15%;
-  width: 150px;
-  height: 50px;
-  border: none;
-  outline: none;
-  border-radius: 25px;
-  color: #fff;
-  font-size: 18px;
-  font-weight: 500;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  cursor: pointer;
-  background: linear-gradient(135deg,#3a8ffe 0%,#9658fe 100%);
+  box-shadow: 0 0 2em #c97076;
 }
 
-.add-btn{
-  margin-top: 30px;
-  display: block;
-  position: absolute;
-  left: 60%;
-  width: 150px;
-  height: 50px;
-  border: none;
-  outline: none;
-  border-radius: 25px;
-  color: #fff;
-  font-size: 18px;
-  font-weight: 500;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  cursor: pointer;
-  background: linear-gradient(135deg,#3a8ffe 0%,#9658fe 100%);
+button:hover {
+  background-position: right center;
+  transform: translateX(2px) translateY(2px);
 }
 /*--------------- Product details section ends here --------------- */
 
 /* Input ------------------------------------------ */
-.pdcontainer{
-  position: absolute;
-  left:50%;
-  top: 20%;
-}
 
 /*--------------- Product details section ends here --------------- */
+
+.cross {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  height: 50px;
+  width: 50px;
+  left: 95%;
+  bottom: 90%;
+  cursor: pointer;
+  z-index: 3;
+}

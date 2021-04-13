@@ -1,0 +1,44 @@
+body{
+    background: linear-gradient(#f2f2f26F 60%, #e7bbc0), url(./images/medFuze_Logo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.container{
+    display: flex;
+    margin: 5% 15%;
+    justify-content: center;
+}
+
+a{
+    text-decoration: none;
+}
+
+.card{
+    height: 300px;
+    width: 300px;
+    background-color: #f7f7f7;
+    margin: 2em;
+    cursor: pointer;
+    transition: 0.5s;
+    box-shadow: 0 0 1em #e7bbc0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card img{
+    filter: invert(0.3);
+    max-width: 30%;
+}
+
+.card div{
+    margin-top: 1em;
+}
+
+.card:hover{
+    transform: translateX(5px) translateY(5px);
+}
+

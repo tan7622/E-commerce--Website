@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Track Order</title>
+    <title>Track Order Admin</title>
+    <link rel="icon" href="/css/images/medFuze_Logo.png">
+    <link rel="stylesheet" href="css/master.css">
     <link rel="stylesheet" href="css/trackOrderAdmin.css">
-    <link rel="stylesheet" href="css/navbar.css">
-    <link rel="stylesheet" href="css/particle.css">
 
     <script src="js/orderList.js"></script>
     <script src="js/medicine.js"></script>
@@ -18,21 +18,16 @@
 <body>
     <div id="particles-js"></div>
 
+    <div id='back' class="cross"><img style="height: 50%; width: 50%;" src="res/icon/back.png"></div>
+
     <div class="overlay">
-        <div class="cross"><img style="height: 50%; width: 50%;" src="res/icon/close-button.svg"></div>
+        <div id='cross' class="cross" style="left: 80%; bottom: 87%;"><img style="height: 50%; width: 50%;"
+                src="res/icon/close-button.svg"></div>
         <div id='container2' class="container2">
 
         </div>
     </div>
 
-    <div class="navbar">
-        <div class="menu">
-            <a href="homepage.html"><img class="logo" src="./css/images/medFuze_Logo.png"></img></a>
-            <div class="hamburger-menu">
-                <div class="bar"></div>
-            </div>
-        </div>
-    </div>
 
     <div style="margin: 5% 15% 1em 15%;">
         <h2>Order List</h2>
@@ -45,202 +40,5 @@
 
 </html>
 
-<script type="template">
-    <div id='container2' class="container2">
-        <h2>Order 2</h2>
-        <div class="row">
-            <div style="width: 60%;">
-                <div>Customer: Someone</div>
-                <div>Address</div>
-                <div>Line1</div>
-                <div>Line2</div>
-                <div>Line3</div>
-            </div>
-            <div style="width: 40%;">
-                <div>Status</div>
-                <select style="width: 60%;">
-                    <option>Received</option>
-                    <option>Packed</option>
-                    <option>Delivering</option>
-                    <option>Completed</option>
-                </select>
-            </div>
-        </div>
-        <h2>Orders</h2>
-        <div class="row">
-            <div class="menu-list">
-                <div class="item">
-                    <div class="menu-item">a</div>
-                    Name x3
-                </div>
-                <div class="item">
-                    <div class="menu-item">a</div>
-                    Name x3
-                </div>
-                <div class="item">
-                    <div class="menu-item">a</div>
-                    Name x3
-                </div>
-                <div class="item">
-                    <div class="menu-item">a</div>
-                    Name x3
-                </div>
-            </div>
-        </div>
-        <div class="row end">
-            <button>Save</button>
-        </div>
-    </div>
-</script>
-
-<script>
-    let cont = document.getElementById('container')
-    const closeBtn = document.querySelector('.cross');
-    const overlay = document.querySelector('.overlay');
-    const container2 = document.querySelector('#container2');
-
-    closeBtn.addEventListener('click', () => {
-        overlay.style.opacity = 0
-        setTimeout(() => {
-            overlay.style.display = 'none'
-        }, 500);
-        document.body.style.overflow = 'auto'
-        container2.innerHTML = ''
-    })
-
-    orderList.forEach(e => {
-        let orderDiv = document.createElement('div')
-        orderDiv.className = 'order'
-
-        let orderNo = document.createElement('div')
-        orderNo.className = 'orderNo'
-        orderNo.innerHTML = 'Order ' + e.id
-
-        let status = document.createElement('div')
-        status.className = 'status'
-        status.innerHTML = getStatus(e, status)
-
-        let btnContainer = document.createElement('div')
-        btnContainer.className = 'btnContainer'
-        let btn = document.createElement('button')
-        btn.innerHTML = "View"
-        btnContainer.append(btn)
-
-        btn.addEventListener('click',()=>{
-            showOrder(e)
-        })
-
-        orderDiv.append(orderNo)
-        orderDiv.append(status)
-        orderDiv.append(btnContainer)
-
-        cont.append(orderDiv)
-    });
-
-    function getStatus(order, element){
-        let status = '';
-        order.status.received.date != '' ? status = 'Received' : null;
-        order.status.packed.date != '' ? status = 'Packed' : null;
-        order.status.delivering.date != '' ? status = 'Delivering' : null;
-        order.status.complete.date != '' ? status = 'Completed' : null;
-
-        status == 'Received'? element.classList.toggle('received') :null;
-        status == 'Packed'? element.classList.toggle('packed') :null;
-        status == 'Delivering'? element.classList.toggle('delivering') :null;
-        status == 'Completed'? element.classList.toggle('completed') :null;
-
-        return status
-    }
-    
-    function showOrder(e) {
-        overlay.style.display = 'flex';
-        setTimeout(() => {
-            overlay.style.opacity = 1;
-        }, 1);
-        document.body.style.overflow = 'hidden'
-
-        let orderNo = document.createElement('h2')
-        orderNo.innerHTML = 'Order ' + e.id
-
-        let detail = document.createElement('div')
-        detail.className = 'row'
-        let detail1 = document.createElement('div')
-        detail1.style.width = '60%'
-        let detail2 = document.createElement('div')
-        detail2.style.width = '40%'
-        detail.append(detail1)
-        detail.append(detail2)
-
-        let n = document.createElement('strong')
-        n.innerHTML = 'Customer: '
-        let name = document.createElement('div')
-        name.innerHTML = e.customer;
-        let address = document.createElement('strong')
-        address.innerHTML = 'Address: '
-        let line1 = document.createElement('div')
-        line1.innerHTML = e.address1
-        let line2 = document.createElement('div')
-        line2.innerHTML = e.address2
-        let line3 = document.createElement('div')
-        line3.innerHTML = e.address3
-
-        console.log(line2)
-        detail1.append(n)
-        detail1.append(name)
-        detail1.append(address)
-        detail1.append(line1)
-        detail1.append(line2)
-        detail1.append(line3)
-
-        let status = document.createElement('div')
-        status.innerHTML = 'Status'
-        let select = document.createElement('select')
-        select.style.width = '60%'
-        let s = ['Received','Packed','Delivering','Completed']
-        s.forEach((e)=>{
-            let opt = document.createElement('option')
-            opt.innerHTML = e
-            select.append(opt)
-        })
-
-        detail2.append(status)
-        detail2.append(select)
-
-        let o = document.createElement('h2')
-        o.innerHTML = 'Orders'
-
-        let menulist = document.createElement('div')
-        menulist.className = 'menu-list'
-        e.items.forEach((i)=>{
-            let med = medicine.filter((m) => {
-                return m.id === i.id
-            })
-            let item = document.createElement('div')
-            item.className = 'item'
-            let menuitem = document.createElement('div')
-            menuitem.className = 'menu-item'
-            let img = document.createElement('img')
-            img.src = med[0].path
-
-            menuitem.append(img)
-            item.append(menuitem)
-            item.append(med[0].medicine + ' x' + i.quantity)
-            menulist.append(item)
-        })
-
-        let end = document.createElement('div')
-        end.className = "row end"
-        let btn = document.createElement('button')
-        btn.innerHTML = 'Save'
-        end.append(btn)
-
-        container2.append(orderNo)
-        container2.append(detail)
-        container2.append(o)
-        container2.append(menulist)
-        container2.append(end)
-    }
-
-</script>
-
+<script src="js/trackOrderAdmin.js"></script>
 <script src="js/particleAdmin.js"></script>

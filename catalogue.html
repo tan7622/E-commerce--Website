@@ -1,71 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catalogue</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catalogue</title>
+  <link rel="icon" href="/css/images/medFuze_Logo.png">
+  <link rel="stylesheet" href="./css/master.css">
+  <link rel="stylesheet" href="./css/catalogue.css">
 
-    <link rel="stylesheet" href="./css/catalogue.css">
-    <link rel="stylesheet" href="./css/navbar.css">
-    <link rel="stylesheet" href="./css/particle.css">
-
-    <script src="./js/medicine.js"></script>
-    <script src="./js/homepage.js"></script>
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="./js/medicine.js"></script>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
 </head>
+
 <body>
-    <div class="navbar">
+  <div id="particles-js"></div>
+
+  <div class="navbar">
     <div class="menu">
-        <a href="homepage.html"><img class="logo" src="./css/images/medFuze_Logo.png"></img></a>
-        <div class="hamburger-menu">
+      <a href="homepage.html"><img class="logo" src="./css/images/medFuze_Logo.png"></img></a>
+      <div class="hamburger-menu">
         <div class="bar"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-container">
+    <div class="main-container">
+      <div class="main">
+        <div id='menu' class="menu-list">
+
         </div>
-    </div>
-    </div>
-
-    <div id='menu' class="menu-list">
-    <div id="particles-js"></div>
-
+      </div>
     </div>
 
-    <div id="vial-container-wrap" style="display: none;">
-        <div id='vial-container' class="vial-container">
-            <div id='prev' class="next"><img class="arrow" src="res/icon/left.svg"></div>
-            <div class="cross"><img style="height: 50%; width: 50%;" src="res/icon/close-button.svg"></div>
-            <div id='id' style="display: none;"></div>
-            <div class="description">
-                <div class="ingredient">
-                    <span class="long"></span>
-                    <span class="long"></span>
-                    <span class="long"></span>
-                    <span class="long"></span>
-                    <span class="short"></span>
-                    <span class="short"></span>
-                    <div class="content">
-                        <h3>Ingredient</h3>
-                        <ul style="position: relative; right: 1.5em;  ">
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="img-container">
-                <div class="toolbox"></div>
-                <img id='vial' class="vial" src="" style="height: 50%; display: block;"></img>
-            </div>
-            <div class="description" style="display: block; text-align: center;">
-                <div id='description' style="text-align: justify;"></div>
-                    <button>Add to Cart</button>
-                    <button>Buy Now</button>
-            </div>
-            <div id='next' class="next"><img class="arrow right" src="res/icon/left.svg"></div>
+    <div class="links">
+      <ul>
+        <li>
+          <a href="homepage.html" style="--i: 0.05s;">Home</a>
+        </li>
+        <li>
+          <a href="catalogue.html" style="--i: 0.1s;">Catalogue</a>
+        </li>
+        <li>
+          <a href="shoppingCart.html" style="--i: 0.15s;">Shopping Cart </a>
+        <li>
+          <a href="trackOrder.html" style="--i: 0.25s;">Track Order </a>
+        </li>
+        <li>
+          <a href="aboutUs.html" style="--i: 0.25s;">About us </a>
+        </li>
+        <li>
+          <a href="admin.html" style="--i: 0.25s;">Super Secret Admin Access</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="js/homepage.js"></script>
+
+
+  <div id="vial-container-wrap" style="display: none;">
+    <div id='vial-container' class="vial-container">
+      <div id='prev' class="next"><img class="arrow" src="res/icon/left.svg"></div>
+      <div class="cross"><img style="height: 50%; width: 50%;" src="res/icon/close-button.svg"></div>
+      <div id='id' style="display: none;"></div>
+      <div class="description">
+        <div class="ingredient">
+          <span class="long"></span>
+          <span class="long"></span>
+          <span class="long"></span>
+          <span class="long"></span>
+          <span class="short"></span>
+          <span class="short"></span>
+          <div class="content">
+            <h3>Ingredient</h3>
+            <ul style="position: relative; right: 1.5em;  ">
+            </ul>
+          </div>
         </div>
+      </div>
+      <div class="img-container">
+        <div class="toolbox"></div>
+        <img id='vial' class="vial" src="" style="height: 50%; display: block;"></img>
+        <div id='medicine'>Something</div>
+        <div class="price-wrap">
+          <div class="dollar-sign">$</div>
+          <div class="price-1">20</div>
+          <div class="price-2">.99</div>
+        </div>
+      </div>
+      <div class="description" style="display: block; text-align: center;">
+        <div id='description' style="text-align: justify;"></div>
+        <button>Add to Cart</button>
+        <button>Buy Now</button>
+      </div>
+      <div id='next' class="next"><img class="arrow right" src="res/icon/left.svg"></div>
     </div>
+  </div>
+  <footer>
+    <div class="horizontal-scroll">
+      <div class="email">
+        <br>
+        <h2>Connect with us</h2>
+        <br>
+        <p>Subscribe to our newsletter for updates and special offers and discount.</p>
+        <div class="ns-container">
+
+          <!-- newsletter code -->
+          <div class="email-box">
+            <i class="fa fa-envelope"></i>
+            <input class="tbox" type="email" placeholder="Enter your email">
+            <div class="btn" type="button" name="button">Subscribe</div>
+          </div>
+        </div>
+      </div>
+      <div class="aboutus">
+        <br>
+        <h2>About us</h2>
+        <br>
+        <p>We medFuze is an art, science, and practice of caring for a patient and managing the prevention of patient
+          injury or disease and illness.
+          MedFuze encompasses a variety of health care practices evolved to maintain and restore health by the
+          prevention and treatment of illness.</p>
+      </div>
+
+      <div class="customerS">
+        <br>
+        <h2>Customer service</h2>
+
+        <ul class="customerUl">
+          <li><a href="aboutUs.html">About Us</a></li>
+        </ul>
+      </div>
+      <div class="socialMedia-icons">
+        <br>
+        <h2>Social Media</h2>
+        <ul class="icons">
+          <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+          <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+          <li><a class="instagram" href="#"><i class="fa fa-instagram"></i></a></li>
+          <li><a class="youtube" href="#"><i class="fa fa-youtube"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
 </body>
+
 </html>
 
 <script type="template">
-    <div class="menu-item">
+  <div class="menu-item">
         <img src="/res/fish-oil.jpg" style="height:70%">
         <div class="menu-overlay">
             <p>THis is some word</p>
@@ -73,110 +162,5 @@
     </div>
 </script>
 
-<script>
-    const closeBtn = document.querySelector('.cross')
-    const prev = document.querySelector('#prev')
-    const next = document.querySelector('#next')
-    const menu = document.getElementById('menu')
-    const product = document.querySelector('.vial-container')
-    const max = medicine.length
-    const tool = document.querySelector('.toolbox')
-
-    medicine.forEach(obj => {
-        let item = document.createElement('div')
-        item.className = 'menu-item'
-        item.id = obj.id
-
-        let image = document.createElement('img')
-        image.src = obj.path
-        image.style.height = '70%'
-
-        let overlay = document.createElement('div')
-        overlay.className = 'menu-overlay'
-        let desc = document.createElement('p')
-        desc.innerHTML = obj.medicine
-        overlay.append(desc)
-
-        item.append(image)
-        item.append(overlay)
-
-        menu.append(item)
-    });
-
-    const items = document.querySelectorAll('.menu-item')
-
-    items.forEach(element => {
-            element.addEventListener('click',function(e){
-                generateDetails(element.id)
-                document.getElementById('vial-container-wrap').style.display = 'block'
-                document.getElementById('menu').style.display = 'none'
-        })        
-    });
-
-    closeBtn.addEventListener('click',()=>{
-        document.getElementById('menu').style.display = 'flex'
-        document.getElementById('vial-container-wrap').style.display = 'none'
-    })
-
-    prev.addEventListener('click',()=>{
-        document.getElementById('vial-container-wrap').style.display = 'none'
-        setTimeout(() => {
-            let id = parseInt(document.getElementById('id').innerHTML)
-            id == 1? id = max : id--
-            generateDetails(id.toString())
-            document.getElementById('vial-container-wrap').style.display = 'flex'
-            document.getElementById('menu').style.display = 'none'
-        }, 100);
-    })
-    next.addEventListener('click',()=>{
-        document.getElementById('vial-container-wrap').style.display = 'none'
-        setTimeout(() => {
-            let id = parseInt(document.getElementById('id').innerHTML)
-            id == max? id = 1 : id++
-            generateDetails(id.toString())
-            document.getElementById('vial-container-wrap').style.display = 'flex'
-            document.getElementById('menu').style.display = 'none'
-        }, 100);
-    })
-
-    function generateDetails(id) {
-        let list = product.querySelector('.content ul')
-        list.innerHTML = ''
-
-        let med = medicine.filter((obj)=>{
-            return obj.id === id
-        })
-
-        let ingredients = med[0].ingredient
-        
-        ingredients.forEach(element => {
-            let ul = document.createElement('li')
-            ul.innerHTML = element
-            list.append(ul)
-        });
-
-        let img = product.querySelector('#vial')
-        img.src = med[0].path
-        img.addEventListener('mousemove',(e)=>{
-            tool.style.left = e.pageX + 15 + 'px';
-            tool.style.top = e.pageY - 15 + 'px';
-        })
-        let ul = document.createElement('ul')
-        med[0].symptom.forEach(element =>{
-            let li = document.createElement('li')
-            li.innerHTML = element
-            ul.append(li)
-        })
-        tool.innerHTML = ''
-        tool.append(ul)
-
-        let desc = product.querySelector('#description')
-        desc.innerHTML = med[0].description
-
-        let medid = product.querySelector('#id')
-        medid.innerHTML = med[0].id
-    }
-
-</script>
-
+<script src="js/catalogue.js"></script>
 <script src="js/particle.js"></script>

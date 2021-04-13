@@ -4,93 +4,156 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>medFuze</title>
+  <title>About Us</title>
   <link rel="icon" href="/css/images/medFuze_Logo.png">
+  <link rel="stylesheet" href="css/master.css" />
+  <link rel="stylesheet" href="css/input.css" />
   <link rel="stylesheet" href="css/aboutUS.css" />
+
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-  </script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
-  </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.26.0/moment.min.js"></script>
+
 </head>
 
 <body>
-  <div class="container">
-    <div class="auHeader">
-      <h1>Our Team</h1>
-    </div>
-    <div class="sub-container">
-      <div class="teams">
-        <img src="css/images/xh.JPG"  alt="xh">
-        <div class="name">Lee Xin Hong</div>
-        <div class="position"> Back-End Developer</div>
-        <div class="about">Specialize in certain programming language and anime hardcore fans </div>
+  <div id="particles-js"></div>
 
-        <div class="social-links">
-          <a href="#">
-            <i1 class="fa fa-facebook"></i1>
-          </a>
-          <a href="#">
-            <i2 class="fa fa-instagram"></i2>
-          </a>
-          <a href="#">
-            <i3 class="fa fa-twitter"></i3>
-          </a>
-          <a href="#">
-            <i4 class="fa fa-github"></i4>
-          </a>
-        </div>
+
+  <div class="overlay">
+    <div class="container2">
+      <h2>Contact Us</h2>
+      <div class="group">
+        <input type="text" required>
+        <label>Name</label>
       </div>
-      <div class="teams">
-        <img src="css/images/hs.JPG" alt="hs">
-        <div class="name">Tan He Song</div>
-        <div class="position">Front-end Developer</div>
-        <div class="about">Specialize in procrastinating but also a hungry learner in html and css </div>
-
-        <div class="social-links">
-          <a href="#">
-            <i1 class="fa fa-facebook"></i1>
-          </a>
-          <a href="#">
-            <i2 class="fa fa-instagram"></i2>
-          </a>
-          <a href="#">
-            <i3 class="fa fa-twitter"></i3>
-          </a>
-          <a href="#">
-            <i4 class="fa fa-github"></i4>
-          </a>
-        </div>
+      <div class="group">
+        <input type="text" required>
+        <label>Email</label>
+      </div>
+      <div class="group">
+        <input type="text" required>
+        <label>Phone Number</label>
+      </div>
+      <div class="group">
+        <input type="text" required>
+        <label>Message</label>
+      </div>
+      <div style="display: flex; justify-content: center;">
+        <button onclick="closing()" style="margin: 1em;">Send</button>
+        <button onclick="closing()" style="margin: 1em;">Cancel</button>
       </div>
     </div>
-    <div class="header2">
-      <h1>Our Company Vision</h1>
-      <p class="desc">
-        We strive to provide better health care with customized options for our customers. We promise to serve<br>
-        everyone with equality, and with the best care that we can offer. We see medFuze to be labelled as the fine
-        quality of the e-commerce for the community.
-      </p>
+  </div>
+
+  <div class="navbar">
+    <div class="menu">
+      <a href="homepage.html"><img class="logo" src="./css/images/medFuze_Logo.png"></img></a>
+      <div class="hamburger-menu">
+        <div class="bar"></div>
+      </div>
     </div>
-    <div class="header2">
-      <h1>Mission</h1>
-      <p class="desc">
-        Our mission is to provide the utmost professional and quality services in medFuze care to all of our <br>clients
-        through responsible provision of medication therapy and promotion of holistic wellness lifestyles that
-        ultimately improve clients' quality of life.
-      </p>
+  </div>
+
+  <div class="page-container">
+    <div class="main-container">
+      <div class="main">
+        <div class="container">
+          <div class="auHeader">
+            <h1>Our Team</h1>
+          </div>
+          <div class="sub-container">
+            <div class="teams">
+              <img src="css/images/xh.JPG" alt="xh">
+              <div class="name">Lee Xin Hong</div>
+              <div class="position"> Back-End Developer</div>
+              <div class="about">Professionally steal codes from the internet. Apparently his video games and TV shows
+                are more important than his social life</div>
+
+              <div class="social-links">
+                <a target="_blank" href="https://www.facebook.com/xinhong9299">
+                  <i1 class="fa fa-facebook"></i1>
+                </a>
+                <a target="_blank" href="https://www.instagram.com/x_in_hong/">
+                  <i2 class="fa fa-instagram"></i2>
+                </a>
+                <a target="_blank" href="https://github.com/xinhong9299">
+                  <i4 class="fa fa-github"></i4>
+                </a>
+              </div>
+            </div>
+            <div class="teams">
+              <img src="css/images/hs.JPG" alt="hs">
+              <div class="name">Tan He Song</div>
+              <div class="position">Front-end Developer</div>
+              <div class="about">Specialize in procrastinating but also a hungry learner in HTML and CSS. Probably typed
+                that out to get high score in assignment</div>
+
+              <div class="social-links">
+                <a target="_blank" href="https://www.facebook.com/tan7622">
+                  <i1 class="fa fa-facebook"></i1>
+                </a>
+                <a target="_blank" href="https://www.instagram.com/jerry.t__/">
+                  <i2 class="fa fa-instagram"></i2>
+                </a>
+                <a target="_blank" href="https://github.com/tan7622">
+                  <i4 class="fa fa-github"></i4>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="header2" style="margin-bottom: 2em;">
+            <button onclick="opening()">Contact Us</button>
+          </div>
+          <div class="header2">
+            <h1>Our Company Vision</h1>
+            <p class="desc">
+              We strive to provide better health care with customized options for our customers. We promise to serve<br>
+              everyone with equality, and with the best care that we can offer. We see medFuze to be labelled as the
+              fine
+              quality of the e-commerce for the community.
+            </p>
+          </div>
+          <div class="header2">
+            <h1>Mission</h1>
+            <p class="desc">
+              Our mission is to provide the utmost professional and quality services in medFuze care to all of our
+              <br>clients
+              through responsible provision of medication therapy and promotion of holistic wellness lifestyles that
+              ultimately improve clients' quality of life.
+            </p>
+          </div>
+          <div class="header2">
+            <h1>Core Value</h1>
+            <p class="desc">
+              Never give up and keep our business shy before and after cancer is cured.
+            </p>
+          </div>
+
+        </div>
+      </div>
     </div>
-    <div class="header2">
-      <h1>Core Value</h1>
-      <p class="desc">
-        Never give up and keep our business shy until covid-19 is officially delete.
-      </p>
+
+    <div class="links">
+      <ul>
+        <li>
+          <a href="homepage.html" style="--i: 0.05s;">Home</a>
+        </li>
+        <li>
+          <a href="catalogue.html" style="--i: 0.1s;">Catalogue</a>
+        </li>
+        <li>
+          <a href="shoppingCart.html" style="--i: 0.15s;">Shopping Cart </a>
+        <li>
+          <a href="trackOrder.html" style="--i: 0.25s;">Track Order </a>
+        </li>
+        <li>
+          <a href="aboutUs.html" style="--i: 0.25s;">About us </a>
+        </li>
+        <li>
+          <a href="admin.html" style="--i: 0.25s;">Super Secret Admin Access</a>
+        </li>
+      </ul>
     </div>
   </div>
 
@@ -107,7 +170,7 @@
           <div class="email-box">
             <i class="fa fa-envelope"></i>
             <input class="tbox" type="email" placeholder="Enter your email">
-            <button class="btn" type="button" name="button">Subscribe</button>
+            <div class="btn" type="button" name="button">Subscribe</div>
           </div>
         </div>
       </div>
@@ -127,10 +190,6 @@
 
         <ul class="customerUl">
           <li><a href="aboutUs.html">About Us</a></li>
-
-          <li><a href="contactUS.html">Contact Us</a></li>
-
-          <li><a href="#">Site Map</a></li>
         </ul>
       </div>
       <div class="socialMedia-icons">
@@ -144,8 +203,11 @@
         </ul>
       </div>
     </div>
-
   </footer>
 </body>
 
 </html>
+
+<script src="js/aboutUs.js"></script>
+<script src="js/particle.js"></script>
+<script src="js/homepage.js"></script>

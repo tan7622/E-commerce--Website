@@ -1,21 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
 
-* {
-  padding: 0;
+body{
+  background: linear-gradient(#f2f2f26F 60%, #c3e6f7), url(./images/medFuze_Logo.png);
+  background-position: center;
+  height: 100%;
   margin: 0;
-  box-sizing: border-box;
-}
-
-::-webkit-scrollbar {
-
-  width: 10px;
-
-}
-
-::-webkit-scrollbar-thumb {
-  background: #e2e2e2;
-  border-radius: 10px;
-
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 /*--------------- Splash start --------------- */
@@ -31,8 +21,8 @@
   position: fixed;
   top: 0;
   left: 0;
-  height: 937px;
-  width: 1920px;
+  height: 100vh;
+  width: 100vw;
   background-color: #f8f7ff;
   font-size: 2em;
   display: flex;
@@ -49,8 +39,6 @@
   background-repeat: no-repeat;
   height: 130px;
   width: 145px;
-
-
 }
 
 .splash::after,
@@ -88,107 +76,20 @@
 
 /*--------------- Splash end --------------- */
 
-/*--------------- Zoom out nav bar background --------------- */
-.container {
-  min-height: 100vh;
-  width: 100%;
-  background-color: #caf0f8;
-  background-image: linear-gradient(135deg, #e8feff 0%, #caf0f8 74%);
-  overflow-x: hidden;
-  transform-style: preserve-3d;
-}
-
-/*--------------- Zoom out nav bar background --------------- */
-
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 10;
-  height: 3rem;
-}
-
-.menu {
-  max-width: 72em;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: #fff;
-}
-
-.logo {
-  height: 50px;
-  width: 50px;
-  position: relative;
-
-}
-
-
-.hamburger-menu {
-  height: 4rem;
-  width: 3rem;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-}
-
-.bar {
-  width: 1.4rem;
-  height: 1.5px;
-  border-radius: 2px;
-  background-color: #0a1128;
-  transition: 0.5s;
-  position: relative;
-}
-
-.bar:before,
-.bar:after {
-  content: "";
+.bg-image{
+  user-select: none;
   position: absolute;
-  width: inherit;
-  height: inherit;
-  background-color: #0a1128;
-  transition: 0.5s;
+  right: 2%;
+  bottom: 2%;
 }
-
-.bar:before {
-  transform: translateY(-9px);
-}
-
-.bar:after {
-  transform: translateY(9px);
-}
-
-.main {
-  position: relative;
-  width: 100%;
-  left: 0;
-  z-index: 5;
-  overflow: hidden;
-  transform-origin: left;
-  transform-style: preserve-3d;
-  transition: 0.5s;
-}
-
-header {
-  min-height: 100vh;
-  width: 100%;
-  position: relative;
-}
-
 /*--------------- Zoom In nav bar background --------------- */
+
+
 /* red pill */
 .pill1 {
-  position: relative;
-  right: auto;
-  left: 1200px;
-  top: auto;
-  bottom: 180px;
+  position: absolute;
+  right: 20%;
+  top: 25%;
   box-sizing: border-box;
   animation: float1 6s ease-in-out infinite;
 
@@ -196,15 +97,48 @@ header {
 
 /* blue pill */
 .pill2 {
-  position: relative;
-  right: auto;
-  left: 780px;
-  top: auto;
-  bottom: 300px;
+  position: absolute;
+  right: 40%;
+  top: 10%;
   box-sizing: border-box;
   animation: float2 6s ease-in-out infinite;
 
+}
 
+.pill2 {
+  position: absolute;
+  right: 40%;
+  top: 10%;
+  box-sizing: border-box;
+  animation: float2 4s ease-in-out infinite;
+
+}
+
+.pill3 {
+  width: 2%;
+  position: absolute;
+  right: 40%;
+  top: 30%;
+  box-sizing: border-box;
+  animation: float3 3s ease-in-out infinite;
+}
+
+.pill4 {
+  width: 3%;
+  position: absolute;
+  right: 25%;
+  top: 2%;
+  box-sizing: border-box;
+  animation: float4 8s ease-in-out infinite;
+}
+
+.pill5 {
+  width: 5%;
+  position: absolute;
+  right: 30%;
+  top: 20%;
+  box-sizing: border-box;
+  animation: float5 5s ease infinite;
 }
 
 @keyframes float1 {
@@ -246,95 +180,59 @@ header {
 
 }
 
+@keyframes float3 {
 
-/* 360 rotate */
+  0% {
+    transform: translatey(0px);
+  }
 
-/* @keyframes float1{
+  70% {
+    transform: translatey(30px) rotate(25deg);
+  }
 
-  0%{
-  box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.6) ;
+  100% {
 
-  transform: rotate(360deg);
+    transform: translatey(0px);
 
   }
-  50%{
-    box-shadow: 0px 25px 15px 0px rgba(0, 0, 0, 0.2) ;
-
-    transform: rotate(0deg);
-    
-  
-    }
-  100%{
-    box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.6) ;
-   
-    transform: rotate(360deg);
-  
-  
-    }
-
 
 }
 
-@keyframes float2{
-
-  0%{
-  box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.6) ;
- 
-  transform: rotate(360deg);
-
+@keyframes float4 {
+  0% {
+    transform: translatey(15px) rotate(45deg);
   }
-  50%{
-    box-shadow: 0px 25px 15px 0px rgba(0, 0, 0, 0.2) ;
-    
-    transform: rotate(0deg);
-    
-  
-    }
-  100%{
-    box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.6) ;
-   
-    transform: rotate(360deg);
-  
-  
-    }
-
+  70%{
+    transform: translatey(45px) rotate(270deg);
+  }
+  100% {
+    transform: translatey(15px) rotate(45deg);
+  }
 
 }
- */
 
+@keyframes float5 {
+  0% {
+    transform: translatey(0px) rotate(0deg);
+  }
+  70%{
+    transform: translatey(10px) rotate(10deg);
+  }
+  100% {
+    transform: translatey(0px) rotate(0deg);
+  }
 
-
-
+}
 
 .overlay {
-  background-image: url("../res/medFuze_background.png");
-  background-repeat: no-repeat;
-  background-size: 75%;
-  position: absolute;
+  background: linear-gradient(#DDF5F7 80%, #A5E9E1, #44679F);
+  position: relative;
   width: 100%;
-  height: 100%;
-  top: 0;
-  left: 10%;
+  height: 100vh;
   display: flex;
   align-items: center;
 }
 
-.shadow {
-  position: absolute;
-  width: 100%;
-  height: 100vh;
-  top: 0;
-  left: 0;
-  transform-style: preserve-3d;
-  transform-origin: left;
-  transition: 0.5s;
-  background-color: #90e0ef;
-}
-
-.shadow.one {
-  z-index: -2;
-  opacity: 0.1;
-}
 
 .container.active .shadow.one {
   animation: shadow-two 0.6s ease-out;
@@ -343,38 +241,37 @@ header {
 
 /*--------------- Card start here --------------- */
 
-.mainContent {
+.slogan{
+  position: relative;
+  width: 30%;
+  height: 40vh;
+  margin-left: 15%;
+}
 
+.mainContent {
+  position: absolute;
+  top: 20%;
   font-family: Arial, Helvetica, sans-serif;
   font-style: italic;
   font-weight: 700;
   font-size: 48px;
-
-
 }
 
 .textContent1 {
+  position: absolute;
+  top: 40%;
+  left:50%;
   font-size: 21px;
   width: 350px;
-  position: relative;
-  left: 40px;
-  top: 50px;
-
 }
 
 .main-container button {
-
   position: absolute;
-  top: 65%;
-  left: 13%;
-  transform: translate(-50%, -40%);
-}
-
-.main-container button {
-
+  top: 60%;
   background: none;
   text-transform: uppercase;
   color: #1f271b;
+  background: linear-gradient(to left, #7AD7F0,#abdcf2,#c6e7f6,#e2f2fa, #F5FCFF);
   width: 220px;
   height: 60px;
   border: 3px solid #fff;
@@ -382,63 +279,18 @@ header {
   border-radius: 4px;
   transition: .6s;
   overflow: hidden;
-}
-
-.main-container button:focus {
-
+  cursor: pointer;
+  background-size: 200%;
+  box-shadow: 0 0 2em #51649d;
   outline: none;
 }
 
-.main-container button:before {
-
-  content: '';
-  display: block;
-  position: absolute;
-  background: rgba(255, 255, 255, 0.5);
-  width: 60px;
-  height: 100%;
-  left: 0;
-  top: 0;
-  opacity: .5s;
-  filter: blur(30px);
-  transform: translateX(-130px) skeX(-15deg);
-}
-
-.main-container button:after {
-
-  content: '';
-  display: block;
-  position: absolute;
-  background: rgba(255, 255, 255, 0.2);
-  width: 30px;
-  height: 100%;
-  left: 30px;
-  top: 0px;
-  opacity: 0;
-  filter: blur(30px);
-  transform: translate(-100px) scaleX(-15deg);
-
-}
-
 .main-container button:hover {
-
-  background: #edf2fb;
-  cursor: pointer;
-
+  background-position: center;
+  box-shadow: 0 0 1em #51649d;
 }
-
-.main-container button:hover::before {
-
-  transform: translateX(300px) skewX(-15px);
-  opacity: 1;
-  transition: .7s;
-
-}
-
 
 /*--------------- Card end here --------------- */
-
-
 
 /*--------------- Zoom In nav bar background --------------- */
 
@@ -447,329 +299,3 @@ header {
   /*Font size root element */
 }
 
-.container.active .bar {
-  transform: rotate(360deg);
-  background-color: transparent;
-}
-
-.container.active .bar:before {
-  transform: translateY(0) rotate(45deg);
-}
-
-.container.active .bar:after {
-  transform: translateY(0) rotate(-45deg);
-}
-
-.container.active .main {
-  animation: main-animation 0.5s ease;
-  cursor: pointer;
-  transform: perspective(1300px) rotateY(20deg) translateZ(310px) scale(0.5);
-}
-
-@keyframes main-animation {
-  from {
-    transform: translate(0);
-  }
-
-  to {
-    transform: perspective(1300px) rotateY(20deg) translateZ(310px) scale(0.5);
-  }
-}
-
-.links {
-  position: absolute;
-  width: 30%;
-  right: 0;
-  top: 0;
-  height: 100vh;
-  z-index: 2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-ul {
-  list-style: none;
-}
-
-
-.links a {
-  text-decoration: none;
-  color: #0a1128;
-  padding: 0.7rem 0;
-  display: inline-block;
-  font-size: 1rem;
-  font-weight: 300;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  transition: 0.3s;
-  opacity: 0;
-  transform: translateY(10px);
-  animation: hide 0.5s forwards ease;
-}
-
-.links a:hover {
-  color: #fff;
-}
-
-.container.active .links a {
-  animation: appear 0.5s forwards ease var(--i);
-}
-
-@keyframes appear {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0px);
-  }
-}
-
-@keyframes hide {
-  from {
-    opacity: 1;
-    transform: translateY(0px);
-  }
-
-  to {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-}
-
-
-/*--------------- footer section starts here --------------- */
-.horizontal-scroll {
-  width: 100%;
-  height: 300px;
-  background: url('./images/medFuze footer-06.png');
-  -webkit-animation: backgroundScroll 400s linear infinite;
-  animation: backgroundScroll 15s linear infinite;
-  background-repeat: no-repeat;
-  /* transform: translateY(-10em); */
-}
-
-@-webkit-keyframes backgroundScroll {
-  from {
-    background-position: -1000px 0;
-  }
-
-  to {
-    background-position: 0 0;
-  }
-}
-
-@keyframes backgroundScroll {
-  from {
-    background-position: -2000px 0;
-  }
-
-  to {
-    background-position: 0 0;
-  }
-}
-
-
-.text {
-  position: initial;
-  left: 40%;
-  text-align: left;
-  font-weight: 400px;
-  text-transform: capitalize;
-  line-height: 3rem;
-}
-
-.email {
-  height: 100px;
-  width: 300px;
-  position: absolute;
-  left: 60px;
-}
-
-.ns-container {
-  background-size: cover;
-  padding: 20px 20px 20px 20px;
-  text-align: center;
-  color: white;
-}
-
-.email-box {
-  height: 40px;
-  justify-content: center;
-  display: flex;
-}
-
-.email-box i {
-  background: #2f3542;
-  width: 40px;
-  line-height: 40px;
-}
-
-.tbox,
-.btn {
-  border: none;
-  outline: none;
-}
-
-.tbox {
-  width: 0px;
-  transition: 0.6s;
-}
-
-.email-box:hover>.tbox,
-.tbox:focus {
-  width: 260px;
-  padding: 0 10px;
-}
-
-.btn {
-  background: #2f3542;
-  color: white;
-  padding: 0 10px;
-  text-transform: uppercase;
-  cursor: pointer;
-}
-
-.aboutus {
-  height: 100px;
-  width: 300px;
-  position: absolute;
-  left: 440px;
-}
-.customerUl{
-  padding: 0%;
-
-}
-
-.customerUl li{
-  margin: 10%;
-  list-style-type:circle;
-}
-
-.customerS {
-  height: 100px;
-  width: 250px;
-  position: absolute;
-  left: 840px;
-
-}
-
-.customerS li :hover {
-  color: black;
-  text-decoration: none;
-}
-
-.customerS li {
-  position: relative;
-  left: 5px;
-
-}
-
-.socialMedia-icons {
-
-  height: 100px;
-  width: 250px;
-  position: absolute;
-  left: 1130px;
-
-}
-
-.site-footer .icons {
-  text-align: left;
-}
-
-.site-footer .icons a {
-  width: 40px;
-  height: 40px;
-  line-height: 40px;
-  margin-left: 6px;
-  margin-right: 20px;
-  border-radius: 100%;
-  background-color: #33353d
-}
-
-@media (max-width:991px) {
-  .site-footer [class^=col-] {
-    margin-bottom: 30px
-  }
-}
-
-.icons {
-  padding: 10%;
-  padding-left: 0;
-  margin-bottom: 0;
-  list-style: none
-}
-
-.icons li {
-  display: inline-block;
-  margin-bottom: 4px
-}
-
-.icons li.title {
-  margin-right: 15px;
-  text-transform: uppercase;
-  color: #96a2b2;
-  font-weight: 700;
-  font-size: 13px
-}
-
-.icons a {
-  background-color: #eceeef;
-  color: #818a91;
-  font-size: 16px;
-  display: inline-block;
-  line-height: 44px;
-  width: 44px;
-  height: 44px;
-  text-align: center;
-  margin-right: 8px;
-  border-radius: 100%;
-  -webkit-transition: all .2s linear;
-  -o-transition: all .2s linear;
-  transition: all .2s linear
-}
-
-.icons a:active,
-.icons a:focus,
-.icons a:hover {
-
-  color: #fff;
-  background-color: #29aafe;
-}
-
-.icons.size-sm a {
-  line-height: 34px;
-  height: 34px;
-  width: 34px;
-  font-size: 14px
-}
-
-.icons a.facebook:hover {
-  background-color: #3b5998
-}
-
-.icons a.twitter:hover {
-  background-color: #00aced
-}
-
-.icons a.instagram:hover {
-  background-color: #b6004c
-}
-
-.icons a.youtube:hover {
-  background-color: #fa0404
-}
-
-@media (max-width:767px) {
-  .icons li.title {
-    display: block;
-    margin-right: 0;
-    font-weight: 600
-  }
-}
-
-/*--------------- footer section ends here --------------- */

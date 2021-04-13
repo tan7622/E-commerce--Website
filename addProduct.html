@@ -3,19 +3,28 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>medFuze</title>
+	<title>Add Product</title>
+	<link rel="icon" href="/css/images/medFuze_Logo.png">
+	<link rel="stylesheet" href="css/master.css">
 	<link rel="stylesheet" href="css/addProduct.css">
 	<link rel="stylesheet" href="css/input.css">
-	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+	<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 </head>
 
 <body>
-	<div class=mainContainer>
+	<div id="particles-js"></div>
+
+	<div id='back' class="cross"><img style="height: 50%; width: 50%;" src="res/icon/back.png"></div>
+
+	<div style="margin: 5% 15% 1em 15%;">
 		<h2>Product Details</h2>
+	</div>
+	<div class="bigcontainer">
 		<div class="container">
 			<div class="wrapper">
 				<div class="image">
-					<img src="" alt="">
+					<img id='img' src="" alt="">
 				</div>
 				<div class="content">
 					<div class="text">
@@ -25,9 +34,7 @@
 			</div>
 			<button onclick="addBtnActive()" id="import-btn">import</button>
 			<input id="default-btn" type="file" hidden>
-
 		</div>
-		<script src="js/addproduct.js"></script>
 		<div class=" pdcontainer">
 			<form>
 				<div class="group">
@@ -64,6 +71,11 @@
 				<button onclick="" class="add-btn">Add</button>
 			</form>
 		</div>
+	</div>
+
 </body>
 
 </html>
+
+<script src="js/particleAdmin.js"></script>
+<script src="js/addproduct.js"></script>

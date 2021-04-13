@@ -6,25 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkout</title>
+    <link rel="icon" href="/css/images/medFuze_Logo.png">
     <link rel="stylesheet" href="css/checkout.css">
     <link rel="stylesheet" href="css/particle.css">
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/input.css">
+    <link rel="stylesheet" href="css/footer.css">
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
 </head>
 
 <body>
     <div id="particles-js"></div>
-
-    <div class="navbar">
-        <div class="menu">
-            <a href="homepage.html"><img class="logo" src="./css/images/medFuze_Logo.png"></img></a>
-            <div class="hamburger-menu">
-                <div class="bar"></div>
-            </div>
-        </div>
-    </div>
 
     <div class="container">
         <div class="col">
@@ -59,7 +52,7 @@
                         <select id="country">
                             <option>Malaysia</option>
                             <option>Australia</option>
-                            <option>Ching Chong</option>
+                            <option>Other</option>
                         </select>
                         <label>Country</label>
                     </div>
@@ -69,7 +62,7 @@
                         <select id="state">
                             <option value="Penang">Penang</option>
                             <option value="Kuala Lumpur">Kuala Lumpur</option>
-                            <option value="Ipoh">Ipoh</option>
+                            <option value="Ipoh">Other</option>
                         </select>
                         <label>State</label>
                     </div>
@@ -133,31 +126,5 @@
 
 </html>
 
-<script>
-    let options = document.querySelectorAll('.payment-opt')
-    options.forEach((e)=>{
-        e.addEventListener('click',()=>{
-            e.classList.toggle('selected')
-            deactivate(e.id)
-        })
-    })
-
-    function deactivate(id) {
-        let tng = document.getElementById('tng')
-        let card = document.getElementById('card')
-
-        options.forEach((e)=>{
-            e.id == id? null: e.classList.remove('selected')
-        })
-        if(id == 1){
-            tng.style.display = 'block'
-            card.style.display = 'none'
-        }
-        else{
-            tng.style.display = 'none'
-            card.style.display = 'block'
-        }
-}
-</script>
-
+<script src="js/checkout.js"></script>
 <script src="js/particle.js"></script>

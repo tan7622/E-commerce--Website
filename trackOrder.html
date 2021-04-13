@@ -2,362 +2,128 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Track Order</title>
-    <link rel="stylesheet" href="css/trackOrder.css">
-    <link rel="stylesheet" href="css/navbar.css">
-    <link rel="stylesheet" href="css/particle.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Track Order</title>
+  <link rel="icon" href="/css/images/medFuze_Logo.png">
+  <link rel="stylesheet" href="css/master.css">
+  <link rel="stylesheet" href="css/trackOrder.css">
 
-    <script src="js/orderList.js"></script>
-    <script src="js/medicine.js"></script>
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="js/orderList.js"></script>
+  <script src="js/medicine.js"></script>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 </head>
 
 <body>
-    <div id="particles-js"></div>
+  <div id="particles-js"></div>
 
-    <div class="overlay">
-        <div class="cross"><img style="height: 50%; width: 50%;" src="res/icon/close-button.svg"></div>
-        <div id='container2' class="container2">
+  <div class="overlay">
+    <div class="cross"><img style="height: 50%; width: 50%;" src="res/icon/close-button.svg"></div>
+    <div id='container2' class="container2">
+
+    </div>
+  </div>
+
+  <div class="navbar">
+    <div class="menu">
+      <a href="homepage.html"><img class="logo" src="./css/images/medFuze_Logo.png"></img></a>
+      <div class="hamburger-menu">
+        <div class="bar"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-container">
+    <div class="main-container">
+      <div class="main">
+        <div style="margin: 5% 15% 1em 15%;">
+          <h2>Order List</h2>
+        </div>
+
+        <div id='container' class="container">
 
         </div>
+      </div>
     </div>
 
+    <div class="links">
+      <ul>
+        <li>
+          <a href="homepage.html" style="--i: 0.05s;">Home</a>
+        </li>
+        <li>
+          <a href="catalogue.html" style="--i: 0.1s;">Catalogue</a>
+        </li>
+        <li>
+          <a href="shoppingCart.html" style="--i: 0.15s;">Shopping Cart </a>
+        <li>
+          <a href="trackOrder.html" style="--i: 0.25s;">Track Order </a>
+        </li>
+        <li>
+          <a href="aboutUs.html" style="--i: 0.25s;">About us </a>
+        </li>
+        <li>
+          <a href="admin.html" style="--i: 0.25s;">Super Secret Admin Access</a>
+        </li>
+      </ul>
+    </div>
+  </div>
 
-    <div class="navbar">
-        <div class="menu">
-            <a href="homepage.html"><img class="logo" src="./css/images/medFuze_Logo.png"></img></a>
-            <div class="hamburger-menu">
-                <div class="bar"></div>
-            </div>
+  <footer>
+    <div class="horizontal-scroll">
+      <div class="email">
+        <br>
+        <h2>Connect with us</h2>
+        <br>
+        <p>Subscribe to our newsletter for updates and special offers and discount.</p>
+        <div class="ns-container">
+
+          <!-- newsletter code -->
+          <div class="email-box">
+            <i class="fa fa-envelope"></i>
+            <input class="tbox" type="email" placeholder="Enter your email">
+            <div class="btn" type="button" name="button">Subscribe</div>
+          </div>
         </div>
-    </div>
+      </div>
+      <div class="aboutus">
+        <br>
+        <h2>About us</h2>
+        <br>
+        <p>We medFuze is an art, science, and practice of caring for a patient and managing the prevention of patient
+          injury or disease and illness.
+          MedFuze encompasses a variety of health care practices evolved to maintain and restore health by the
+          prevention and treatment of illness.</p>
+      </div>
 
-    <div style="margin: 5% 15% 1em 15%;">
-        <h2>Order List</h2>
-    </div>
+      <div class="customerS">
+        <br>
+        <h2>Customer service</h2>
 
-    <div id='container' class="container">
-
+        <ul class="customerUl">
+          <li><a href="aboutUs.html">About Us</a></li>
+        </ul>
+      </div>
+      <div class="socialMedia-icons">
+        <br>
+        <h2>Social Media</h2>
+        <ul class="icons">
+          <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+          <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+          <li><a class="instagram" href="#"><i class="fa fa-instagram"></i></a></li>
+          <li><a class="youtube" href="#"><i class="fa fa-youtube"></i></a></li>
+        </ul>
+      </div>
     </div>
+  </footer>
 </body>
 
 </html>
 
-<script type="template">
-    <div class="overlay">
-        <div class="container2">
-            <h2>Order 1</h2>
-            <ul class="progressbar">
-                <li class="active"></li>
-                <li class="active"></li>
-                <li class="current"></li>
-                <li></li>
-            </ul>
-            <div class="container3">
-                <div class="row">
-                    <div style="width: 80%;">The package has been packed</div>
-                    <div style="width: 20%; text-align: center;">
-                        <h2>9 Feb</h2>
-                        <h3>10AM</h3>
-                    </div>
-                </div>
-                <div class="row">
-                    <div style="width: 80%;">The package has been packed</div>
-                    <div style="width: 20%; text-align: center;">
-                        <h2>9 Feb</h2>
-                        <h3>10AM</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</script>
-<script type="template">
-    <div id='1' class="order">
-        <div>Order 20</div>
-        <div class="items">
-            <div class="row">
-                <div class="thumbnail">
-                    <div class="menu-item"><img src="res/aspirin.jpg" style="max-width: 100%;"></div>
-                </div>
-                <div class="detail">
-                    <div style="display: flex;">
-                        <div style="width: 80%;">Aspirin</div>
-                        <div style="width: 20%; text-align: right;">$12.99</div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="thumbnail">
-                    <div class="menu-item"><img src="res/aspirin.jpg" style="max-width: 100%;"></div>
-                </div>
-                <div class="detail">
-                    <div style="display: flex;">
-                        <div style="width: 80%;">Aspirin</div>
-                        <div style="width: 20%; text-align: right;">$12.99</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</script>
 
-<script>
-    const container = document.querySelector('#container');
-    const container2 = document.querySelector('#container2');
-    const overlay = document.querySelector('.overlay');
-    const closeBtn = document.querySelector('.cross');
-
-    closeBtn.addEventListener('click', () => {
-        overlay.style.opacity = 0
-        setTimeout(() => {
-            overlay.style.display = 'none'
-        }, 500);
-        document.body.style.overflow = 'auto'
-        container2.innerHTML = ''
-    })
-
-    let orderFromCustomer = orderList.filter((c)=>{
-        return c.customer === 'Francesca'
-    })
-
-    orderFromCustomer.forEach(obj => {
-        let orderDiv = document.createElement('div')
-        orderDiv.className = 'order'
-        orderDiv.id = obj.id
-
-        let orderNo = document.createElement('div')
-        orderNo.classList = 'clickable'
-        orderNo.innerHTML = 'Order ' + obj.id
-
-        let orderItems = document.createElement('div')
-        orderItems.className = "items"
-
-        let receivedDiv = document.createElement('div')
-        receivedDiv.className = 'row'
-        let received = document.createElement('div')
-        received.innerHTML = 'Received on: ' + obj.status.received.date
-
-        receivedDiv.append(received)
-        orderItems.append(receivedDiv)
-
-        orderDiv.append(orderNo)
-        orderDiv.append(orderItems)
-
-        container.append(orderDiv)
-
-        let totalP = 0;
-        obj.items.forEach(i => {
-            let med = medicine.filter((m) => {
-                return m.id === i.id
-            })
-
-            let item = document.createElement('div')
-            item.className = 'row'
-
-            let div1 = document.createElement('div')
-            div1.className = 'thumbnail'
-
-            let thumbnail = document.createElement('div')
-            thumbnail.className = 'menu-item'
-
-            let image = document.createElement('img')
-            image.src = med[0].path
-            image.style.maxWidth = '100%'
-
-            let div2 = document.createElement('div')
-            div2.className = 'detail'
-
-            let quantity = document.createElement('div')
-            quantity.className = 'quantity'
-            quantity.innerHTML = 'Quantity: ' + i.quantity
-
-            let div3 = document.createElement('div')
-            div3.style.display = 'flex'
-
-            let name = document.createElement('div')
-            name.className = 'name'
-            name.innerHTML = med[0].medicine
-            name.style.width = '80%'
-
-            let price = document.createElement('div')
-            price.className = 'price-wrap'
-            let dollar = document.createElement('div')
-            dollar.className = 'dollar-sign'
-            dollar.innerHTML = '$'
-            let price1 = document.createElement('div')
-            price1.className = 'price-1'
-            price1.innerHTML = med[0].price.split('.')[0]
-            let price2 = document.createElement('div')
-            price2.className = 'price-2'
-            price2.innerHTML = '.' + med[0].price.split('.')[1]
-
-            price.append(dollar)
-            price.append(price1)
-            price.append(price2)
-
-            div3.append(name)
-            div3.append(price)
-            div2.append(div3)
-            div2.append(quantity)
-
-            div1.append(thumbnail)
-            thumbnail.append(image)
-            item.append(div1)
-            item.append(div2)
-
-            orderItems.append(item)
-
-        })
-
-        totalP = caclculate(orderDiv)
-
-        let summaryDiv = document.createElement('div')
-        summaryDiv.className = "end"
-
-        let totalText = document.createElement('div')
-        totalText.className = 'total-text'
-        totalText.innerHTML = 'Total:'
-
-        let price = document.createElement('div')
-        price.className = 'price-wrap'
-        let dollar = document.createElement('div')
-        dollar.className = 'dollar-sign'
-        dollar.innerHTML = '$'
-        let price1 = document.createElement('div')
-        price1.className = 'price-1'
-        price1.innerHTML = totalP.toString().split('.')[0]
-        let price2 = document.createElement('div')
-        price2.className = 'price-2'
-        price2.innerHTML = '.' + totalP.toFixed(2).toString().split('.')[1]
-
-        price.append(totalText)
-        price.append(dollar)
-        price.append(price1)
-        price.append(price2)
-
-        let a = document.createElement('div')
-        a.append(price)
-        let btn = document.createElement('button')
-        btn.innerHTML = 'Track'
-        btn.onclick = () => {
-            showTracker(obj)
-        }
-
-        summaryDiv.append(a)
-        summaryDiv.append(btn)
-
-        orderItems.append(summaryDiv)
-    })
-
-    const orders = document.querySelectorAll('.order')
-
-    orders.forEach(element => {
-        element.querySelector('.clickable').addEventListener('click', () => {
-            element.classList.toggle('on')
-            let a = element.querySelector('.items')
-            element.classList.contains('on') ? a.style.opacity = '1' : a.style.opacity = '0';
-        })
-    });
-
-    let messages = [
-        'Your order has been received',
-        'Your order has been packed',
-        'Your order is being delivered',
-        'Your order is delivered',
-    ]
-
-    function showTracker(order) {
-        overlay.style.display = 'flex';
-        setTimeout(() => {
-            overlay.style.opacity = 1;
-        }, 1);
-        document.body.style.overflow = 'hidden'
-
-        let orderNo = document.createElement('h2')
-        orderNo.innerHTML = "Order " + order.id
-
-        let progressBar = document.createElement('ul')
-        progressBar.className = 'progressbar'
-
-        let status = 0;
-        order.status.received.date != '' ? status = 0 : null;
-        order.status.packed.date != '' ? status = 1 : null;
-        order.status.delivering.date != '' ? status = 2 : null;
-        order.status.complete.date != '' ? status = 3 : null;
-
-        for (let i = 0; i < 4; i++) {
-            let step = document.createElement('li')
-            progressBar.append(step)
-        }
-        for (let i = 0; i <= status; i++) {
-            let list = progressBar.querySelectorAll('li')
-            list[i].className = 'active'
-            list[status].className = 'current'
-        }
-
-        let statusContainer = document.createElement('div')
-        statusContainer.className = 'container3'
-
-        for (let i = 0; i <= status; i++) {
-            let row = document.createElement('div')
-            row.className = 'row'
-            let message = document.createElement('div')
-            message.className = 'message'
-            let datetime = document.createElement('div')
-            datetime.className = 'datetime'
-
-            message.innerHTML = messages[i]
-            let date = document.createElement('h2')
-            let time = document.createElement('h3')
-
-            if (i == 0) {
-                date.innerHTML = order.status.received.date
-                time.innerHTML = order.status.received.time
-            }
-            if (i == 1) {
-                date.innerHTML = order.status.packed.date
-                time.innerHTML = order.status.packed.time
-            }
-            if (i == 2) {
-                date.innerHTML = order.status.delivering.date
-                time.innerHTML = order.status.delivering.time
-            }
-            if (i == 3) {
-                date.innerHTML = order.status.complete.date
-                time.innerHTML = order.status.complete.time
-            }
-
-            datetime.append(date)
-            datetime.append(time)
-
-            row.append(message)
-            row.append(datetime)
-            statusContainer.append(row)
-        }
-
-        container2.append(orderNo)
-        container2.append(progressBar)
-        container2.append(statusContainer)
-    }
-
-    function caclculate(order) {
-        let price1 = order.querySelectorAll('.price-1')
-        let price2 = order.querySelectorAll('.price-2')
-        let quantity = order.querySelectorAll('.quantity')
-        let totalP = 0
-        let i = 0
-        price1.forEach(e => {
-            let price = e.innerHTML + '.' + price2[i].innerHTML.substr(1)
-            totalP = totalP + (parseFloat(price) * parseFloat(quantity[i].innerHTML.split(': ')[1]))
-            i++
-        })
-        return totalP
-    }
-    
-</script>
-
+<script src="js/trackOrder.js"></script>
+<script src="js/homepage.js"></script>
 <script src="js/particle.js"></script>

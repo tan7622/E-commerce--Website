@@ -5,7 +5,8 @@ const importBtn = document.querySelector("#import-btn");
 const cancelBtn = document.querySelector("#cancel-btn");
 const addBtn = document.querySelector("#add-btn");
 const clearBtn = document.querySelector("#clear-btn");
-const img = document.querySelector("img");
+const img = document.getElementById("img");
+const back = document.getElementById('back')
 
 function addBtnActive(){
   defaultBtn.click();
@@ -13,6 +14,7 @@ function addBtnActive(){
 defaultBtn.addEventListener("change", function(){
   const file = this.files[0];
   if(file){
+    img.style.display = 'block'
     const reader = new FileReader();
     reader.onload = function(){
       const result = reader.result;
@@ -27,23 +29,6 @@ defaultBtn.addEventListener("change", function(){
   }
 });
 
-// defaultBtn.addEventListener("change", function(){
-//   const file = this.files[0];
-//   if(file){
-//     const reader = new FileReader();
-//     reader.onload = function(){
-//       const result = reader.result;
-//       img.src = result;
-//       wrapper.classList.add("active");
-//     }
-//     clearBtn.addEventListener("click", function(){
-//       img.src = "";
-//       wrapper.classList.remove("active");
-//     })
-//     reader.readAsDataURL(file);
-//   }
-//   if(this.value){
-//     let valueStore = this.value.match(regExp);
-//     fileName.textContent = valueStore;
-//   }
-// });
+back.addEventListener('click',()=>{
+    window.location.href = 'admin.html'
+})
