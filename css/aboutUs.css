@@ -40,7 +40,6 @@ body{
 }
 
 .overlay .container2{
-  display: relative;
   margin: auto;
   padding: 1em 5% ;
   background-color: #f7f7f7;
@@ -74,8 +73,7 @@ button:hover{
 }
 
 .header {
-
-  padding: top 60px;
+  padding-top : 60px;
   color: #444;
   font-size: 20px;
   margin: auto;
@@ -83,8 +81,7 @@ button:hover{
 }
 
 .header2 {
-
-  padding: top 60px;
+  padding-top : 60px;
   color: #444;
   font-size: 20px;
   margin: auto;
@@ -133,7 +130,7 @@ desc {
 
   padding: 12px;
   font-weight: bold;
-  font: size 16px;
+  font-size: 16px;
   text-transform: uppercase;
 
 }

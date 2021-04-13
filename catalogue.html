@@ -21,7 +21,7 @@
 
   <div class="navbar">
     <div class="menu">
-      <a href="homepage.html"><img class="logo" src="./css/images/medFuze_Logo.png"></img></a>
+      <a href="homepage.html"><img class="logo" src="./css/images/medFuze_Logo.png" alt="logo"></a>
       <div class="hamburger-menu">
         <div class="bar"></div>
       </div>
@@ -65,8 +65,8 @@
 
   <div id="vial-container-wrap" style="display: none;">
     <div id='vial-container' class="vial-container">
-      <div id='prev' class="next"><img class="arrow" src="res/icon/left.svg"></div>
-      <div class="cross"><img style="height: 50%; width: 50%;" src="res/icon/close-button.svg"></div>
+      <div id='prev' class="next"><img class="arrow" src="res/icon/left.svg" alt="left"></div>
+      <div class="cross"><img style="height: 50%; width: 50%;" src="res/icon/close-button.svg" alt="cross"></div>
       <div id='id' style="display: none;"></div>
       <div class="description">
         <div class="ingredient">
@@ -85,7 +85,7 @@
       </div>
       <div class="img-container">
         <div class="toolbox"></div>
-        <img id='vial' class="vial" src="" style="height: 50%; display: block;"></img>
+        <img id='vial' class="vial" src="null" style="height: 50%; display: block;" alt="vial">
         <div id='medicine'>Something</div>
         <div class="price-wrap">
           <div class="dollar-sign">$</div>
@@ -98,9 +98,11 @@
         <button>Add to Cart</button>
         <button>Buy Now</button>
       </div>
-      <div id='next' class="next"><img class="arrow right" src="res/icon/left.svg"></div>
+      <div id='next' class="next"><img class="arrow right" src="res/icon/left.svg" alt="right"></div>
     </div>
   </div>
+
+
   <footer>
     <div class="horizontal-scroll">
       <div class="email">
@@ -114,7 +116,7 @@
           <div class="email-box">
             <i class="fa fa-envelope"></i>
             <input class="tbox" type="email" placeholder="Enter your email">
-            <div class="btn" type="button" name="button">Subscribe</div>
+            <div class="btn">Subscribe</div>
           </div>
         </div>
       </div>
@@ -148,19 +150,10 @@
       </div>
     </div>
   </footer>
+  
+<script src="js/catalogue.js"></script>
+<script src="js/particle.js"></script>
 
 </body>
 
 </html>
-
-<script type="template">
-  <div class="menu-item">
-        <img src="/res/fish-oil.jpg" style="height:70%">
-        <div class="menu-overlay">
-            <p>THis is some word</p>
-        </div>
-    </div>
-</script>
-
-<script src="js/catalogue.js"></script>
-<script src="js/particle.js"></script>

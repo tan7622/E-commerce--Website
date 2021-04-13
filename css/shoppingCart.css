@@ -196,7 +196,6 @@ select:hover{
     right: 7%;
     height: 25%;
     cursor: pointer;
-    filter: invert();
     transition: 1s;
 }
 
