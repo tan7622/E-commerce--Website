@@ -127,7 +127,6 @@
 
 }
 
-
 .hamburger-menu {
   height: 4rem;
   width: 3rem;
@@ -301,11 +300,6 @@ header {
 
 }
  */
-
-
-
-
-
 .overlay {
   background-image: url("../res/medFuze_background.png");
   background-repeat: no-repeat;
