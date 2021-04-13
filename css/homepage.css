@@ -361,6 +361,11 @@ header {
   top: 50px;
 
 }
+.main-container button a{
+  text-decoration: none;
+  color: #000;
+
+}
 
 .main-container button {
 
