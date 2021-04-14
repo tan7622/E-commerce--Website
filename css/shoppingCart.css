@@ -197,6 +197,7 @@ select:hover{
     height: 25%;
     cursor: pointer;
     transition: 1s;
+    filter: invert(1);
 }
 
 @keyframes glow{
